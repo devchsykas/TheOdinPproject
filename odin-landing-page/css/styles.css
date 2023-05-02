@@ -1,0 +1,649 @@
+/*----------Google Fonts----------*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;600;700&display=swap");
+
+/*----------Ionic Framework----------*/
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+/*----------Reset Styles----------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*----------Typography----------*/
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*----------Main Layout----------*/
+
+/*----------Header Section----------*/
+#header {
+  background-color: #3cb371;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  /* padding: 20px; */
+}
+
+.logo img {
+  width: 300px;
+  height: 300px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 1.2rem;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid #000000;
+}
+
+.menu a:hover {
+  color: #3cb371;
+  border-bottom: none;
+}
+
+/*----------Hero Section----------*/
+
+.hero {
+  /* text-align: center; */
+  background-image: url("../assets/images/background/hero-section-bike-img.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+}
+
+.hero em {
+  font-style: italic;
+  font-weight: 700;
+  color: #3cb371;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero .cta-btn:hover {
+  color: #3cb371;
+}
+
+/*----------Features Section----------*/
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+}
+
+.features h2 {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 5px solid #3cb371;
+}
+
+.features p {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.card {
+  font-family: "Lato", sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 2.5rem;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  background: #ffffff;
+  text-align: left;
+  color: #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-perspective: 20rem;
+  perspective: 20rem;
+}
+
+.card * {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.card img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+
+.rent-the-bike {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 0.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  opacity: 0;
+  background-color: #3cb371;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.card .rent-the-bike i {
+  display: inline-block;
+  margin-right: 0.6rem;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #2f4f4f;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.card figcaption {
+  padding: 1.2rem;
+}
+
+.card h3,
+.card p {
+  margin: 0;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.card .price {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 48px;
+  letter-spacing: 1px;
+}
+
+.card .price s {
+  margin-right: 0.5rem;
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.card a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card:hover .rent-the-bike,
+.card:hover .rent-the-bike {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+.card:hover .rent-the-bike i,
+.card:hover .rent-the-bike i {
+  background-color: #2f4f4f;
+}
+
+/*----------Testimonials Section----------*/
+
+.testimonials {
+  margin: 4rem 0;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid #3cb371;
+}
+
+.testimonials p {
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonials-container ul {
+  display: flex;
+}
+
+.testimonials-container li {
+  flex-basis: calc(33.33% - 1rem);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonials cite {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/*----------Contact Us Section----------*/
+
+.contact-us {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.contact-us h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid #3cb371;
+}
+
+/* .contact-us p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Lato", sans-serif;
+} */
+
+/* .contact-us .contact-info {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.contact-info-inner {
+  text-align: center;
+} */
+
+strong {
+  font-weight: 700;
+}
+
+.contact-us-box {
+  width: 900px;
+  margin: 2rem auto;
+  padding: 0;
+  border: 1px solid #2f4f4f;
+  border-radius: 4px;
+  background: #fafafa;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-box-header {
+  padding: 0.7rem;
+  border-bottom: 1px solid #2f4f4f;
+}
+
+.contact-us-box-footer {
+  border-top: 1px solid #2f4f4f;
+}
+
+.col1 {
+  width: 100%;
+  border-bottom: 1px solid #2f4f4f;
+  position: relative;
+}
+
+.col2 {
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #2f4f4f;
+  position: relative;
+}
+
+.col1 textarea {
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  vertical-align: top;
+}
+
+.contact-us-box .col2.last,
+.contact-us-box .col1.last {
+  border-bottom: none;
+}
+
+.col2 input {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1.6rem;
+  text-shadow: -1px 1px 2px rgba(150, 150, 152, 1);
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 0.1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0.1rem;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #2f4f4f;
+}
+
+.close {
+  float: right;
+  margin: -0.45rem 0 0 0;
+  font-size: 1.3rem;
+  transition: color 0.9s;
+}
+
+.close:hover {
+  color: #757575;
+}
+
+em {
+  color: #3cb371;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border: none;
+  outline: 0;
+  padding: 9px;
+  padding-left: 50px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  background: #f7faf8;
+}
+
+.input.error:hover,
+textarea.error:hover {
+  background: #ffd9d9;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 0.45rem;
+  background: #000000;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  float: right;
+  -webkit-transition: background 0.9s;
+  -moz-transition: background 0.9s;
+  -o-transition: background 0.9s;
+  transition: background 0.9s;
+}
+
+input[type="submit"]:hover {
+  background-color: #3cb371;
+}
+
+.group::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+div.error {
+  background: #ff4545;
+  color: white;
+  padding: 0.4em 1em;
+  position: absolute;
+  left: 2.5em;
+  top: 100%;
+  margin-top: 3px;
+  z-index: 2000;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+div.error::before {
+  content: " ";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #ff4545 transparent;
+  position: absolute;
+  bottom: 100%;
+  left: 1;
+}
+
+/* @media all and (max-width: 850px) {
+  .contact-us-box {
+    width: 95%;
+  }
+  .col2 {
+    width: 100%;
+  }
+  input[type="submit"] {
+    width: 90%;
+    margin: 0.45rem auto;
+    float: none;
+  }
+} */
+
+/*----------About Us Section----------*/
+
+.about-us {
+  margin-bottom: 4rem;
+}
+
+.about-us h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 5px solid #3cb371;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem;
+}
+
+.about-us-container img {
+  width: 50%;
+  max-width: 500px;
+  min-height: 500px;
+  margin-right: 3.2rem;
+}
+
+.about-us-text {
+  flex: 1;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+}
+
+.about-us-text .business-name {
+  font-weight: 700;
+  color: #3cb371;
+}
+
+.about-us-text .business-name:hover {
+  border-bottom: 1px solid #000000;
+}
+
+/*----------FAQ Section----------*/
+.faq {
+  margin-bottom: 4rem;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid #3cb371;
+}
+
+.container-width {
+  width: 100%;
+}
+
+.wrapper {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 50.2);
+}
+
+.toogle,
+.content {
+  font-family: "Lato" sans-serif;
+}
+
+.toogle {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: #2f4f4f;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.content {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.7rem;
+  /* height: 0;
+  overflow: hidden;
+  transition: all 1s; */
+}
+
+/*----------Footer Section----------*/
+
+.footer p {
+  font-size: 1.5rem;
+  background-color: #3cb371;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
