@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,800;1,400&display=swap");
+
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bodoni Moda", helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Header Style*/
+
+.header {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #f2f2f2; */
+}
+
+.header h1 {
+  font-size: 2em;
+  color: #808000;
+}
+
+/* Section Main Style */
+
+#ingredients,
+#instructions {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section Footer Styles */
+
+.footer {
+  background-color: #becd75;
+  /* height: 175px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #808000;
+}
