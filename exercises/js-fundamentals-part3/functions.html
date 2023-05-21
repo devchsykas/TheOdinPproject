@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions Examples</title>
+  </head>
+  <body>
+    <h1>Functions Examples</h1>
+    <script>
+      // Function Declaration
+      function checkAge(age) {
+        if (age > 18) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(checkAge(16));
+      console.log(checkAge(18));
+      console.log(checkAge(22));
+
+      // Function Expression
+      const checkAgeAgain = function (age) {
+        //using ternary operator
+        return age > 18 ? true : false;
+      };
+
+      console.log(checkAgeAgain(3));
+      console.log(checkAgeAgain(19));
+
+      //Function to check age with OR
+      function checkAgeOr(age) {
+        return age > 18 || false;
+      }
+
+      console.log(checkAgeOr(19));
+      console.log(checkAgeOr(10));
+
+      function min(num1, num2) {
+        if (num1 < num2) {
+          return num1;
+        } else {
+          return num2;
+        }
+      }
+
+      console.log(min(2, 5));
+      console.log(min(3, -1));
+      console.log(min(1, 1));
+
+      /*
+        Write a function pow(x,n) that returns x in power n.Prompts for x and n, and then shows the result of pow(x,n).The function should support only natural values of n: integers up from 1.
+        */
+
+      function pow(x, n) {
+        let result = x;
+
+        for (let i = 1; i < n; i++) {
+          result *= x;
+        }
+
+        return result;
+      }
+
+      let x = prompt("x?", "");
+      let n = prompt("n?", "");
+
+      if (n < 1) {
+        console.log(`Power ${n} is not supported, use a positive integer`);
+      } else {
+        console.log(pow(x, n));
+      }
+
+      /*
+        This is a function that takes in three parameters: `question`, `yes`, and `no`. It displays a confirmation dialog box with the `question` as the message and two buttons: "OK" and "Cancel".
+        If the user clicks "OK", the `yes` function is called. If the user clicks "Cancel", the `no` function is called.
+        */
+      function ask(question, yes, no) {
+        if (confirm(question)) {
+          yes();
+        } else {
+          no();
+        }
+      }
+
+      /*
+       `function showOk()` is a function that displays an alert message with the text "You agreed". It is used as a callback function in the `ask()` function to be executed when the user clicks "OK" in the confirmation dialog box.
+       */
+      function showOk() {
+        console.log("You agreed");
+      }
+
+      /*
+      The `showCancel()` function is displaying an alert message with the text "You cancelled the
+      execution". It is used as a callback function in the `ask()` function to be executed when the
+      user clicks "Cancel" in the confirmation dialog box.
+      */
+      function showCancel() {
+        console.log("You cancelled the execution");
+      }
+
+      ask("Do you agree?", showOk, showCancel);
+
+      // const askQuestion = (question, yes, no) => {
+      //   if (confirm(question)) {
+      //     yes();
+      //   } else {
+      //     no();
+      //   }
+      // };
+
+      // askQuestion(
+      //   "Do you agree",
+      //   () => {
+      //     alert("You agreed");
+      //   },
+      //   () => {
+      //     alert("You canceled the execution");
+      //   }
+      // );
+
+      /*
+      Write a function called add7 that takes one number and returns that number + 7.
+      */
+
+      function add7(number) {
+        return number + 7;
+      }
+      console.log(add7(3));
+
+      // Or with arrow function
+      const add7WithArrow = (num) => {
+        return num + 7;
+      };
+      console.log(add7WithArrow(10));
+
+      /*
+      Write a function called multiply that takes 2 numbers and returns their product.
+      */
+      const multiply = (num1, num2) => {
+        return num1 * num2;
+      };
+
+      console.log(multiply(3, 3));
+
+      /*
+      Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+      */
+      function capitalize(word) {
+        // if (str.length > 0) {
+        //   str = str.charAt(0).toUpperCase() + str.slice(1);
+        // }
+        // return str;
+        const words = word.toLowerCase().split(" ");
+        console.log(words);
+        for (let i = 0; i < words.length; i++) {
+          words[i] = words[i].charAt(0).toUpperCase() + words[i].substr(1);
+        }
+        return words.join(" ");
+      }
+
+      console.log(capitalize("chris sykas"));
+      console.log(capitalize("GEORGE sykas"));
+      console.log(capitalize("myrtO sYKa"));
+
+      /*
+      Write a function called lastLetter that takes a string and returns the very last letter of that string
+      */
+
+      function lastLetter(word) {
+        return word.charAt(word.length - 1);
+      }
+
+      console.log(lastLetter("chris"));
+    </script>
+  </body>
+</html>

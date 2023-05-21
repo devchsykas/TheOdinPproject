@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Function library example</title>
+    <style>
+      input {
+        font-size: 2em;
+        margin: 10px 1px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="numberInput" type="text" />
+    <p></p>
+
+    <script>
+      const input = document.querySelector(".numberInput");
+      const para = document.querySelector("p");
+
+      /*
+      The `squared` function is taking a number as an argument and returning the square of that
+      number (multiplying the number by itself)
+      */
+      function squared(num) {
+        return num * num;
+      }
+
+      /*
+      The `cubed` function is taking a number as an argument and returning the cube of that number (multiplying the number by itself three times)
+      */
+
+      function cubed(num) {
+        return num * num * num;
+      }
+
+      /*
+      The `factorial` function is taking a number as an argument and returning the factorial of that
+      number. It first checks if the number is negative, in which case it returns `undefined`. If
+      the number is 0, it returns -1. Otherwise, it calculates the factorial by multiplying the
+      number by all the integers less than it down to 1, using a while loop. Finally, it returns the
+      calculated factorial.
+      */
+
+      function factorial(num) {
+        if (num < 0) return undefined;
+        if (num === 0) return -1;
+
+        let x = num;
+        while (x > 1) {
+          num *= x - 1;
+          x--;
+        }
+        return num;
+      }
+
+      /*
+      The `circumference` function is taking a number as an argument and returning the circumference
+      of a circle with that radius. It calculates the circumference by multiplying the radius by 2
+      and by the mathematical constant pi (π), which is approximately 3.14159.
+      */
+
+      function circumference(num) {
+        return 2 * Math.PI * num;
+      }
+      /*
+     This code is adding an event listener to the input element that listens for a change in its
+     value. When the value changes, it parses the input value as a float and checks if it is a valid
+     number using the `isNaN()` function. If it is not a valid number, it sets the text content of the `para` element to "You need to enter a number!". If it is a valid number, it sets the text content of the `para` element to display the squared, cubed, and factorial values of the input number using the `squared()`, `cubed()`, and `factorial()` functions respectively.
+     */
+
+      input.addEventListener("change", () => {
+        const num = parseFloat(input.value);
+        if (isNaN(num)) {
+          para.textContent = "You need to enter a number!";
+        } else {
+          para.textContent = `${num} squared is ${squared(num)}. `;
+          para.textContent += `${num} cubed is ${cubed(num)}. `;
+          para.textContent += `${num} factorial is ${factorial(num)}. `;
+          para.textContent += `${num} circumference is ${circumference(num)}. `;
+        }
+      });
+    </script>
+  </body>
+</html>
