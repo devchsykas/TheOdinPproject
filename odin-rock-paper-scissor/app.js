@@ -91,9 +91,23 @@ function game() {
     } else if (result === "Computer Wins") {
       computerScore++;
     }
-    //display the results of each round
+    //Display the results of each round
     console.log(
       `Round ${i + 1}: ${playerSelection} vs ${computerSelection} - ${result}`
+    );
+  }
+  //Display the final winner and return it.
+  if (playerScore === computerScore) {
+    return console.log(
+      `We don't have a winner! it's a tie with score ${playerScore} - ${computerScore}`
+    );
+  } else if (playerScore > computerScore) {
+    return console.log(
+      `Player wins with score ${playerScore} - ${computerScore}`
+    );
+  } else {
+    return console.log(
+      `Computer wins with score ${computerScore} - ${playerScore}`
     );
   }
 }
