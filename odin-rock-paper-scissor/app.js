@@ -5,18 +5,35 @@
  */
 function getComputerChoice() {
   const computerChoice = Math.floor(Math.random() * 3);
-  console.log(computerChoice);
+  console.log("Computer choice is: ", computerChoice);
 
   if (computerChoice === 0) {
-    return "Rock";
+    return "rock";
   } else if (computerChoice === 1) {
-    return "Paper";
+    return "paper";
   } else {
-    return "Scissors";
+    return "scissors";
   }
 }
 
-// console.log(getComputerChoice());
+/**
+ * The function prompts the user to enter their choice of rock, paper, or scissors and returns the
+ * choice as a string.
+ * @returns The function `getPlayerChoice()` returns a string value of either "rock", "paper", or
+ * "scissors" based on the user's input.
+ */
+function getPlayerChoice() {
+  let playerChoice = prompt("Rock - Paper - Scissors! Enter your choice here");
+  console.log("Player choice is:", playerChoice);
+
+  if (playerChoice === "rock") {
+    return "rock";
+  } else if (playerChoice === "paper") {
+    return "paper";
+  } else {
+    return "scissors";
+  }
+}
 
 /**
  * The function plays a round of rock-paper-scissors between a player and a computer and returns the
@@ -58,8 +75,36 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "rock";
+/**
+ * The function "game" plays a game of rock-paper-scissors for 5 rounds and keeps track of the player
+ * and computer scores.
+ */
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection);
+    if (result === "Player Wins") {
+      playerScore++;
+    } else if (result === "Computer Wins") {
+      computerScore++;
+    }
+    //display the results of each round
+    console.log(
+      `Round ${i + 1}: ${playerSelection} vs ${computerSelection} - ${result}`
+    );
+  }
+}
+
+// const playerSelection = "scissors";
 const computerSelection = getComputerChoice();
-console.log(computerSelection);
+console.log("Computer saying:", computerSelection);
+
+const playerSelection = getPlayerChoice();
+console.log("Player saying:", playerSelection);
 
 console.log(playRound(playerSelection, computerSelection));
+
+const winner = game();
