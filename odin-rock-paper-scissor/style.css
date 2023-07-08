@@ -78,11 +78,32 @@ body {
   border-radius: 10px;
   font-size: 1.8rem;
   border: none;
+  cursor: pointer;
+}
+
+.player-choice-button:hover {
+  background-color: #333;
 }
 
 .computer-emoji {
   font-size: 1.8rem;
   margin-top: 40px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.scoreboard > div {
+  font-family: "Lobster", cursive;
+  font-size: 1.7rem;
+  border: 5px solid #eee;
+  border-radius: 10px;
+  color: #333;
+  padding: 10px;
+  margin: 10px;
 }
 
 .result {
