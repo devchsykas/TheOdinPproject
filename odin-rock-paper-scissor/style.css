@@ -1,0 +1,93 @@
+/*------------Google Fonts----------*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&display=swap");
+
+/* font-family: 'Lobster', cursive;
+font-family: 'Poppins', sans-serif; */
+
+/*-----------Body Section-----------*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #a0a3a3;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*---------Header Section----------*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .welcome {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  font-size: 2rem;
+}
+
+.header .game-title {
+  margin-top: 5px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/*----------Main Section-----------*/
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  width: 75vw;
+  max-width: 700px;
+  margin-top: 20px;
+  color: #333;
+  font-family: "Lobster", cursive;
+}
+
+.vs {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 20px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.choice-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.375rem;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+}
+
+.player-choice-button {
+  margin-top: 40px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  border: none;
+}
+
+.computer-emoji {
+  font-size: 1.8rem;
+  margin-top: 40px;
+}
+
+.result {
+  height: 50px;
+  font-size: 2.25rem;
+  color: #fff;
+  font-family: "Lobster", cursive;
+}

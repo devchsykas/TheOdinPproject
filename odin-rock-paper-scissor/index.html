@@ -4,11 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Rock - Paper - Scissor Game</title>
   </head>
   <body>
-    <h1>Rock - Paper - Scissor Game</h1>
+    <header class="header">
+      <h4 class="welcome">Welcome to the game</h4>
+      <h1 class="game-title">Rock, Paper, Scissor</h1>
+    </header>
 
-    <script src="./app.js"></script>
+    <main class="main-container">
+      <section class="game-container">
+        <p>Player</p>
+        <div class="choice-container" id="player-choice">
+          <button class="player-choice-button" id="rock-emoji">🪨</button>
+          <button class="player-choice-button" id="paper-emoji">📄</button>
+          <button class="player-choice-button" id="scissor-emoji">✂️</button>
+        </div>
+      </section>
+
+      <h3 class="vs">VS</h3>
+
+      <section class="game-container">
+        <p>Computer</p>
+        <div class="choice-container" id="computer-choice">
+          <p class="computer-emoji" id="emoji-shuffle"></p>
+        </div>
+      </section>
+    </main>
+
+    <h2 class="result" id="game-result-message"></h2>
+
+    <!-- <script src="./app.js"></script> -->
   </body>
 </html>
