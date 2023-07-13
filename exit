@@ -1,0 +1,228 @@
+[33mcommit 977a7d38993eafe8b75e2465591bf8239cc3870e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jul 13 04:16:52 2023 +0300
+
+    Add functionality and style the page
+
+[33mcommit 97064734083daf6d570755bef3fca3412cacbf25[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sun Jul 9 02:47:17 2023 +0300
+
+    Add the scoreboard section and style it
+
+[33mcommit 00665254c46a07f01c721bb4cb76f17183c8c336[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sun Jul 9 02:24:29 2023 +0300
+
+    Add the UI
+
+[33mcommit 925f45ffbd362ee2f3dd57d2cbb576b600437420[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 2daa242 63a39a7
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sat Jul 1 03:09:48 2023 +0300
+
+    Merge branch 'main' of https://github.com/devchsykas/TheOdinPproject
+
+[33mcommit 2daa242057283839a10a68532c5f6fe606b62978[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sat Jul 1 03:09:21 2023 +0300
+
+    Delete the css-exercises directory
+
+[33mcommit 63a39a72789373bc6bcb991f3aff8320865ec7a8[m
+Author: devchsykas <133340466+devchsykas@users.noreply.github.com>
+Date:   Sat Jul 1 03:06:40 2023 +0300
+
+    Delete exercises directory
+
+[33mcommit 5611f74a05e66692ef5522bfc297172cb9f7c1b7[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Tue Jun 27 02:34:17 2023 +0300
+
+    Add eventListeners to the js file
+
+[33mcommit ceef366e26667bd20546f51d7e2dad2237d527ef[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Tue Jun 27 02:03:31 2023 +0300
+
+    Add the code to the js file
+
+[33mcommit c8c2ec977c9c03b6f672244d1e8d3a4a186dfc1a[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Tue Jun 27 01:34:58 2023 +0300
+
+    Add the files
+
+[33mcommit d2c6df6abbcf9246cf9a47e15e242e73de4be23b[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Tue Jun 13 02:56:21 2023 +0300
+
+    Return the winner at function game()
+
+[33mcommit c6238772a3e414c3c1786ced7721f4e4bc4a21b0[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Tue Jun 13 02:40:38 2023 +0300
+
+    Add function game
+
+[33mcommit 657eb8e56d2d1c50edc4d6724e094bec9e5571d8[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 04:32:04 2023 +0300
+
+    Add the js code
+
+[33mcommit 6bd956c1a1e0e08fe57e1d79eec200208c3b4a67[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 02:25:10 2023 +0300
+
+    Create the files
+
+[33mcommit ccdca87b65e91ba0435e309721dbcd20daa32a76[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 02:10:14 2023 +0300
+
+    Fix the error message
+
+[33mcommit 4044af3132d4f9077a43c2784c908b33f7b178d0[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 01:56:22 2023 +0300
+
+    Fix the error message
+
+[33mcommit 113a626a95109736350a932392d55bb0a503ce22[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 01:54:06 2023 +0300
+
+    Fix the error message on null value
+
+[33mcommit 1cca7b260a59e980c00d6d8d655021b914e00e98[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 01:46:42 2023 +0300
+
+    Fix the error message on function addEventListener
+
+[33mcommit 57b2e4223224e656625da41c0a261a31e1fddf4c[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu Jun 1 01:45:51 2023 +0300
+
+    Add the javascript code
+
+[33mcommit dcea0ab25658f44f82851720ea59d9be507759ab[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Wed May 31 00:58:26 2023 +0300
+
+    Add style to page
+
+[33mcommit 5ffbb623a6251e2a618ca640cfbc5e32e03f4fd6[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Wed May 31 00:53:55 2023 +0300
+
+    Add the html code
+
+[33mcommit db719b89225691aa0de9dc253d2341a3605606f5[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Wed May 31 00:04:06 2023 +0300
+
+    Add the css and the js files
+
+[33mcommit 5a64c4519a4f33d4b7934aae84ce169bfbd5b1c1[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Wed May 31 00:01:18 2023 +0300
+
+    Add the html file
+
+[33mcommit ebc43aa81dd81c7d9d57dcfed7a05965a817068c[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Thu May 25 01:20:23 2023 +0300
+
+    Final Solution - fizzbuzz function
+
+[33mcommit 2ac6e490089f32cd7031f9bdbd01a418d054c890[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sun May 21 04:59:40 2023 +0300
+
+    fizzbuzz function
+
+[33mcommit 11a1c0c34db887c2e531ace53f7ac83b69c03209[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Sun May 21 03:50:38 2023 +0300
+
+    Functions exercises
+
+[33mcommit 58f35c1f2c71b1b2069dd78e2f1ebdfdb01e3401[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Fri May 19 04:15:35 2023 +0300
+
+    Exercises js fundmentals part 2
+
+[33mcommit 8cc31a34f349ee0c76b0882c6bdba70ca9ff5b37[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Mon May 15 03:41:30 2023 +0300
+
+    js exercises - fundamentals part 1
+
+[33mcommit dac14055389277448fe7652bcf19834cc38048ce[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Fri May 12 23:08:52 2023 +0300
+
+    Add comments to index file
+
+[33mcommit 70b76ef0c5e838ef90837cd1f36332a614d0d90b[m
+Author: chsykas <dev.chsykas@gmail.com.noreply.github.com>
+Date:   Fri May 12 23:04:02 2023 +0300
+
+    Add new files
+
+[33mcommit 587dae6473c9de0b3948504bd2e1501131f2f45c[m
+Author: chsykas <chsykas@gmail.com>
+Date:   Tue May 2 23:36:21 2023 +0300
+
+    Delete comments from index file
+
+[33mcommit e278047eefc8958d14c85b9e473db55c7f55112e[m
+Author: chsykas <chsykas@gmail.com>
+Date:   Tue May 2 23:33:07 2023 +0300
+
+    Mone styles.css to css folder
+
+[33mcommit 5a72a0fccba5836d463bcae3be8d7cc410bf6375[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:17:31 2023 +0300
+
+    Add files via upload
+
+[33mcommit 6799d1e537dda44db58f8eda4e5b29cc6c99c139[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:15:00 2023 +0300
+
+    Create README.md
+
+[33mcommit d7e7d79bd4f8f5c788843f8700ea6f1d871b2ae0[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:14:28 2023 +0300
+
+    Add files via upload
+
+[33mcommit 0f554a72ce8a335815a65b6ef81c7601fae6f1c4[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:10:36 2023 +0300
+
+    Create README.md
+
+[33mcommit 9726bd0d6d07404cc0eaef315908e541ba9d1150[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:09:48 2023 +0300
+
+    Add files via upload
+
+[33mcommit 5a51e8cd8377d161d63cf9c7c63579b1cf674fd4[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:09:05 2023 +0300
+
+    Create README.md
+
+[33mcommit a6e5ed2e9d028f4f1aee7516a45c3dec42c1d13b[m
+Author: Christos <99770160+chsykas@users.noreply.github.com>
+Date:   Tue May 2 23:06:49 2023 +0300
+
+    Initial commit
