@@ -20,12 +20,27 @@
         <button class="btn-30" id="btn-30">30X30</button>
         <button class="btn-64" id="btn-64">64X64</button>
       </div>
-      <div class="color-picker">Choose your color from the palette</div>
-      <div class="color-btn">
-        <button class="btn-color-picker" id="btn-color-picker">Color</button>
+      <div class="color-picker">
+        <div class="color-btn">
+          <label for="btn-color-picker">Select your color:</label>
+          <input
+            type="color"
+            id="btn-color-picker"
+            name="btn-color-picker"
+            value="#000000"
+          />
+        </div>
       </div>
-      <div class="grid-container" id="grid-container"></div>
+      <div class="grid-container" id="grid-container">Item 1</div>
     </main>
+    <footer class="footer">
+      © 2023 by
+      <a
+        href="https://github.com/devchsykas/TheOdinPproject/tree/main/odin-etch-a-sketch"
+        target="_blank"
+        >devchsykas</a
+      >
+    </footer>
 
     <script src="app.js"></script>
   </body>
