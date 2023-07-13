@@ -8,38 +8,44 @@
     <title>Rock - Paper - Scissor Game</title>
   </head>
   <body>
-    <header class="header">
-      <h4 class="welcome">Welcome to the game</h4>
-      <h1 class="game-title">Rock, Paper, Scissor</h1>
+    <header class="title">
+      <h4 class="welcome">Welcome to</h4>
+      <h1 class="game-title">Rock Paper Scissors</h1>
     </header>
 
-    <main class="main-container">
-      <section class="game-container">
-        <p>Player</p>
-        <div class="choice-container" id="player-choice">
-          <button class="player-choice-button" id="rock-emoji">🪨</button>
-          <button class="player-choice-button" id="paper-emoji">📄</button>
-          <button class="player-choice-button" id="scissor-emoji">✂️</button>
+    <main class="game">
+      <section class="moves">
+        <div class="move">
+          <p>Choose your move!</p>
+        </div>
+        <div class="moves-left">
+          <p>Moves left: 5</p>
         </div>
       </section>
 
-      <h3 class="vs">VS</h3>
+      <section class="options">
+        <button class="btn-rock" id="rock">Rock</button>
+        <button class="btn-paper" id="paper">Paper</button>
+        <button class="btn-scissors" id="scissors">Scissors</button>
+      </section>
 
-      <section class="game-container">
-        <p>Computer</p>
-        <div class="choice-container" id="computer-choice">
-          <p class="computer-emoji" id="emoji-shuffle"></p>
+      <section class="results">
+        <h2 class="result-title">Result</h2>
+        <p class="result-text"></p>
+      </section>
+
+      <section class="scoreboard">
+        <div class="player-score">
+          <h3>Player Score</h3>
+          <span id="player-score">0</span>
+        </div>
+        <div class="computer-score">
+          <h3>Computer Score</h3>
+          <span id="computer-score">0</span>
         </div>
       </section>
     </main>
-
-    <section class="scoreboard">
-      <div class="player-score">Player: 0</div>
-      <div class="computer-score">Computer: 0</div>
-    </section>
-
-    <h2 class="result" id="game-result-message"></h2>
-
     <!-- <script src="./app.js"></script> -->
+    <script src="./main.js"></script>
   </body>
 </html>
