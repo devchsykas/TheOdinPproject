@@ -1,3 +1,7 @@
+const form = document.getElementById("calculator-form");
+const display = document.getElementById("display");
+const operandButtons = document.querySelectorAll("button[data-type=operand]");
+
 let number1, number2;
 let operator;
 
@@ -28,3 +32,7 @@ function operate(num1, num2, operator) {
 // console.log(subtract(2, 2));
 // console.log(multiply(2, 2));
 // console.log(divide(2, 2));
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
