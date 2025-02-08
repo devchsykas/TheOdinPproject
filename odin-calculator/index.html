@@ -13,91 +13,89 @@
     <main id="main">
       <form id="calculator-form">
         <div class="calculator-display">
+          <!-- <label for="display">Calculator Display</label> -->
           <input
             type="text"
             id="display"
             class="calc-display"
             value="0"
             disabled
+            aria-label="Calculator Display"
           />
         </div>
         <div class="calculator-container">
-          <div class="btn-group">
-            <button
-              data-type="clear"
-              type="reset"
-              value="clear"
-              class="btn btn-clear"
-            >
-              AC
-            </button>
-            <button data-type="operator" value="invert" class="btn btn-invert">
-              +/-
-            </button>
-            <button data-type="operator" value="%" class="btn btn-percentage">
-              %
-            </button>
-            <button data-type="operator" value="/" class="btn btn-divide">
-              /
-            </button>
-          </div>
-          <div class="btn-group">
-            <button data-type="operand" value="7" class="btn btn-number-7">
-              7
-            </button>
-            <button data-type="operand" value="8" class="btn btn-number-8">
-              8
-            </button>
-            <button data-type="operand" value="9" class="btn btn-number-9">
-              9
-            </button>
-            <button data-type="operator" value="*" class="btn btn-multiply">
-              X
-            </button>
-          </div>
-          <div class="btn-group">
-            <button data-type="operand" value="4" class="btn btn-number-4">
-              4
-            </button>
-            <button data-type="operand" value="5" class="btn btn-number-5">
-              5
-            </button>
-            <button data-type="operand" value="6" class="btn btn-number-6">
-              6
-            </button>
-            <button data-type="operator" value="-" class="btn btn-subtraction">
-              -
-            </button>
-          </div>
-          <div class="btn-group">
-            <button data-type="operand" value="1" class="btn btn-number-1">
-              1
-            </button>
-            <button data-type="operand" value="2" class="btn btn-number-2">
-              2
-            </button>
-            <button data-type="operand" value="3" class="btn btn-number-3">
-              3
-            </button>
-            <button data-type="operator" value="+" class="btn btn-addition">
-              +
-            </button>
-          </div>
-          <div class="btn-group">
-            <button
-              data-type="operand"
-              value="0"
-              class="btn btn-grow btn-number-0"
-            >
-              0
-            </button>
-            <button data-type="operand" value="." class="btn btn-decimal">
-              .
-            </button>
-            <button data-type="operator" value="=" class="btn btn-result">
-              =
-            </button>
-          </div>
+          <button
+            data-type="clear"
+            type="reset"
+            value="clear"
+            class="btn btn-clear"
+          >
+            AC
+          </button>
+          <button data-type="operator" value="invert" class="btn btn-invert">
+            +/-
+          </button>
+          <button data-type="operator" value="%" class="btn btn-percentage">
+            %
+          </button>
+          <button data-type="operator" value="/" class="btn btn-divide">
+            /
+          </button>
+
+          <button data-type="operand" value="7" class="btn btn-number-7">
+            7
+          </button>
+          <button data-type="operand" value="8" class="btn btn-number-8">
+            8
+          </button>
+          <button data-type="operand" value="9" class="btn btn-number-9">
+            9
+          </button>
+          <button data-type="operator" value="*" class="btn btn-multiply">
+            X
+          </button>
+
+          <button data-type="operand" value="4" class="btn btn-number-4">
+            4
+          </button>
+          <button data-type="operand" value="5" class="btn btn-number-5">
+            5
+          </button>
+          <button data-type="operand" value="6" class="btn btn-number-6">
+            6
+          </button>
+          <button data-type="operator" value="-" class="btn btn-subtraction">
+            -
+          </button>
+
+          <button data-type="operand" value="1" class="btn btn-number-1">
+            1
+          </button>
+          <button data-type="operand" value="2" class="btn btn-number-2">
+            2
+          </button>
+          <button data-type="operand" value="3" class="btn btn-number-3">
+            3
+          </button>
+          <button data-type="operator" value="+" class="btn btn-addition">
+            +
+          </button>
+
+          <button
+            data-type="operand"
+            value="0"
+            class="btn btn-grow btn-number-0"
+          >
+            0
+          </button>
+
+          <button data-type="operand" value="." class="btn btn-decimal">
+            .
+          </button>
+
+          <button data-type="operator" value="=" class="btn btn-result">
+            =
+          </button>
         </div>
       </form>
     </main>
