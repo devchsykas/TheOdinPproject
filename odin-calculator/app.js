@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to update display when numbers are clicked
   function updateDisplay(value) {
-    if (shouldResetDisplay) {
+    if (shouldResetDisplay || display.value === "0") {
       display.value = value; // Replace the display with the new number
-      shouldResetDisplay = false;
+      shouldResetDisplay = false; // Allow for continued input
     } else {
       display.value = display.value === "0" ? value : display.value + value; // Append numbers
     }
@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentOperator && !shouldResetDisplay) {
       evaluate(); // Evaluate before setting new operator
     }
-    firstOperand = display.value;
+    firstOperand = display.value; // Store the current display value for evaluation
+
     currentOperator = operator;
-    shouldResetDisplay = true; // Reset only after operator press
+    shouldResetDisplay = true; // Set to true to reset display for the next number input
   }
 
   // Function to evaluate the expression
@@ -105,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
           invertSign();
         } else if (value === "=") {
           evaluate();
-        } else {
-          handleOperator(value);
+        } else if (type === "decimal") {
+          addDecimal();
         }
-      } else if (type === "decimal") {
-        addDecimal();
+      } else {
+        handleOperator(value);
       }
     });
   });
