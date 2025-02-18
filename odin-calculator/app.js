@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to update display when numbers are clicked
   function updateDisplay(value) {
-    if (shouldResetDisplay || display.value === "0") {
+    if (shouldResetDisplay) {
       display.value = value; // Replace the display with the new number
       shouldResetDisplay = false; // Allow for continued input
     } else {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     display.value = result;
     firstOperand = result.toString();
-    currentOperator = "";
+    currentOperator = null;
     shouldResetDisplay = true; // Ensure next number press replaces display
   }
 
@@ -106,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
           invertSign();
         } else if (value === "=") {
           evaluate();
-        } else if (type === "decimal") {
-          addDecimal();
+        } else {
+          handleOperator(value);
         }
-      } else {
-        handleOperator(value);
+      } else if (type === "decimal") {
+        addDecimal();
       }
     });
   });
