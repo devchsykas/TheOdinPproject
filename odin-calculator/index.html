@@ -11,7 +11,7 @@
       <h1 class="heading">Calculator App</h1>
     </header>
     <main id="main">
-      <form id="calculator-form">
+      <div id="calculator-form">
         <div class="calculator-display">
           <!-- <label for="display">Calculator Display</label> -->
           <input
@@ -24,12 +24,7 @@
           />
         </div>
         <div class="calculator-container">
-          <button
-            data-type="clear"
-            type="reset"
-            value="clear"
-            class="btn btn-clear"
-          >
+          <button data-type="operator" value="clear" class="btn btn-clear">
             AC
           </button>
           <button data-type="operator" value="invert" class="btn btn-invert">
@@ -89,7 +84,7 @@
             0
           </button>
 
-          <button data-type="operand" value="." class="btn btn-decimal">
+          <button data-type="decimal" value="." class="btn btn-decimal">
             .
           </button>
 
@@ -97,7 +92,7 @@
             =
           </button>
         </div>
-      </form>
+      </div>
     </main>
 
     <script src="app.js"></script>

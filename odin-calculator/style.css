@@ -117,11 +117,13 @@ header .heading {
 
 /* Number Buttons */
 
-.btn[data-type="operand"] {
+.btn[data-type="operand"],
+.btn[data-type="decimal"] {
   background-color: var(--dark-grey);
 }
 
-.btn[data-type="operand"]:hover {
+.btn[data-type="operand"]:hover,
+.btn[data-type="decimal"]:hover {
   background-color: #999;
 }
 
