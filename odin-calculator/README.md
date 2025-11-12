@@ -5,7 +5,7 @@ It performs basic arithmetic operations with a clean and modern user interface.
 
 # 🚀 Features
 
-"\*" Perform basic math operations: addition (+), subtraction (−), multiplication (×), division (÷), and modulus (%)
+- Perform basic math operations: addition (+), subtraction (−), multiplication (×), division (÷), and modulus (%)
 
 Includes AC (clear), decimal point, and ± (invert sign) functions
 
