@@ -7,35 +7,35 @@ It performs basic arithmetic operations with a clean and modern user interface.
 
 - Perform basic math operations: addition (+), subtraction (−), multiplication (×), division (÷), and modulus (%)
 
-Includes AC (clear), decimal point, and ± (invert sign) functions
+* Includes AC (clear), decimal point, and ± (invert sign) functions
 
-Real-time display updates
+* Real-time display updates
 
-Simple, mobile-friendly layout
+* Simple, mobile-friendly layout
 
-No libraries or frameworks required — pure vanilla JavaScript
+* No libraries or frameworks required — pure vanilla JavaScript
 
 # 🛠️ Technologies Used
 
-HTML5 for structure
+- HTML5 for structure
 
-CSS3 for styling
+- CSS3 for styling
 
-JavaScript (ES6) for functionality
+- JavaScript (ES6) for functionality
 
 # 💻 How to Use
 
-Clone or download this repository.
+1. Clone or download this repository.
 
-Open index.html in your browser.
+2. Open index.html in your browser.
 
-Start calculating!
+3. Start calculating!
 
 # 🌟 Future Improvements
 
-Include scientific calculator functions (sin, cos, etc.)
+- Include scientific calculator functions (sin, cos, etc.)
 
-Add light/dark themes
+- Add light/dark themes
 
 # 👨‍💻 Author
 
