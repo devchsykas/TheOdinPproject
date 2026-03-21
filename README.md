@@ -46,9 +46,9 @@ This repository documents my progress, projects, and learning throughout The Odi
 | --- | --- |
 | Foundations | ✅ Completed |
 | JavaScript | 🟡 In Progress |
-| React Framework | 🟡 In Progress |
-| Databases | 🟡 In Progress |
-| Node.js / Backend | 🟡 In Progress |
+| React Framework | ⏳ Not Started |
+| Databases | ⏳ Not Started |
+| Node.js / Backend | ⏳ Not Started |
 ## 📌 What I Focus On
 - Writing clean, readable code
 - Building projects from scratch
