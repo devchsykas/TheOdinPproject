@@ -28,7 +28,6 @@ A simple multi-page recipe website built with HTML. This project focuses on lear
 
 ## 🌟 Future Improvements
 
-* Add CSS styling for better design
 * Improve layout and spacing
 * Make the site responsive
 * Add more recipes and images
