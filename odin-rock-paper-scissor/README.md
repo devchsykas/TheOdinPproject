@@ -30,8 +30,6 @@ A classic Rock Paper Scissors game built with JavaScript. This project focuses o
 
 ## 🌟 Future Improvements
 
-* Add a graphical user interface (GUI)
-* Implement buttons instead of console input
 * Add animations and visual feedback
 * Improve score display and game reset functionality
 
