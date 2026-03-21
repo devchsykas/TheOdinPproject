@@ -42,12 +42,12 @@ This repository documents my progress, projects, and learning throughout The Odi
 - Work with databases
 - Become job-ready as a full-stack developer
 ## 📈 Progress Tracker
-Section	                  Status
-Foundations	              ✅ Completed
-JavaScript	              🟡 In Progress
-React Framework           ⏳ Not Started
-Databases	                ⏳ Not Started
-Node.js / Backend	        ⏳ Not Started
+| Section | Status |
+| Foundations | | ✅ Completed |
+| JavaScript | | 🟡 In Progress |
+| React Framework | | ⏳ Not Started |
+| Databases | | ⏳ Not Started | 
+| Node.js / Backend | | ⏳ Not Started |
 ## 📌 What I Focus On
 - Writing clean, readable code
 - Building projects from scratch
