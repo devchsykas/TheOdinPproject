@@ -43,7 +43,7 @@ This repository documents my progress, projects, and learning throughout The Odi
 - Become job-ready as a full-stack developer
 ## 📈 Progress Tracker
 | Section | Status |
-|---------|--------|
+| --- | --- |
 | Foundations | | ✅ Completed |
 | JavaScript | | 🟡 In Progress |
 | React Framework | | ⏳ Not Started |
