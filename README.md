@@ -16,3 +16,42 @@ This repository documents my progress, projects, and learning throughout The Odi
 ### 🍽️ Recipes
 - Basic HTML project
 - Practiced links, lists, and page structure
+### 🎨 Landing Page
+- Built a full webpage using Flexbox
+- Focused on layout and styling
+### ✊✋✌ Rock Paper Scissors
+- JavaScript logic-based game
+- Played via browser console
+### 🧮 Calculator
+- Interactive calculator with DOM manipulation
+- Applied event handling and logic control
+### 🎨 Etch-a-Sketch
+- Dynamic grid-based drawing app
+- Practiced DOM creation and event listeners
+## 🚧 Current Project
+### 📝 Sign-Up Form
+- First project in the Full Stack JavaScript path
+- Focus on:
+ - Form validation
+ - User experience (UX)
+ - Styling and layout
+## 🎯 Goals
+- Strengthen JavaScript fundamentals
+- Build real-world, interactive applications
+- Learn backend development (Node.js, Express)
+- Work with databases
+- Become job-ready as a full-stack developer
+## 📈 Progress Tracker
+Section	                  Status
+Foundations	              ✅ Completed
+JavaScript	              🟡 In Progress
+React Framework           ⏳ Not Started
+Databases	                ⏳ Not Started
+Node.js / Backend	        ⏳ Not Started
+## 📌 What I Focus On
+- Writing clean, readable code
+- Building projects from scratch
+- Understanding concepts deeply (not just copying)
+- Improving problem-solving skills
+## 🤝 Connect With Me
+- GitHub: https://github.com/devchsykas
