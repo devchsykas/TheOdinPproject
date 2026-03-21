@@ -19,8 +19,7 @@ A classic Rock Paper Scissors game built with JavaScript. This project focuses o
 
 1. Clone or download this repository
 2. Open `index.html` in your browser
-3. Open the browser console
-4. Play the game by following the prompts
+3. Play the game
 
 ## 📚 What I Learned
 
