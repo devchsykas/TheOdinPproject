@@ -1,4 +1,4 @@
-# 🎨 odin-landing-page
+# 🎨 Landing Page
 
 A modern and responsive landing page built with HTML and CSS. This project focuses on layout design, Flexbox usage, and creating visually appealing web pages.
 
