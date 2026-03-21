@@ -9,5 +9,71 @@
     <title>Odin Sign Up Form</title>
     <link rel="stylesheet" href="/assets/styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <section class="signup-form-left-column">
+      <div class="logo-container">
+        <img
+          src="/assets/images/odin-lined-logo.png"
+          alt="Odin Logo"
+          width="50"
+          height="50"
+        />
+        <h1>Odin</h1>
+      </div>
+    </section>
+    <section class="signup-form-right-column">
+      <header class="signup-form-header">
+        <h2>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </h2>
+        <h3>You <em>know</em> you want to.</h3>
+      </header>
+      <form action="#" method="post" class="signup-form">
+        <h3>Let's do this!</h3>
+        <div class="form-row">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" required />
+        </div>
+        <div class="form-row">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="joe@example.com"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" required />
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="form-row">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <button type="submit">Create Account</button>
+        </div>
+        <div class="form-row">
+          <p>Already have an account?<a href="#">Log in</a></p>
+        </div>
+      </form>
+    </section>
+  </body>
 </html>
