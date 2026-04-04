@@ -13,343 +13,262 @@
     />
     <meta name="author" content="Chris Sykas" />
     <title>Admin Dashboard</title>
+
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="icon" href="/assets/images/favicon/favicon.ico" />
   </head>
+
   <body>
-    <h1>Admin Dashboard</h1>
-    <header class="header-top">
-      <div class="search-bar">
-        <img
-          src="/assets/images/icons/magnify.svg"
-          width="18"
-          height="18"
-          alt="Search Icon"
-          class="search-icon"
-        />
-        <input type="text" placeholder="Search..." class="search-input" />
-      </div>
-      <div class="profile">
-        <img
-          src="/assets/images/icons/bell-ring.svg"
-          width="18"
-          height="18"
-          alt="Notifications Icon"
-          class="notification-icon"
-        />
-        <img
-          src="/assets/images/profile/chris.svg"
-          alt="profile picture"
-          width="32"
-          height="32"
-          class="profile-picture"
-        />
-        <p class="profile-name">Chris Sykas</p>
-      </div>
-    </header>
-    <header class="header-bottom">
-      <div class="profile-info">
-        <img
-          src="/assets/images/profile/chris.svg"
-          alt="profile picture"
-          width="32"
-          height="32"
-          class="profile-picture"
-        />
-        <p class="greeting">Hi there,</p>
-        <p class="name">Chris Sykas (@chris)</p>
-      </div>
-      <div class="action-buttons">
-        <button class="btn">New</button>
-        <button class="btn">Upload</button>
-        <button class="btn">Share</button>
-      </div>
-    </header>
-    <main class="main">
-      <section class="sidebar">
-        <img
-          src="/assets/images/icons/view-dashboard.svg"
-          alt="dashboard icon"
-          width="24"
-          height="24"
-        />
-        <p>Dashboard</p>
+    <div class="container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img
+            src="/assets/images/icons/view-dashboard.svg"
+            alt="dashboard icon"
+            width="24"
+            height="24"
+          />
+          <h1>Dashboard</h1>
+        </div>
+
         <nav class="navbar">
-          <img
-            src="/assets/images/icons/home.svg"
-            width="18"
-            height="18"
-            alt="home icon"
-          />
-          <a href="#">Home</a>
-          <img
-            src="/assets/images/icons/card-account-details.svg"
-            alt="profile icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Profile</a>
-          <img
-            src="/assets/images/icons/message.svg"
-            alt="message icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Messages</a>
-          <img
-            src="/assets/images/icons/history.svg"
-            alt="history icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">History</a>
-          <img
-            src="/assets/images/icons/note-multiple.svg"
-            alt="task icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Tasks</a>
-          <img
-            src="/assets/images/icons/account-group.svg"
-            alt="communities icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Communities</a>
-          <img
-            src="/assets/images/icons/cog.svg"
-            alt="setting icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Settings</a>
-          <img
-            src="/assets/images/icons/help-box.svg"
-            alt="support icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Support</a>
-          <img
-            src="/assets/images/icons/shield-check.svg"
-            alt="privacy icon"
-            width="18"
-            height="18"
-          />
-          <a href="#">Privacy</a>
+          <ul>
+            <li class="nav-item">
+              <img src="/assets/images/icons/home.svg" alt="home icon" />
+              <a href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <img
+                src="/assets/images/icons/card-account-details.svg"
+                alt="profile icon"
+              />
+              <a href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <img src="/assets/images/icons/message.svg" alt="messages icon" />
+              <a href="#">Messages</a>
+            </li>
+            <li class="nav-item">
+              <img src="/assets/images/icons/history.svg" alt="history icon" />
+              <a href="#">History</a>
+            </li>
+            <li class="nav-item">
+              <img
+                src="/assets/images/icons/note-multiple.svg"
+                alt="tasks icon"
+              />
+              <a href="#">Tasks</a>
+            </li>
+            <li class="nav-item">
+              <img
+                src="/assets/images/icons/account-group.svg"
+                alt="communities icon"
+              />
+              <a href="#">Communities</a>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="nav-item">
+              <img src="/assets/images/icons/cog.svg" alt="settings icon" />
+              <a href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <img src="/assets/images/icons/help-box.svg" alt="support icon" />
+              <a href="#">Support</a>
+            </li>
+            <li class="nav-item">
+              <img
+                src="/assets/images/icons/shield-check.svg"
+                alt="privacy icon"
+              />
+              <a href="#">Privacy</a>
+            </li>
+          </ul>
         </nav>
-      </section>
-      <section class="projects-section">
-        <h2>Your Projects</h2>
-        <div class="project-card">
-          <h3 class="project-title">Super Cool Project</h3>
-          <p class="project-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-            similique et quos impedit velit placeat nobis nulla accusamus alias,
-            perspiciatis recusandae officiis, dolorum libero. Similique ducimus
-            officiis voluptatibus voluptate laborum.
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">Less Cool Project</h3>
-          <p class="project-info">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            alias temporibus quasi eos, veritatis atque distinctio in, adipisci
-            praesentium quibusdam officia vel sunt, cumque nesciunt assumenda ut
-            doloremque voluptatibus minus!
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-       <div class="project-card">
-          <h3 class="project-title">Impossible App</h3>
-          <p class="project-info">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            alias temporibus quasi eos, veritatis atque distinctio in, adipisci
-            praesentium quibusdam officia vel sunt, cumque nesciunt assumenda ut
-            doloremque voluptatibus minus!
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">Easy Peasy App</h3>
-          <p class="project-info">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            alias temporibus quasi eos, veritatis atque distinctio in, adipisci
-            praesentium quibusdam officia vel sunt, cumque nesciunt assumenda ut
-            doloremque voluptatibus minus!
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-          <img src="" alt="" />
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">Ad Blocker</h3>
-          <p class="project-info">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            alias temporibus quasi eos, veritatis atque distinctio in, adipisci
-            praesentium quibusdam officia vel sunt, cumque nesciunt assumenda ut
-            doloremque voluptatibus minus!
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-        <div class="project-card">
-          <h3 class="project-title">Money Maker</h3>
-          <p class="project-info">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-            alias temporibus quasi eos, veritatis atque distinctio in, adipisci
-            praesentium quibusdam officia vel sunt, cumque nesciunt assumenda ut
-            doloremque voluptatibus minus!
-          </p>
-          <img
-            src="/assets/images/icons/star-plus.svg"
-            alt="favorite icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/eye-plus.svg"
-            alt="view icon"
-            width="18"
-            height="18"
-          />
-          <img
-            src="/assets/images/icons/share-variant.svg"
-            alt="share icon"
-            width="18"
-            height="18"
-          />
-        </div>
-          <img src="" alt="" />
-        </div>
-      </section>
-      <section class="announcements-section">
-        <aside>
-          <h2>Announcements</h2>
-          <div class="announcement">
-            <h3 class="announcement-title">Site Maintenance</h3>
-            <p class="announcement-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos quae ea ad illum. Nisi quas magni doloremque, magnam commodi fugit assumenda optio sint cum quis necessitatibus minima ad quod.</p>
+      </aside>
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-top">
+          <div class="search-bar">
+            <img
+              src="/assets/images/icons/magnify.svg"
+              alt="search icon"
+              class="search-icon"
+            />
+            <input type="text" placeholder="Search..." class="search-input" />
           </div>
-          <div class="announcement">
-            <h3 class="announcement-title">Community Share Day</h3>
-            <p class="announcement-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos quae ea ad illum. Nisi quas magni doloremque, magnam commodi fugit assumenda optio sint cum quis necessitatibus minima ad quod.</p>
+
+          <div class="profile">
+            <img
+              src="/assets/images/icons/bell-ring.svg"
+              alt="notifications icon"
+            />
+            <img
+              src="/assets/images/profile/chris.svg"
+              alt="profile picture"
+              class="profile-picture"
+            />
+            <p>Chris Sykas</p>
           </div>
+        </div>
+
+        <div class="header-bottom">
+          <div class="profile-info">
+            <img
+              src="/assets/images/profile/chris.svg"
+              alt="profile picture"
+              class="profile-picture"
+            />
+            <div>
+              <p class="greeting">Hi there,</p>
+              <p class="name">Chris Sykas (@chris)</p>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button class="btn">New</button>
+            <button class="btn">Upload</button>
+            <button class="btn">Share</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- PROJECTS -->
+        <section class="projects">
+          <h2>Your Projects</h2>
+
+          <div class="projects-grid">
+            <!-- CARD -->
+            <div class="project-card">
+              <h3>Super Cool Project</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Less Cool Project</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Impossible App</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Easy Peasy App</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Ad Blocker</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+
+            <div class="project-card">
+              <h3>Money Maker</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <div class="card-actions">
+                <img src="/assets/images/icons/star-plus.svg" alt="favorite" />
+                <img src="/assets/images/icons/eye-plus.svg" alt="view" />
+                <img src="/assets/images/icons/share-variant.svg" alt="share" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="right-sidebar">
+          <!-- ANNOUNCEMENTS -->
+          <section class="announcements">
+            <h2>Announcements</h2>
+
             <div class="announcement">
-              <h3 class="announcement-title">Uploaded Privacy Policy</h3>
-              <p class="announcement-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos quae ea ad illum. Nisi quas magni doloremque, magnam commodi fugit assumenda optio sint cum quis necessitatibus minima ad quod.</p>
-        </aside>
-      </section>
-      <section class="trending-section">
-        <aside>
-          <h2>Trending</h2>
-          <div class="trending">
-            <img src="/assets/images/profile/alvaro.svg" alt="alvaro profile picture" width="22" height="22">
-            <p class="profile-name">@alvaro</p>
-            <p class="profile-status">World Peace Builder</p>
-          </div>
-          <div class="trending">
-            <img src="/assets/images/profile/morgan.svg" alt="morgan profile picture" width="22" height="22">
-            <p class="profile-name">@morgan</p>
-            <p class="profile-status">Super Cool Project</p>
-          </div>
-          <div class="trending">
-            <img src="/assets/images/profile/muhammad.svg" alt="muhamad profile picture" width="22" height="22">
-            <p class="profile-name">@muhammad</p>
-            <p class="profile-status">Life Changing App</p>
-          </div>
-          <div class="trending">
-            <img src="/assets/images/profile/ogie.svg" alt="ogie profile picture" width="22" height="22">
-            <p class="profile-name">@ogie</p>
-            <p class="profile-status">No Trafic Maker</p>
-          </div>
-        </aside>
-      </section>
-    </main>
+              <h3>Site Maintenance</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <hr />
+            </div>
+
+            <div class="announcement">
+              <h3>Community Share Day</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <hr />
+            </div>
+
+            <div class="announcement">
+              <h3>Updated Privacy Policy</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <hr />
+          </section>
+
+          <!-- TRENDING -->
+          <section class="trending">
+            <h2>Trending</h2>
+
+            <div class="trending-item">
+              <img src="/assets/images/profile/alvaro.svg" alt="alvaro" />
+              <div>
+                <p>@alvaro</p>
+                <p>World Peace Builder</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img src="/assets/images/profile/morgan.svg" alt="morgan" />
+              <div>
+                <p>@morgan</p>
+                <p>Super Cool Project</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img src="/assets/images/profile/muhammad.svg" alt="muhammad" />
+              <div>
+                <p>@muhammad</p>
+                <p>Life Changing App</p>
+              </div>
+            </div>
+
+            <div class="trending-item">
+              <img src="/assets/images/profile/ogie.svg" alt="ogie" />
+              <div>
+                <p>@ogie</p>
+                <p>No Traffic Maker</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
