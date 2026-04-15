@@ -1,0 +1,131 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-sidebar: #1e293b;
+  --bg-header: #ffffff;
+  --primary: #22c55e;
+  --primary-dark: #16a34a;
+  --text-main: #0f172a;
+  --text-secondary: #64748b;
+  --text-light: #ffffff;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+/* BASE STYLES */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.sidebar {
+  background-color: var(--bg-sidebar);
+  color: var(--text-light);
+}
+
+.header {
+  background-color: var(--bg-header);
+}
+
+.main-content {
+  background-color: var(--bg-main);
+}
+
+.project-card,
+.announcements,
+.trending {
+  background-color: var(--bg-card);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
