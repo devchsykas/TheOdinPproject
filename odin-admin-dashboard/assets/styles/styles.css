@@ -1,7 +1,9 @@
 /* FONTS */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* CSS RESET */
+
 *,
 *::before,
 *::after {
@@ -66,6 +68,7 @@ a {
 }
 
 /* VARIABLES */
+
 :root {
   --bg-main: #f1f5f9;
   --bg-card: #ffffff;
@@ -84,6 +87,7 @@ a {
 }
 
 /* BASE STYLES */
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg-main);
@@ -94,22 +98,22 @@ body {
 .sidebar {
   background-color: var(--bg-sidebar);
   color: var(--text-light);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .header {
   background-color: var(--bg-header);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .main-content {
   background-color: var(--bg-main);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .project-card,
-.announcements,
-.trending {
+.announcement,
+.trending-item {
   background-color: var(--bg-card);
 }
 
@@ -151,26 +155,44 @@ p {
 }
 
 /* Layout */
+
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
-  gap: var(--space-lg);
+  /* gap: var(--space-lg); */
   max-width: 1440px;
+}
+
+.sidebar {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  padding: var(--space-sm) var(--space-lg) var(--space-xl) var(--space-sm);
+}
+
+.header {
+  grid-column: 4 / 13;
+  grid-row: 1 / 2;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.main-content {
+  display: grid;
+  grid-column: 4 / 13;
+  grid-row: 3 / 4;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.right-sidebar {
+  grid-column: 12 / 14;
+  grid-row: 1 / 4;
 }
 
 /* Left Sidebar */
 
-.sidebar {
-  grid-column: 1 / 5;
-  grid-row: 1 / 3;
-  padding: var(--space-sm) var(--space-lg) var(--space-xl) var(--space-sm);
-}
-
 .logo {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   gap: var(--space-sm);
   padding: var(--space-md);
 }
@@ -178,8 +200,9 @@ p {
 .logo img {
   width: 40px;
   height: 40px;
-  /* color: white; */
 }
+
+/* Navbar */
 
 .navbar {
   display: flex;
@@ -211,13 +234,9 @@ p {
   border-radius: 8px;
 }
 
-/* Header */
+/* Header Section */
 
-.header {
-  grid-column: 5 / 13;
-  grid-row: 1 / 3;
-  padding: var(--space-md) var(--space-lg);
-}
+/* Header Top */
 
 .header-top {
   display: flex;
@@ -275,6 +294,8 @@ p {
   color: var(--text-main);
 }
 
+/* Header Bottom */
+
 .header-bottom {
   display: flex;
   align-items: center;
@@ -317,29 +338,29 @@ p {
 
 /* Main Content */
 
-.main-content {
-  grid-column: 5 / 13;
-  grid-row: 3 / 3;
-  padding: var(--space-lg) var(--space-md);
-}
+/* Projects Section */
 
-/* Projects Cards */
-
-.projects {
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-lg);
+.projects,
+.announcements,
+.trending {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
   padding: var(--space-md);
 }
 
-.projects h2 {
+.projects h2,
+.announcements h2,
+.trending h2 {
   margin-bottom: var(--space-sm);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-lg);
 }
+
+/* Project Card */
 
 .project-card {
   border-left: 5px solid var(--primary);
@@ -362,7 +383,43 @@ p {
   transition: all 0.2s ease;
 }
 
-/* .right-sidebar {
-  grid-column: 13 / 14;
-  grid-row: 1 / 3;
-} */
+/* Right Sidebar */
+
+/* Announcements Section */
+
+.announcement {
+  border-radius: 12px;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.announcement hr {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+/* Trending Section */
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  border-radius: 12px;
+}
+
+.trending-item img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.trending-item h3 {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.trending-item p {
+  font-size: 0.75rem;
+}
