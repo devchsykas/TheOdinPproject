@@ -161,7 +161,7 @@ p {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
   /* gap: var(--space-lg); */
-  max-width: 1440px;
+  /* max-width: 1440px; */
 }
 
 .sidebar {
@@ -394,6 +394,7 @@ p {
 }
 
 .announcement hr {
+  /* border-color: var(--primary); */
   margin-top: var(--space-lg);
   margin-bottom: var(--space-md);
 }
