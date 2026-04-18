@@ -22,9 +22,8 @@ A simple and interactive Library Management System built with HTML, CSS, and Jav
 2.  Book data is stored in an array
 3.  The UI dynamically updates to display all books
 4.  Users can:
-
-- Delete a book
-- Toggle its read status
+    - Delete a book
+    - Toggle its read status
 
 ## 💡 Future Improvements
 
