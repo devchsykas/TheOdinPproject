@@ -46,7 +46,7 @@ A simple and interactive Library Management System built with HTML, CSS, and Jav
 ## 📦 Installation & Usage
 
 1.  Clone the repository:
-    git clone https://github.com/your-username/odin-library.git
+    - git clone https://github.com/your-username/odin-library.git
 
 2.  Open the project folder
 3.  Run index.html in your browser
