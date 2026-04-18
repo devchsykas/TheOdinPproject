@@ -279,3 +279,46 @@ td {
 .submenu li a:hover {
   background: var(--color-bg);
 }
+
+/* =========================
+    MAIN CONTENT
+========================= */
+
+main {
+  display: grid;
+  grid-column: 2 / 3;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+main h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.btn {
+  font-size: 14px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  color: var(--color-surface);
+  box-shadow: var(--spacing-md);
+}
+
+.action-btn {
+  background-color: var(--color-primary);
+  margin-right: var(--spacing-sm);
+}
+
+.action-btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.action-btn:active {
+  background-color: var(--color-primary-dark);
+}
