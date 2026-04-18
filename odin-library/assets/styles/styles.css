@@ -151,6 +151,10 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   padding: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: var(--spacing-lg);
 }
 
 button {
@@ -173,7 +177,7 @@ td {
 
 .header {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-column: 1 / 3;
   align-items: center;
   gap: var(--spacing-lg);
   padding: var(--spacing-lg);
@@ -200,48 +204,54 @@ td {
   font-weight: 500;
   font-size: 0.875rem;
 }
-/* .navbar {
+
+/* =========================
+   NAVBAR SECTION
+========================= */
+
+.sidebar {
+  display: grid;
+  grid-column: 1 / 2;
+  /* grid-row: 2 / 3; */
+  padding: var(--spacing-lg);
+}
+
+.navbar {
   margin-top: var(--spacing-lg);
-} */
+}
 
-/* .nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.nav-list {
   display: flex;
-  gap: var(--spacing-lg);
-  align-items: center;
-} */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
 
-/* .nav-list li {
+.nav-list li {
   position: relative;
-} */
+}
 
-/* .nav-item {
+.nav-item {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   gap: var(--spacing-xs);
-} */
+}
 
-/* .submenu-toggle {
+.submenu-toggle {
   background: transparent;
-  border: none;
   padding: 0;
-  cursor: pointer;
   color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1;
-} */
+}
 
-/* .submenu-toggle:hover,
+.submenu-toggle:hover,
 .submenu-toggle:focus {
   color: var(--color-text);
-} */
+}
 
-/* .submenu {
-  list-style: none;
-  margin: 0;
+.submenu {
   padding: var(--spacing-sm) 0;
   position: absolute;
   top: calc(100% + 0.5rem);
@@ -253,19 +263,19 @@ td {
   border-radius: var(--radius-md);
   display: none;
   z-index: 10;
-} */
+}
 
-/* .nav-list li.open > .submenu {
+.nav-list li.open > .submenu {
   display: block;
-} */
+}
 
-/* .submenu li a {
+.submenu li a {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-text);
   white-space: nowrap;
-} */
+}
 
-/* .submenu li a:hover {
+.submenu li a:hover {
   background: var(--color-bg);
-} */
+}
