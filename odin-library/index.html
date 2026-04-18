@@ -57,7 +57,7 @@
       <main>
         <h2>Manage Books</h2>
         <section class="controls">
-          <button type="button" class="btn action-btn">Add Book</button>
+          <button type="button" class="btn add-btn">Add Book</button>
         </section>
         <section class="table-container">
           <table class="book-table">
@@ -99,20 +99,24 @@
                   <span class="status available">Available</span>
                 </td>
                 <td>
-                  <button type="button" class="btn edit-btn">Edit</button>
-                  <button type="button" class="btn delete-btn">Delete</button>
+                  <div class="actions-btn">
+                    <button type="button" class="btn edit-btn">Edit</button>
+                    <button type="button" class="btn delete-btn">Delete</button>
+                  </div>
                 </td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="10">
+                <td colspan="12">
                   <div class="pagination">
-                    <button type="button" class="btn">Previous</button>
-                    <button type="button" class="btn">1</button>
+                    <button type="button" class="btn previous-btn">
+                      Previous
+                    </button>
+                    <button type="button" class="btn active">1</button>
                     <button type="button" class="btn">2</button>
                     <button type="button" class="btn">3</button>
-                    <button type="button" class="btn">Next</button>
+                    <button type="button" class="btn next-btn">Next</button>
                   </div>
                 </td>
               </tr>

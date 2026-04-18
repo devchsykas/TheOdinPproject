@@ -83,6 +83,7 @@ table {
   --color-primary: #2e7d32;
   --color-primary-light: #4caf50;
   --color-primary-dark: #1b5e20;
+  --color-accent: #6f737a;
   --color-bg: #f9fafb;
   --color-surface: #ffffff;
   --color-border: #e5e7eb;
@@ -90,8 +91,12 @@ table {
   --color-text-secondary: #6b7280;
   --color-success: #16a34a;
   --color-danger: #dc2626;
+  --color-danger-light: #f87171;
   --color-warning: #f59e0b;
   --color-info: #3b82f6;
+  --color-info-light: #93c5fd;
+  --color-active: #2563eb;
+  --color-active-light: #3b82f6;
   /* Typography */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -295,6 +300,10 @@ main h2 {
   margin-bottom: var(--spacing-sm);
 }
 
+/* =========================
+    CONTROLS SECTION
+========================= */
+
 .controls {
   display: flex;
   align-items: center;
@@ -310,15 +319,111 @@ main h2 {
   box-shadow: var(--spacing-md);
 }
 
-.action-btn {
+.add-btn {
   background-color: var(--color-primary);
   margin-right: var(--spacing-sm);
 }
 
-.action-btn:hover {
+.add-btn:hover {
   background-color: var(--color-primary-light);
 }
 
-.action-btn:active {
+.add-btn:active {
   background-color: var(--color-primary-dark);
+}
+
+/* =========================
+    TABLE SECTION
+========================= */
+
+.table-container {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+.book-table {
+  width: 100%;
+  border: 3px solid var(--color-border);
+}
+
+thead th {
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+tbody td {
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+  border: 1px solid var(--color-border);
+}
+
+tr:hover {
+  background-color: var(--color-surface);
+}
+
+.status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.available {
+  background-color: var(--color-success);
+  color: var(--color-surface);
+}
+
+.actions-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.edit-btn {
+  background-color: var(--color-info);
+}
+
+.delete-btn {
+  background-color: var(--color-danger);
+}
+
+.edit-btn:hover {
+  background-color: var(--color-info-light);
+}
+
+.delete-btn:hover {
+  background-color: var(--color-danger-light);
+}
+
+.pagination {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  margin-right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.previous-btn,
+.next-btn {
+  background-color: var(--color-text-secondary);
+  color: var(--color-surface);
+}
+
+.active {
+  background-color: var(--color-active);
+}
+
+.previous-btn:hover,
+.next-btn:hover {
+  background-color: var(--color-accent);
+}
+
+.active:hover {
+  background-color: var(--color-active-light);
 }
