@@ -54,6 +54,72 @@
         </nav>
       </aside>
       <!-- MAIN CONTENT -->
+      <main>
+        <section class="controls">
+          <h2>Manage Books</h2>
+          <button type="button" class="btn">Add Book</button>
+        </section>
+        <section class="table-container">
+          <table class="book-table">
+            <thead>
+              <th>Image</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>ISBN</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>Category</th>
+              <th>Rack</th>
+              <th>No of Copies</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/images/book-1.jpg"
+                    alt="Eloquent JavaScript book cover"
+                    width="50"
+                    height="50"
+                  />
+                </td>
+                <td>001</td>
+                <td>
+                  Eloquent JavaScript Third Edition: A Modern Introduction to
+                  Programming
+                </td>
+                <td>19381684</td>
+                <td>Marijn Haverbeke</td>
+                <td>No Starch Press</td>
+                <td>Programming Language</td>
+                <td>R2</td>
+                <td>5</td>
+                <td>
+                  <span class="status available">Available</span>
+                </td>
+                <td>
+                  <button type="button" class="btn edit-btn">Edit</button>
+                  <button type="button" class="btn delete-btn">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="10">
+                  <div class="pagination">
+                    <button type="button" class="btn">Previous</button>
+                    <button type="button" class="btn">1</button>
+                    <button type="button" class="btn">2</button>
+                    <button type="button" class="btn">3</button>
+                    <button type="button" class="btn">Next</button>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+      </main>
     </div>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/toggleMenu.js"></script>
