@@ -200,3 +200,72 @@ td {
   font-weight: 500;
   font-size: 0.875rem;
 }
+/* .navbar {
+  margin-top: var(--spacing-lg);
+} */
+
+/* .nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+} */
+
+/* .nav-list li {
+  position: relative;
+} */
+
+/* .nav-item {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+} */
+
+/* .submenu-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1;
+} */
+
+/* .submenu-toggle:hover,
+.submenu-toggle:focus {
+  color: var(--color-text);
+} */
+
+/* .submenu {
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-sm) 0;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  min-width: 180px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-md);
+  display: none;
+  z-index: 10;
+} */
+
+/* .nav-list li.open > .submenu {
+  display: block;
+} */
+
+/* .submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  white-space: nowrap;
+} */
+
+/* .submenu li a:hover {
+  background: var(--color-bg);
+} */

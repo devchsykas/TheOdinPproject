@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
+    <!-- CONTAINER -->
     <div class="container">
+      <!-- HEADER SECTION -->
       <header class="header">
         <h1>Odin Library Management System</h1>
         <div class="profile-container">
@@ -16,9 +18,43 @@
             alt="library book icon"
             class="profile-icon"
           />
-          <p>Welcome Back Chris</p>
+          <p>Welcome Chris</p>
+          <p>Logout</p>
         </div>
       </header>
+      <!-- ASIDE SECTION -->
+      <aside>
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li><a href="#">Dashboard</a></li>
+            <li class="has-submenu">
+              <div class="nav-item">
+                <a href="#">Books</a>
+                <button
+                  type="button"
+                  class="submenu-toggle"
+                  aria-expanded="false"
+                  aria-label="Toggle Library submenu"
+                >
+                  ▾
+                </button>
+              </div>
+              <ul class="submenu">
+                <li><a href="#">Manage Books</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Author</a></li>
+                <li><a href="#">Publisher</a></li>
+                <li><a href="#">Rack</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Issue Books</a></li>
+            <li><a href="#">User</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- MAIN CONTENT -->
     </div>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
