@@ -7,39 +7,31 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
   </head>
   <body>
-    <!-- CONTAINER -->
-    <div class="container">
+    <div class="layout">
       <!-- HEADER SECTION -->
       <header class="header">
-        <h1>Odin Library Management System</h1>
-        <div class="profile-container">
+        <h1 class="header__title">Odin Library Management System</h1>
+        <div class="header__user">
           <img
             src="/assets/images/icons/library-book-svg.svg"
             alt="library book icon"
-            class="profile-icon"
+            class="header__avatar"
           />
-          <p>Welcome Chris</p>
-          <p>Logout</p>
+          <span class="header__welcome">Welcome Chris</span>
+          <button type="button" class="btn btn--secondary">Logout</button>
         </div>
       </header>
-      <!-- ASIDE SECTION -->
+
+      <!-- SIDEBAR SECTION-->
       <aside class="sidebar">
-        <nav class="navbar">
+        <nav class="nav">
           <ul class="nav-list">
-            <li><a href="#">Dashboard</a></li>
-            <li class="has-submenu">
-              <div class="nav-item">
-                <a href="#">Books</a>
-                <button
-                  type="button"
-                  class="submenu-toggle"
-                  aria-expanded="false"
-                  aria-label="Toggle Library submenu"
-                >
-                  ▾
-                </button>
-              </div>
-              <ul class="submenu">
+            <li><a href="#" class="nav__link">Dashboard</a></li>
+
+            <li class="nav__item--has-submenu">
+              <button class="nav__toggle" aria-expanded="false">Books ▾</button>
+
+              <ul class="nav__submenu">
                 <li><a href="#">Manage Books</a></li>
                 <li><a href="#">Category</a></li>
                 <li><a href="#">Author</a></li>
@@ -47,84 +39,100 @@
                 <li><a href="#">Rack</a></li>
               </ul>
             </li>
-            <li><a href="#">Issue Books</a></li>
-            <li><a href="#">User</a></li>
-            <li><a href="#">Logout</a></li>
+
+            <li><a href="#" class="nav__link">Issue Books</a></li>
+            <li><a href="#" class="nav__link">User</a></li>
+            <li><button class="nav__link">Logout</button></li>
           </ul>
         </nav>
       </aside>
+
       <!-- MAIN CONTENT -->
-      <main>
-        <h2>Manage Books</h2>
-        <section class="controls">
-          <button type="button" class="btn add-btn">Add Book</button>
-        </section>
-        <section class="table-container">
-          <table class="book-table">
-            <thead>
-              <th>Image</th>
-              <th>ID</th>
-              <th>Title</th>
-              <th>ISBN</th>
-              <th>Author</th>
-              <th>Publisher</th>
-              <th>Category</th>
-              <th>Rack</th>
-              <th>No of Copies</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img
-                    src="./assets/images/book-1.jpg"
-                    alt="Eloquent JavaScript book cover"
-                    width="50"
-                    height="50"
-                  />
-                </td>
-                <td>001</td>
-                <td>
-                  Eloquent JavaScript Third Edition: A Modern Introduction to
-                  Programming
-                </td>
-                <td>19381684</td>
-                <td>Marijn Haverbeke</td>
-                <td>No Starch Press</td>
-                <td>Programming Language</td>
-                <td>R2</td>
-                <td>5</td>
-                <td>
-                  <span class="status available">Available</span>
-                </td>
-                <td>
-                  <div class="actions-btn">
-                    <button type="button" class="btn edit-btn">Edit</button>
-                    <button type="button" class="btn delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="12">
-                  <div class="pagination">
-                    <button type="button" class="btn previous-btn">
-                      Previous
-                    </button>
-                    <button type="button" class="btn active">1</button>
-                    <button type="button" class="btn">2</button>
-                    <button type="button" class="btn">3</button>
-                    <button type="button" class="btn next-btn">Next</button>
-                  </div>
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+      <main class="main">
+        <section class="books">
+          <header class="books__header">
+            <h2>Manage Books</h2>
+
+            <div class="controls">
+              <button class="btn btn--primary">Add Book</button>
+            </div>
+          </header>
+
+          <div class="table-container">
+            <table class="table">
+              <caption class="table__caption">
+                List of books in the library
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Image</th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">ISBN</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Publisher</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Rack</th>
+                  <th scope="col">No of Copies</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="./assets/images/book-1.jpg"
+                      alt="Cover of Eloquent JavaScript"
+                      width="50"
+                      height="50"
+                    />
+                  </td>
+                  <td>001</td>
+                  <td class="table__title">
+                    Eloquent JavaScript Third Edition
+                  </td>
+                  <td>19381684</td>
+                  <td>Marijn Haverbeke</td>
+                  <td>No Starch Press</td>
+                  <td>Programming Language</td>
+                  <td>R2</td>
+                  <td>5</td>
+                  <td>
+                    <span class="status status--available">Available</span>
+                  </td>
+                  <td>
+                    <div class="table__actions">
+                      <button class="btn btn--info">Edit</button>
+                      <button class="btn btn--danger">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="11">
+                    <nav class="pagination" aria-label="Table pagination">
+                      <button type="class=" btn>Previous</button>
+                      <button class="btn btn--active" aria-current="page">
+                        1
+                      </button>
+                      <button class="btn">2</button>
+                      <button class="btn">3</button>
+                      <button class="btn">Next</button>
+                    </nav>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </section>
       </main>
     </div>
+
     <script src="./scripts/main.js"></script>
     <script src="./scripts/toggleMenu.js"></script>
   </body>
