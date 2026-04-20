@@ -152,16 +152,6 @@ p {
   font-size: 1rem;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: var(--spacing-lg);
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: auto 1fr;
-  gap: var(--spacing-lg);
-}
-
 button {
   border: none;
   cursor: pointer;
@@ -177,112 +167,68 @@ td {
 }
 
 /* =========================
+   LAYOUT
+========================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+/* =========================
    HEADER SECTION
 ========================= */
 
 .header {
-  display: grid;
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-lg);
   padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.profile-container {
-  display: grid;
-  align-items: center;
-  grid-auto-flow: column;
-  gap: var(--spacing-sm);
-  grid-column: 2 / 3;
-}
-
-.header h1 {
+.header__title {
   font-weight: 800;
 }
 
-.profile-container .profile-icon {
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__avatar {
   width: 40px;
   height: 40px;
 }
 
-.profile-container p {
-  font-weight: 500;
-  font-size: 0.875rem;
-}
-
 /* =========================
-   NAVBAR SECTION
+   SIDEBAR SECTION
 ========================= */
 
 .sidebar {
-  display: grid;
-  grid-column: 1 / 2;
-  /* grid-row: 2 / 3; */
   padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-right: 1px solid var(--color-border);
 }
 
-.navbar {
-  margin-top: var(--spacing-lg);
-}
-
-.nav-list {
+.nav__list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--spacing-sm);
 }
 
-.nav-list li {
-  position: relative;
-}
-
-.nav-item {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  gap: var(--spacing-xs);
-}
-
-.submenu-toggle {
-  background: transparent;
-  padding: 0;
-  color: var(--color-text-secondary);
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.submenu-toggle:hover,
-.submenu-toggle:focus {
-  color: var(--color-text);
-}
-
-.submenu {
-  padding: var(--spacing-sm) 0;
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 0;
-  min-width: 180px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  border-radius: var(--radius-md);
+.nav__submenu {
   display: none;
-  z-index: 10;
+  padding-left: var(--spacing-md);
 }
 
-.nav-list li.open > .submenu {
+.nav__item--has-submenu.open .nav__submenu {
   display: block;
-}
-
-.submenu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: var(--color-text);
-  white-space: nowrap;
-}
-
-.submenu li a:hover {
-  background: var(--color-bg);
 }
 
 /* =========================
@@ -290,46 +236,48 @@ td {
 ========================= */
 
 main {
-  display: grid;
-  grid-column: 2 / 3;
-  gap: var(--spacing-lg);
   padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
-main h2 {
-  margin-bottom: var(--spacing-sm);
+.books__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* =========================
-    CONTROLS SECTION
+   BUTTONS
 ========================= */
 
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--spacing-sm);
-}
-
 .btn {
-  font-size: 14px;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
-  color: var(--color-surface);
-  box-shadow: var(--spacing-md);
+  font-size: 0.875rem;
+  color: white;
+  background-color: var(--color-accent);
 }
 
-.add-btn {
+.btn--primary {
   background-color: var(--color-primary);
-  margin-right: var(--spacing-sm);
 }
 
-.add-btn:hover {
-  background-color: var(--color-primary-light);
+.btn--danger {
+  background-color: var(--color-danger);
 }
 
-.add-btn:active {
-  background-color: var(--color-primary-dark);
+.btn--info {
+  background-color: var(--color-info);
+}
+
+.btn--warning {
+  background-color: var(--color-warning);
+}
+
+.btn--active {
+  background-color: var(--color-active);
 }
 
 /* =========================
@@ -337,93 +285,87 @@ main h2 {
 ========================= */
 
 .table-container {
-  background-color: var(--color-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  box-shadow: var(--shadow-md);
   overflow-x: auto;
 }
 
-.book-table {
+table {
   width: 100%;
-  border: 3px solid var(--color-border);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-thead th {
+thead {
+  background-color: var(--color-bg);
+}
+
+th {
   padding: var(--spacing-sm);
-  font-size: 0.9rem;
-  border: 1px solid var(--color-border);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid var(--color-border);
   text-align: center;
 }
 
-tbody td {
+td {
   padding: var(--spacing-sm);
-  font-size: 0.9rem;
-  border: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
-tr:hover {
-  background-color: var(--color-surface);
+tbody tr:hover {
+  background-color: #f3f4f6;
 }
+
+/* =========================
+   STATUS
+========================= */
 
 .status {
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-border);
+  font-size: 0.75rem;
 }
 
-.available {
-  background-color: var(--color-success);
-  color: var(--color-surface);
+.status--available {
+  background-color: #dcfce7;
+  color: var(--color-success);
 }
 
-.actions-btn {
+/* =========================
+   ACTIONS
+========================= */
+
+.table__actions {
   display: flex;
-  align-items: center;
   gap: var(--spacing-sm);
 }
 
-.edit-btn {
-  background-color: var(--color-info);
-}
-
-.delete-btn {
-  background-color: var(--color-danger);
-}
-
-.edit-btn:hover {
-  background-color: var(--color-info-light);
-}
-
-.delete-btn:hover {
-  background-color: var(--color-danger-light);
-}
+/* =========================
+   PAGINATION
+========================= */
 
 .pagination {
-  margin-top: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
-  margin-right: var(--spacing-md);
   display: flex;
-  align-items: center;
   justify-content: flex-end;
   gap: var(--spacing-sm);
 }
 
-.previous-btn,
-.next-btn {
-  background-color: var(--color-text-secondary);
-  color: var(--color-surface);
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.btn--primary:hover {
+  background-color: var(--color-primary-light);
 }
 
-.active {
-  background-color: var(--color-active);
+.btn--danger:hover {
+  background-color: var(--color-danger-light);
 }
 
-.previous-btn:hover,
-.next-btn:hover {
-  background-color: var(--color-accent);
+.btn--info:hover {
+  background-color: var(--color-info-light);
 }
 
-.active:hover {
+.btn--active:hover {
   background-color: var(--color-active-light);
 }
