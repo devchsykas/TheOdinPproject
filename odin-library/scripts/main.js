@@ -4,6 +4,11 @@
  * This is the main JS file for the library management system.
  */
 
+/**
+ * The `form` element is selected from the DOM.
+ */
+const form = document.getElementById("bookForm");
+
 /* This array will be used to store instances of the `Book` objects in the
 library management system. */
 const library = [];
@@ -68,3 +73,33 @@ function addBookToLibrary(book) {
 /* This function essentially adds a book to the library's collection by pushing the book object into the array. */
 addBookToLibrary(book1);
 console.log(library);
+
+/**
+ * Event listener for the form submission.
+ */
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  //console.log("Form submitted without reloading!");
+  const title = document.getElementById("title").value;
+  const isbn = document.getElementById("isbn").value;
+  const author = document.getElementById("author").value;
+  const publisher = document.getElementById("publisher").value;
+  const category = document.getElementById("category").value;
+  const rack = document.getElementById("rack").value;
+  const numOfCopies = document.getElementById("numOfCopies").value;
+  const status = document.getElementById("status").value;
+  const image = document.getElementById("image").files[0];
+
+  console.log(
+    title,
+    isbn,
+    author,
+    publisher,
+    category,
+    rack,
+    numOfCopies,
+    status,
+    image,
+  );
+});
