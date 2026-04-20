@@ -9,11 +9,6 @@ library management system. */
 const library = [];
 
 /**
- * selecting the HTML button element with the class "btn--primary" using the `document.querySelector` method. It is assigning a reference to this button element to the `addBookBtn` constant variable in the JavaScript code.
- */
-const addBookBtn = document.querySelector(".btn--primary");
-
-/**
  * The function `Book` creates a book object with properties such as title, ISBN, author, publisher,
  * category, rack, copies, status, and image.
  * @param title
@@ -73,11 +68,3 @@ function addBookToLibrary(book) {
 /* This function essentially adds a book to the library's collection by pushing the book object into the array. */
 addBookToLibrary(book1);
 console.log(library);
-
-/**
- * When the `addBookBtn` element is clicked, the `addBookModal` element is removed from the DOM.
- */
-addBookBtn.addEventListener("click", () => {
-  const addBookModal = document.getElementById("addBookModal");
-  addBookModal.classList.remove("hidden");
-});
