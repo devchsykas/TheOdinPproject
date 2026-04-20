@@ -33,7 +33,7 @@ function Book(
   publisher,
   category,
   rack,
-  copies,
+  numOfCopies,
   status,
   image,
 ) {
@@ -43,23 +43,10 @@ function Book(
   this.publisher = publisher;
   this.category = category;
   this.rack = rack;
-  this.copies = copies;
+  this.numOfCopies = numOfCopies;
   this.status = status;
   this.image = image;
 }
-
-/* Creating a new instance of the `Book` object with specific properties. In this case, it is creating a book object with the following details: */
-const book1 = new Book(
-  " Eloquent JavaScript Third Edition",
-  "19381684",
-  "Marijn Haverbeke",
-  "No Starch Press",
-  "Programming Language",
-  "R2",
-  "5",
-  "Available",
-  "./assets/images/book-1.jpg",
-);
 
 /**
  * The function `addBookToLibrary` adds a book to a library array.
@@ -67,12 +54,37 @@ const book1 = new Book(
  */
 function addBookToLibrary(book) {
   library.push(book);
-  // console.log(library);
+  console.log(`Book added to library: ${book.title}`);
 }
 
-/* This function essentially adds a book to the library's collection by pushing the book object into the array. */
-addBookToLibrary(book1);
-console.log(library);
+function renderBooks() {
+  // Select the table
+  const tbody = document.querySelector("tbody");
+  // Clear the table
+  tbody.innerHTML = "";
+  // Loop through the library array
+  library.forEach((book) => {
+    // Create a new row for each book
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td><img src="${book.image}" alt="${book.title}"></td>
+      <td>${book.isbn}</td>
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+      <td>${book.publisher}</td>
+      <td>${book.category}</td>
+      <td>${book.rack}</td>
+      <td>${book.numOfCopies}</td>
+      <td>${book.status}</td>
+      <td>
+        <button class="btn btn--info">Edit</button>
+        <button class="btn btn--danger">Delete</button>
+      </td>
+    `;
+    // Append the row to the table
+    tbody.appendChild(row);
+  });
+}
 
 /**
  * Event listener for the form submission.
@@ -91,7 +103,19 @@ form.addEventListener("submit", (event) => {
   const status = document.getElementById("status").value;
   const image = document.getElementById("image").files[0];
 
-  console.log(
+  // console.log(
+  //   title,
+  //   isbn,
+  //   author,
+  //   publisher,
+  //   category,
+  //   rack,
+  //   numOfCopies,
+  //   status,
+  //   image,
+  // );
+
+  const book = new Book(
     title,
     isbn,
     author,
@@ -102,4 +126,9 @@ form.addEventListener("submit", (event) => {
     status,
     image,
   );
+
+  console.log(book);
+
+  addBookToLibrary(book);
+  renderBooks();
 });
