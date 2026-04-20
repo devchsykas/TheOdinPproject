@@ -171,7 +171,7 @@
             <input type="text" name="category" id="category" required />
           </div>
 
-          <div class="form_group">
+          <div class="form__group">
             <label for="rack">Rack</label>
             <input type="text" name="rack" id="rack" required />
           </div>
@@ -183,15 +183,24 @@
 
           <div class="form__group">
             <label for="status">Status</label>
-            <select name="status" id="status">
+            <select name="status" id="status" class="form__select">
               <option value="available">Available</option>
               <option value="unavailable">Unavailable</option>
             </select>
           </div>
 
           <div class="form__group">
-            <label for="image">Image</label>
-            <input type="file" name="image" id="image" required />
+            <label for="image">Book Image</label>
+            <input
+              type="file"
+              name="image"
+              id="image"
+              class="file__input"
+              required
+              hidden
+            />
+            <label for="image" class="file__label">Choose Image</label>
+            <span class="file__name">No file Chosen</span>
           </div>
 
           <div class="form__actions">
