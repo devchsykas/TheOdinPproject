@@ -366,12 +366,11 @@ tbody tr:hover {
   align-items: center;
   justify-content: center;
   z-index: 999;
-  pointer-events: none;
 }
 
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 .modal__content {
   background-color: var(--color-surface);
