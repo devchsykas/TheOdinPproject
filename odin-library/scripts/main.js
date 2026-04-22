@@ -58,7 +58,7 @@ function addBookToLibrary(book) {
 }
 
 function renderBooks() {
-  // Select the table
+  // Select the tbody element of the table
   const tbody = document.querySelector("tbody");
   // Clear the table
   tbody.innerHTML = "";
@@ -81,7 +81,7 @@ function renderBooks() {
         <button class="btn btn--danger">Delete</button>
       </td>
     `;
-    // Append the row to the table
+    // Append the row to the end of the table body
     tbody.appendChild(row);
   });
 }

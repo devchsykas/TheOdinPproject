@@ -331,6 +331,11 @@ tbody tr:hover {
   color: var(--color-success);
 }
 
+.status--unavailable {
+  background-color: #f5cdb1;
+  color: var(--color-warning);
+}
+
 /* =========================
    ACTIONS
 ========================= */
