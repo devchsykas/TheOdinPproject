@@ -252,7 +252,8 @@ main {
    BUTTONS
 ========================= */
 
-.btn {
+.btn,
+.delete--btn {
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
@@ -264,7 +265,8 @@ main {
   background-color: var(--color-primary);
 }
 
-.cancel--btn {
+.cancel--btn,
+.delete--btn {
   background-color: var(--color-danger);
 }
 
@@ -326,12 +328,12 @@ tbody tr:hover {
   font-size: 0.75rem;
 }
 
-td .status--available {
+.status--available {
   background-color: #dcfce7;
   color: var(--color-success);
 }
 
-td .status--unavailable {
+.status--unavailable {
   background-color: #f5cdb1;
   color: var(--color-warning);
 }

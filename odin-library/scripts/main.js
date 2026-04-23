@@ -86,7 +86,7 @@ function renderBooks() {
       <td>${book.status}</td>
       <td>
         <button class="btn edit--btn">Edit</button>
-        <button class="delete-btn" data-index="${index}">Delete</button>
+        <button class="delete--btn" data-index="${index}">Delete</button>
       </td>
     `;
     // Append the row to the end of the table body
@@ -155,7 +155,7 @@ form.addEventListener("submit", (event) => {
 
 tbody.addEventListener("click", (e) => {
   console.log("clicked", e.target);
-  if (e.target.classList.contains("delete-btn")) {
+  if (e.target.classList.contains("delete--btn")) {
     const index = e.target.dataset.index;
     console.log(index);
     const confirmDelete = confirm("Are you sure you want to delete this book?");
