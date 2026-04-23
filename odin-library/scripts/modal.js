@@ -1,7 +1,7 @@
 /**
  * The `addBookBtn` and `closeModalBtn` elements are selected from the DOM.
  */
-const addBookBtn = document.querySelector(".btn--primary");
+const addBookBtn = document.querySelector(".add-book--btn");
 const closeModalBtn = document.getElementById("closeModal");
 
 /* When the `addBookBtn` element is
