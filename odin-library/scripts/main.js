@@ -5,31 +5,31 @@
  */
 
 /**
- * Elements with the id "bookForm", "editBookBtn", and "deleteBookBtn" is selected from the DOM.
+ * Elements "form", "tbody", are selected from the DOM.
  */
 const form = document.getElementById("bookForm");
 const tbody = document.querySelector("tbody");
-// const editBookBtn = document.querySelector(".btn--info");
-// const deleteBookBtn = document.querySelector(".btn--danger");
 
 /* This array will be used to store instances of the `Book` objects in the
 library management system. */
 const library = [];
 
 /**
- * The function `Book` creates a book object with properties such as title, ISBN, author, publisher,
- * category, rack, copies, status, and image.
- * @param title
- * @param isbn
- * @param author
- * @param publisher
- * @param category
- * @param rack
- * @param copies
- * @param status
- * @param image
+ * The function `Book` creates a new instance of the `Book` class.
+ * @param {*} image - The image of the book
+ * @param {*} id - The ID of the book
+ * @param {*} title - The title of the book
+ * @param {*} isbn - The ISBN number of the book
+ * @param {*} author - The author of the book
+ * @param {*} publisher - The publisher of the book
+ * @param {*} category - The category of the book
+ * @param {*} rack - The rack number of the book
+ * @param {*} numOfCopies - The number of copies of the book
+ * @param {*} status - The status of the book
  */
 function Book(
+  image,
+  id,
   title,
   isbn,
   author,
@@ -38,8 +38,9 @@ function Book(
   rack,
   numOfCopies,
   status,
-  image,
 ) {
+  this.image = image;
+  this.id = id;
   this.title = title;
   this.isbn = isbn;
   this.author = author;
@@ -48,12 +49,50 @@ function Book(
   this.rack = rack;
   this.numOfCopies = numOfCopies;
   this.status = status;
-  this.image = image;
+}
+
+/**
+ * The function `getFormData` returns an object with the values of various form elements.
+ * @returns An object with the values of various form elements.
+ */
+function getFormData() {
+  return {
+    image: document.getElementById("image").files[0] || null,
+    // id: document.getElementById("id").value,
+    title: document.getElementById("title").value,
+    isbn: document.getElementById("isbn").value,
+    author: document.getElementById("author").value,
+    publisher: document.getElementById("publisher").value,
+    category: document.getElementById("category").value,
+    rack: document.getElementById("rack").value,
+    numOfCopies: document.getElementById("numOfCopies").value,
+    status: document.getElementById("status").value,
+  };
+}
+
+/**
+ * The function `createBook` creates a new book object based on the provided data.
+ * @param {*} data - The data object containing book information.
+ * @returns - A new instance of the `Book` class.
+ */
+function createBook(data) {
+  return new Book(
+    data.image,
+    data.id,
+    data.title,
+    data.isbn,
+    data.author,
+    data.publisher,
+    data.category,
+    data.rack,
+    data.numOfCopies,
+    data.status,
+  );
 }
 
 /**
  * The function `addBookToLibrary` adds a book to a library array.
- * @param book
+ * @param book - The book object to be added to the library.
  */
 function addBookToLibrary(book) {
   library.push(book);
@@ -61,11 +100,20 @@ function addBookToLibrary(book) {
 }
 
 /**
+ * The function `deleteBook` removes a specified book from a library array and then triggers a rendering function.
+ * @param book - The book object to be deleted from the library.
+ */
+function deleteBook(index) {
+  library.splice(index, 1);
+  //renderBooks();
+}
+
+function editBook(book) {}
+
+/**
  * The `renderBooks` function dynamically populates a table with book information from a library array.
  */
 function renderBooks() {
-  // Select the tbody element of the table
-  const tbody = document.querySelector("tbody");
   //Clear the table
   tbody.innerHTML = "";
   // Loop through the library array
@@ -85,8 +133,8 @@ function renderBooks() {
       <td>${book.numOfCopies}</td>
       <td>${book.status}</td>
       <td>
-        <button class="btn edit--btn">Edit</button>
-        <button class="delete--btn" data-index="${index}">Delete</button>
+        <button class="btn edit--btn" data-index="${index}">Edit</button>
+        <button class="btn delete--btn" data-index="${index}">Delete</button>
       </td>
     `;
     // Append the row to the end of the table body
@@ -94,74 +142,50 @@ function renderBooks() {
   });
 }
 
-function editBook(book) {}
-
 /**
- * The function `deleteBook` removes a specified book from a library array and then triggers a
- * rendering function.
- * @param book
+ * The function `handleFormSubmit` is triggered when the form is submitted. It gets the form data, creates a book object, adds the book to the library array, and then renders the books.
+ * @returns The function does not return anything.
  */
-function deleteBook(book) {
-  library.splice(library.indexOf(book), 1);
+function handleFormSubmit() {
+  const formData = getFormData();
+  const book = createBook(formData);
+  addBookToLibrary(book);
   renderBooks();
 }
 
 /**
- * Event listener for the form submission.
+ * The function `handleDeleteClick` is triggered when a delete button is clicked. It removes the corresponding book from the library array and then re-renders the books.
+ * @param {*} event - the event object that triggered the function
  */
+function handleDeleteClick(event) {
+  const index = event.target.dataset.index;
+  deleteBook(index);
+  renderBooks();
+}
 
+/**
+ * Event listener for the form submit event. When the form is submitted, the function `handleFormSubmit` is triggered.
+ * @param event - the event object that triggered the function
+ */
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   //console.log("Form submitted without reloading!");
-  const title = document.getElementById("title").value;
-  const isbn = document.getElementById("isbn").value;
-  const author = document.getElementById("author").value;
-  const publisher = document.getElementById("publisher").value;
-  const category = document.getElementById("category").value;
-  const rack = document.getElementById("rack").value;
-  const numOfCopies = document.getElementById("numOfCopies").value;
-  const status = document.getElementById("status").value;
-  const image = document.getElementById("image").files[0];
-
-  // console.log(
-  //   title,
-  //   isbn,
-  //   author,
-  //   publisher,
-  //   category,
-  //   rack,
-  //   numOfCopies,
-  //   status,
-  //   image,
-  // );
-
-  const book = new Book(
-    title,
-    isbn,
-    author,
-    publisher,
-    category,
-    rack,
-    numOfCopies,
-    status,
-    image,
-  );
-
-  console.log(book);
-
-  addBookToLibrary(book);
-  renderBooks();
+  handleFormSubmit();
 });
 
+/**
+ * Event listener for the click event on the table body. When a delete button is clicked, the function `handleDeleteClick` is triggered.
+ * @param e - the event object that triggered the function
+ */
 tbody.addEventListener("click", (e) => {
-  console.log("clicked", e.target);
+  //console.log("clicked", e.target);
   if (e.target.classList.contains("delete--btn")) {
     const index = e.target.dataset.index;
-    console.log(index);
+    //console.log(index);
     const confirmDelete = confirm("Are you sure you want to delete this book?");
 
     if (confirmDelete) {
-      library.splice(index, 1);
+      deleteBook(index);
       renderBooks();
     }
   }
