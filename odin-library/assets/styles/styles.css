@@ -260,15 +260,15 @@ main {
   background-color: var(--color-accent);
 }
 
-.btn--primary {
+.add-book--btn {
   background-color: var(--color-primary);
 }
 
-.btn--danger {
+.cancel--btn {
   background-color: var(--color-danger);
 }
 
-.btn--info {
+.edit--btn {
   background-color: var(--color-info);
 }
 
@@ -276,7 +276,7 @@ main {
   background-color: var(--color-warning);
 }
 
-.btn--active {
+.active--btn {
   background-color: var(--color-active);
 }
 
@@ -326,12 +326,12 @@ tbody tr:hover {
   font-size: 0.75rem;
 }
 
-.status--available {
+td .status--available {
   background-color: #dcfce7;
   color: var(--color-success);
 }
 
-.status--unavailable {
+td .status--unavailable {
   background-color: #f5cdb1;
   color: var(--color-warning);
 }
@@ -476,19 +476,19 @@ tbody tr:hover {
    HOVER EFFECTS
 ========================= */
 
-.btn--primary:hover {
+.add-book--btn:hover {
   background-color: var(--color-primary-light);
 }
 
-.btn--danger:hover {
+.cancel--btn:hover {
   background-color: var(--color-danger-light);
 }
 
-.btn--info:hover {
+.edit--btn:hover {
   background-color: var(--color-info-light);
 }
 
-.btn--active:hover {
+.active--btn:hover {
   background-color: var(--color-active-light);
 }
 

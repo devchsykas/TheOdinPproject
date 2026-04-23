@@ -25,7 +25,7 @@
             class="header__avatar"
           />
           <span class="header__welcome">Welcome Chris</span>
-          <button type="button" class="btn btn--secondary">Logout</button>
+          <button type="button" class="btn logout--btn">Logout</button>
         </div>
       </header>
 
@@ -61,7 +61,7 @@
             <h2>Manage Books</h2>
 
             <div class="controls">
-              <button class="btn btn--primary">Add Book</button>
+              <button class="btn add-book--btn">Add Book</button>
             </div>
           </header>
 
@@ -88,7 +88,7 @@
               </thead>
 
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td>
                     <img
                       src="./assets/images/book-1.jpg"
@@ -116,7 +116,7 @@
                       <button class="btn btn--danger">Delete</button>
                     </div>
                   </td>
-                </tr>
+                </tr> -->
               </tbody>
 
               <tfoot>
@@ -124,7 +124,7 @@
                   <td colspan="11">
                     <nav class="pagination" aria-label="Table pagination">
                       <button class="btn">Previous</button>
-                      <button class="btn btn--active" aria-current="page">
+                      <button class="btn active--btn" aria-current="page">
                         1
                       </button>
                       <button class="btn">2</button>
@@ -204,8 +204,8 @@
           </div>
 
           <div class="form__actions">
-            <button type="submit" class="btn btn--primary">Add Book</button>
-            <button type="button" class="btn btn--danger" id="closeModal">
+            <button type="submit" class="btn add-book--btn">Add Book</button>
+            <button type="button" class="btn cancel--btn" id="closeModal">
               Cancel
             </button>
           </div>

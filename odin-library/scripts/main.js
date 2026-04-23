@@ -5,9 +5,12 @@
  */
 
 /**
- * The `form` element is selected from the DOM.
+ * Elements with the id "bookForm", "editBookBtn", and "deleteBookBtn" is selected from the DOM.
  */
 const form = document.getElementById("bookForm");
+const tbody = document.querySelector("tbody");
+// const editBookBtn = document.querySelector(".btn--info");
+// const deleteBookBtn = document.querySelector(".btn--danger");
 
 /* This array will be used to store instances of the `Book` objects in the
 library management system. */
@@ -57,19 +60,24 @@ function addBookToLibrary(book) {
   console.log(`Book added to library: ${book.title}`);
 }
 
+/**
+ * The `renderBooks` function dynamically populates a table with book information from a library array.
+ */
 function renderBooks() {
   // Select the tbody element of the table
   const tbody = document.querySelector("tbody");
-  // Clear the table
+  //Clear the table
   tbody.innerHTML = "";
   // Loop through the library array
-  library.forEach((book) => {
+  library.forEach((book, index) => {
     // Create a new row for each book
     const row = document.createElement("tr");
+    // Populate the row with book data
     row.innerHTML = `
       <td><img src="${book.image}" alt="${book.title}"></td>
-      <td>${book.isbn}</td>
+      <td>${book.id}</td>
       <td>${book.title}</td>
+      <td>${book.isbn}</td>
       <td>${book.author}</td>
       <td>${book.publisher}</td>
       <td>${book.category}</td>
@@ -77,13 +85,25 @@ function renderBooks() {
       <td>${book.numOfCopies}</td>
       <td>${book.status}</td>
       <td>
-        <button class="btn btn--info">Edit</button>
-        <button class="btn btn--danger">Delete</button>
+        <button class="btn edit--btn">Edit</button>
+        <button class="delete-btn" data-index="${index}">Delete</button>
       </td>
     `;
     // Append the row to the end of the table body
     tbody.appendChild(row);
   });
+}
+
+function editBook(book) {}
+
+/**
+ * The function `deleteBook` removes a specified book from a library array and then triggers a
+ * rendering function.
+ * @param book
+ */
+function deleteBook(book) {
+  library.splice(library.indexOf(book), 1);
+  renderBooks();
 }
 
 /**
@@ -131,4 +151,18 @@ form.addEventListener("submit", (event) => {
 
   addBookToLibrary(book);
   renderBooks();
+});
+
+tbody.addEventListener("click", (e) => {
+  console.log("clicked", e.target);
+  if (e.target.classList.contains("delete-btn")) {
+    const index = e.target.dataset.index;
+    console.log(index);
+    const confirmDelete = confirm("Are you sure you want to delete this book?");
+
+    if (confirmDelete) {
+      library.splice(index, 1);
+      renderBooks();
+    }
+  }
 });
