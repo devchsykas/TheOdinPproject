@@ -251,7 +251,8 @@ form.addEventListener("submit", (event) => {
 
   // Render the books
   renderBooks();
-  //form.reset();
+  // Reset the form elements
+  form.reset();
   // Close the modal
   addBookModal.classList.add("hidden");
 });
