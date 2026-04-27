@@ -17,6 +17,9 @@ const library = [];
 // Variable to store the index of the book being edited
 let editIndex = null;
 
+// Variable to store the unique identifier for the book being edited or added
+const uuid = crypto.randomUUID();
+
 /**
  * The function `Book` creates a new instance of the `Book` class.
  * @param {*} image - The image of the book
@@ -43,7 +46,7 @@ function Book(
   status,
 ) {
   this.image = image;
-  this.id = id;
+  this.id = uuid;
   this.title = title;
   this.isbn = isbn;
   this.author = author;
@@ -65,7 +68,7 @@ function getFormData() {
   // Return an object with the form data
   return {
     image: fileInput.files[0] || null,
-    // id: document.getElementById("id").value,
+    id: document.getElementById("id").value,
     title: document.getElementById("title").value,
     isbn: document.getElementById("isbn").value,
     author: document.getElementById("author").value,
@@ -224,7 +227,7 @@ function handleEditClick(index) {
 
   // Populate the form with the book data
   //document.getElementById("image").value = book.image;
-  //document.getElementById("id").value = book.id;
+  document.getElementById("id").value = book.id;
   document.getElementById("title").value = book.title;
   document.getElementById("isbn").value = book.isbn;
   document.getElementById("author").value = book.author;
