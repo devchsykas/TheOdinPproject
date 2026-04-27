@@ -14,6 +14,9 @@ const tbody = document.querySelector("tbody");
 library management system. */
 const library = [];
 
+// Variable to store the index of the book being edited
+let editIndex = null;
+
 /**
  * The function `Book` creates a new instance of the `Book` class.
  * @param {*} image - The image of the book
@@ -56,8 +59,12 @@ function Book(
  * @returns An object with the values of various form elements.
  */
 function getFormData() {
+  // Get the form data from the DOM elements
+  const fileInput = document.getElementById("image");
+
+  // Return an object with the form data
   return {
-    image: document.getElementById("image").files[0] || null,
+    image: fileInput.files[0] || null,
     // id: document.getElementById("id").value,
     title: document.getElementById("title").value,
     isbn: document.getElementById("isbn").value,
@@ -76,6 +83,7 @@ function getFormData() {
  * @returns - A new instance of the `Book` class.
  */
 function createBook(data) {
+  // Create a new book object with the provided data
   return new Book(
     data.image,
     data.id,
@@ -95,6 +103,7 @@ function createBook(data) {
  * @param book - The book object to be added to the library.
  */
 function addBookToLibrary(book) {
+  // Add the book to the library array
   library.push(book);
   console.log(`Book added to library: ${book.title}`);
 }
@@ -104,11 +113,22 @@ function addBookToLibrary(book) {
  * @param book - The book object to be deleted from the library.
  */
 function deleteBook(index) {
+  // Get the book to be deleted from the library array at the specified index
+  const deletedBook = library[index];
+  // Remove the book from the library array
   library.splice(index, 1);
-  //renderBooks();
+  console.log(`Book deleted from Library: ${deletedBook.title}`);
+  renderBooks();
 }
-
-function editBook(book) {}
+/**
+ * The function `editBook` updates a book object in a library array.
+ * @param {*} index - The index of the book to be updated
+ * @param {*} updatedBook - The updated book object
+ */
+function editBook(index, updatedBook) {
+  // Update the book in the library array at the specified index
+  library[index] = updatedBook;
+}
 
 /**
  * The `renderBooks` function dynamically populates a table with book information from a library array.
@@ -147,9 +167,13 @@ function renderBooks() {
  * @returns The function does not return anything.
  */
 function handleFormSubmit() {
+  // Get the form data from the DOM elements
   const formData = getFormData();
+  // Create a new book object from the form data
   const book = createBook(formData);
+  // Add the book to the library array
   addBookToLibrary(book);
+  // Render the books
   renderBooks();
 }
 
@@ -158,9 +182,38 @@ function handleFormSubmit() {
  * @param {*} event - the event object that triggered the function
  */
 function handleDeleteClick(event) {
+  // Get the index of the book to be deleted from the event target dataset index property
   const index = event.target.dataset.index;
+  // Remove the book from the library array at the specified index
   deleteBook(index);
+  // Re-render the books
   renderBooks();
+}
+
+/**
+ * The function `handleEditClick` populates a form with book data based on the index provided and displays a modal for editing.
+ * @param index - Used to identify the position of the book in the `library` array that needs to be edited. It helps in retrieving the specific book object from the `library` array so that its data can be populated in the form for editing
+ */
+function handleEditClick(index) {
+  // Get the book to be edited from the library array at the specified index
+  const book = library[index];
+  // Store the index of the book being edited globally for later use in the `handleFormSubmit` function
+  editIndex = index;
+
+  // Populate the form with the book data
+  //document.getElementById("image").value = book.image;
+  //document.getElementById("id").value = book.id;
+  document.getElementById("title").value = book.title;
+  document.getElementById("isbn").value = book.isbn;
+  document.getElementById("author").value = book.author;
+  document.getElementById("publisher").value = book.publisher;
+  document.getElementById("category").value = book.category;
+  document.getElementById("rack").value = book.rack;
+  document.getElementById("numOfCopies").value = book.numOfCopies;
+  document.getElementById("status").value = book.status;
+
+  // Show the modal for editing the book
+  addBookModal.classList.remove("hidden");
 }
 
 /**
@@ -168,9 +221,39 @@ function handleDeleteClick(event) {
  * @param event - the event object that triggered the function
  */
 form.addEventListener("submit", (event) => {
+  // Prevent the default form submission behavior to prevent the page from reloading when the form is submitted
   event.preventDefault();
   //console.log("Form submitted without reloading!");
-  handleFormSubmit();
+  // handleFormSubmit();
+  // Get the form data from the form elements on the page
+  const formData = getFormData();
+  // Get the image file from the form data
+  let image = formData.image;
+
+  // If we are editing a book, use the existing image if no new image is provided
+  if (editIndex !== null && !image) {
+    image = library[editIndex].image;
+  }
+
+  // Override formData image before creating the book object with the new image file
+  formData.image = image;
+
+  // Create a new book object from the form data and image file
+  const book = createBook(formData);
+
+  // If we are editing a book, update the book in the library array
+  if (editIndex !== null) {
+    editBook(editIndex, book);
+    editIndex = null;
+  } else {
+    addBookToLibrary(book);
+  }
+
+  // Render the books
+  renderBooks();
+  //form.reset();
+  // Close the modal
+  addBookModal.classList.add("hidden");
 });
 
 /**
@@ -179,11 +262,19 @@ form.addEventListener("submit", (event) => {
  */
 tbody.addEventListener("click", (e) => {
   //console.log("clicked", e.target);
+  // Get the index of the book
+  const index = e.target.dataset.index;
+  // If the clicked element has the class "edit--btn", call the `handleEditClick` function with the index as an argument
+  if (e.target.classList.contains("edit--btn")) {
+    handleEditClick(index);
+  }
+
+  // If the clicked element has the class "delete--btn", show a confirmation dialog
   if (e.target.classList.contains("delete--btn")) {
-    const index = e.target.dataset.index;
     //console.log(index);
     const confirmDelete = confirm("Are you sure you want to delete this book?");
 
+    // If the user confirms the deletion, call the `deleteBook` function with the index as an argument and re-render the books
     if (confirmDelete) {
       deleteBook(index);
       renderBooks();
