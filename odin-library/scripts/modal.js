@@ -38,21 +38,7 @@ function handleEscapeKey(e) {
   }
 }
 
-/* The line `addBookBtn.addEventListener("click", openModal);` is adding an event listener to the
-`addBookBtn` element. It listens for a "click" event on the `addBookBtn` element, and when the click
-event occurs, it calls the `openModal` function. This means that when the user clicks on the
-`addBookBtn`, the `openModal` function will be executed, removing the "hidden" class from the
-`addBookModalBtn` element and making it visible. */
+// Event listeners
 addBookBtn.addEventListener("click", openModal);
-
-/* The line `closeModalBtn.addEventListener("click", closeModal);` is adding an event listener to the
-`closeModalBtn` element. It listens for a "click" event on the `closeModalBtn` element, and when the
-click event occurs, it calls the `closeModal` function. This means that when the user clicks on the
-`closeModalBtn`, the `closeModal` function will be executed, adding the "hidden" class to the
-`addBookModalBtn` element and hiding it. */
 closeModalBtn.addEventListener("click", closeModal);
-
-/* The line `document.addEventListener("keydown", handleEscapeKey);` is adding an event listener to the
-entire document. It listens for a "keydown" event, which is triggered when a key is pressed, and
-when this event occurs, it calls the `handleEscapeKey` function. */
 document.addEventListener("keydown", handleEscapeKey);
