@@ -106,6 +106,7 @@ function addBookToLibrary(book) {
   // Add the book to the library array
   library.push(book);
   console.log(`Book added to library: ${book.title}`);
+  //form.reset();
 }
 
 /**
@@ -163,6 +164,25 @@ function renderBooks() {
 }
 
 /**
+ * The function `validateForm` checks if an image is selected in a form and alerts the user if not.
+ * @param formData - The `formData` parameter is likely an object containing data from a form, such as
+ * user input values. In the provided function `validateForm`, it checks if `editIndex` is `null` and
+ * if the `formData` object does not have an `image` property. If these conditions are
+ * @returns The function `validateForm` will return `false` if `editIndex` is `null` and
+ * `formData.image` is falsy (empty or undefined), indicating that the user needs to select an image.
+ * Otherwise, it will return `true`.
+ */
+function validateForm(formData) {
+  // Check if an image is selected in the form and alert the user if not selected
+  if (editIndex === null && !formData.image) {
+    alert("Please select an image");
+    return false;
+  } else {
+    return true;
+  }
+}
+
+/**
  * The function `handleFormSubmit` is triggered when the form is submitted. It gets the form data, creates a book object, adds the book to the library array, and then renders the books.
  * @returns The function does not return anything.
  */
@@ -175,6 +195,8 @@ function handleFormSubmit() {
   addBookToLibrary(book);
   // Render the books
   renderBooks();
+  // Clear the form data
+  form.reset();
 }
 
 /**
@@ -227,6 +249,12 @@ form.addEventListener("submit", (event) => {
   // handleFormSubmit();
   // Get the form data from the form elements on the page
   const formData = getFormData();
+
+  // Check if the form data is valid and alert the user if not
+  if (!validateForm(formData)) {
+    return;
+  }
+
   // Get the image file from the form data
   let image = formData.image;
 
