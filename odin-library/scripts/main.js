@@ -18,7 +18,7 @@ const library = [];
 let editIndex = null;
 
 // Variable to store the unique identifier for the book being edited or added
-const uuid = crypto.randomUUID();
+//const uuid = crypto.randomUUID();
 
 /**
  * The function `Book` creates a new instance of the `Book` class.
@@ -46,7 +46,7 @@ function Book(
   status,
 ) {
   this.image = image;
-  this.id = uuid;
+  this.id = crypto.randomUUID();
   this.title = title;
   this.isbn = isbn;
   this.author = author;
@@ -68,7 +68,7 @@ function getFormData() {
   // Return an object with the form data
   return {
     image: fileInput.files[0] || null,
-    id: document.getElementById("id").value,
+    //id: document.getElementById("id").value,
     title: document.getElementById("title").value,
     isbn: document.getElementById("isbn").value,
     author: document.getElementById("author").value,
@@ -155,7 +155,9 @@ function renderBooks() {
       <td>${book.category}</td>
       <td>${book.rack}</td>
       <td>${book.numOfCopies}</td>
-      <td>${book.status}</td>
+      <td 
+        <span class="status status--available status-unavailable"></span>${book.status}
+      </td>
       <td>
         <button class="btn edit--btn" data-index="${index}">Edit</button>
         <button class="btn delete--btn" data-index="${index}">Delete</button>
