@@ -229,7 +229,7 @@ function handleEditClick(index) {
 
   // Populate the form with the book data
   //document.getElementById("image").value = book.image;
-  document.getElementById("id").value = book.id;
+  //document.getElementById("id").value = book.id;
   document.getElementById("title").value = book.title;
   document.getElementById("isbn").value = book.isbn;
   document.getElementById("author").value = book.author;
