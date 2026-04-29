@@ -86,9 +86,16 @@ function getFormData() {
  * @returns - A new instance of the `Book` class.
  */
 function createBook(data) {
+  // Get the image file from the data object
+  let image = data.image;
+
+  // Convert file to usable URL
+  if (image instanceof File) {
+    image = URL.createObjectURL(image);
+  }
   // Create a new book object with the provided data
   return new Book(
-    data.image,
+    image,
     data.id,
     data.title,
     data.isbn,
@@ -122,7 +129,7 @@ function deleteBook(index) {
   // Remove the book from the library array
   library.splice(index, 1);
   console.log(`Book deleted from Library: ${deletedBook.title}`);
-  renderBooks();
+  // renderBooks();
 }
 /**
  * The function `editBook` updates a book object in a library array.
@@ -146,7 +153,7 @@ function renderBooks() {
     const row = document.createElement("tr");
     // Populate the row with book data
     row.innerHTML = `
-      <td><img src="${book.image}" alt="${book.title}"></td>
+      <td>${book.image ? `<img src="${book.image}" alt="${book.title}">` : "No Image"}</td>
       <td>${book.id}</td>
       <td>${book.title}</td>
       <td>${book.isbn}</td>
@@ -195,6 +202,12 @@ function validateForm(formData) {
 function handleFormSubmit() {
   // Get the form data from the DOM elements
   const formData = getFormData();
+
+  // Keep same ID if editing
+  if (editIndex !== null) {
+    formData.id = library[editIndex].id;
+  }
+
   // Create a new book object from the form data
   const book = createBook(formData);
   // Add the book to the library array

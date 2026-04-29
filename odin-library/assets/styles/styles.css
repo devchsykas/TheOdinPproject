@@ -314,6 +314,12 @@ td {
   text-align: center;
 }
 
+td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
 tbody tr:hover {
   background-color: #f3f4f6;
 }
@@ -457,7 +463,6 @@ tbody tr:hover {
   box-shadow: 0 0 0 1px rgba(46, 125, 50, 0.25);
   outline: none;
 }
-
 
 /* .file__input {
   display: none;
