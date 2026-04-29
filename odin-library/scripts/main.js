@@ -155,8 +155,9 @@ function renderBooks() {
       <td>${book.category}</td>
       <td>${book.rack}</td>
       <td>${book.numOfCopies}</td>
-      <td 
-        <span class="status status--available status-unavailable"></span>${book.status}
+      <td>
+        <span class="status status--${book.status}">
+          ${book.status}</span>
       </td>
       <td>
         <button class="btn edit--btn" data-index="${index}">Edit</button>

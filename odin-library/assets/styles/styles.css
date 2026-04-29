@@ -311,6 +311,7 @@ th {
 td {
   padding: var(--spacing-sm);
   border-bottom: 1px solid var(--color-border);
+  text-align: center;
 }
 
 tbody tr:hover {
@@ -439,6 +440,10 @@ tbody tr:hover {
   background-color: var(--color-surface);
   color: var(--color-text);
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: none;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='gray'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -449,7 +454,10 @@ tbody tr:hover {
 
 .form__select:focus {
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px rgba(46, 125, 50, 0.25);
+  outline: none;
 }
+
 
 /* .file__input {
   display: none;
