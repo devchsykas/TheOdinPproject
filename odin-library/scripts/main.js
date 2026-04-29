@@ -46,7 +46,7 @@ function Book(
   status,
 ) {
   this.image = image;
-  this.id = crypto.randomUUID();
+  this.id = id;
   this.title = title;
   this.isbn = isbn;
   this.author = author;
@@ -68,7 +68,7 @@ function getFormData() {
   // Return an object with the form data
   return {
     image: fileInput.files[0] || null,
-    //id: document.getElementById("id").value,
+    id: crypto.randomUUID(),
     title: document.getElementById("title").value,
     isbn: document.getElementById("isbn").value,
     author: document.getElementById("author").value,
