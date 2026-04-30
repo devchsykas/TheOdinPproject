@@ -120,14 +120,19 @@ function addBookToLibrary(book) {
 }
 
 /**
- * The function `deleteBook` removes a specified book from a library array and then triggers a rendering function.
- * @param book - The book object to be deleted from the library.
+ * The function `deleteBook` removes a book from a library array based on the provided book ID.
+ * @param id - The `id` parameter in the `deleteBook` function is used to identify the specific book
+ * that needs to be deleted from the library array. It is passed to the function to find the index of
+ * the book in the array and then remove it from the library.
  */
-function deleteBook(index) {
+function deleteBook(id) {
   // Get the book to be deleted from the library array at the specified index
-  const deletedBook = library[index];
-  // Remove the book from the library array
-  library.splice(index, 1);
+  const index = findBookIndexById(id);
+
+  if (index !== -1) {
+    // Remove the book from the library array
+    library.splice(index, 1);
+  }
   console.log(`Book deleted from Library: ${deletedBook.title}`);
   // renderBooks();
 }
@@ -167,8 +172,8 @@ function renderBooks() {
           ${book.status}</span>
       </td>
       <td>
-        <button class="btn edit--btn" data-index="${index}">Edit</button>
-        <button class="btn delete--btn" data-index="${index}">Delete</button>
+        <button class="btn edit--btn" data-id="${book.id}">Edit</button>
+        <button class="btn delete--btn" data-id="${book.id}">Delete</button>
       </td>
     `;
     // Append the row to the end of the table body
@@ -177,10 +182,32 @@ function renderBooks() {
 }
 
 /**
+ * The function `findBookId` searches for a book in a library by its ID.
+ * @param id - The `id` parameter is the unique identifier of the book that you want to find in the
+ * `library` array. The `findBookId` function takes this `id` as an argument and searches for a book in
+ * the `library` array that matches this `id`.
+ * @returns The `findBookId` function is returning the book object from the `library` array that has
+ * the specified `id`.
+ */
+function findBookId(id) {
+  return library.find((book) => book.id === id);
+}
+
+/**
+ * The function `findBookIndexById` returns the index of a book in a library array based on its ID.
+ * @param id - The `id` parameter in the `findBookIndexById` function is the unique identifier of the
+ * book that you want to find in the `library` array.
+ * @returns The `findBookIndexById` function is returning the index of a book in the `library` array
+ * that matches the given `id`.
+ */
+function findBookIndexById(id) {
+  return library.findIndex((book) => book.id === id);
+}
+
+/**
  * The function `validateForm` checks if an image is selected in a form and alerts the user if not.
  * @param formData - The `formData` parameter is likely an object containing data from a form, such as
- * user input values. In the provided function `validateForm`, it checks if `editIndex` is `null` and
- * if the `formData` object does not have an `image` property. If these conditions are
+ * user input values.
  * @returns The function `validateForm` will return `false` if `editIndex` is `null` and
  * `formData.image` is falsy (empty or undefined), indicating that the user needs to select an image.
  * Otherwise, it will return `true`.
@@ -233,13 +260,13 @@ function handleDeleteClick(event) {
 
 /**
  * The function `handleEditClick` populates a form with book data based on the index provided and displays a modal for editing.
- * @param index - Used to identify the position of the book in the `library` array that needs to be edited. It helps in retrieving the specific book object from the `library` array so that its data can be populated in the form for editing
+ * @param id - The `id` parameter in the `handleEditClick` function is used to identify the specific book that needs to be edited. It is passed to the function when an edit button is clicked, allowing the function to retrieve the corresponding book data from the library array and populate the form with that data for editing.
  */
-function handleEditClick(index) {
+function handleEditClick(id) {
   // Get the book to be edited from the library array at the specified index
-  const book = library[index];
+  const book = findBookId(id);
   // Store the index of the book being edited globally for later use in the `handleFormSubmit` function
-  editIndex = index;
+  editIndex = findBookIndexById(id);
 
   // Populate the form with the book data
   //document.getElementById("image").value = book.image;
@@ -265,7 +292,7 @@ form.addEventListener("submit", (event) => {
   // Prevent the default form submission behavior to prevent the page from reloading when the form is submitted
   event.preventDefault();
   //console.log("Form submitted without reloading!");
-  // handleFormSubmit();
+
   // Get the form data from the form elements on the page
   const formData = getFormData();
 
@@ -306,15 +333,16 @@ form.addEventListener("submit", (event) => {
 
 /**
  * Event listener for the click event on the table body. When a delete button is clicked, the function `handleDeleteClick` is triggered.
+ * When an edit button is clicked, the function `handleEditClick` is triggered.
  * @param e - the event object that triggered the function
  */
 tbody.addEventListener("click", (e) => {
   //console.log("clicked", e.target);
-  // Get the index of the book
-  const index = e.target.dataset.index;
-  // If the clicked element has the class "edit--btn", call the `handleEditClick` function with the index as an argument
+  // Get the index of the book to be deleted or edited from the event target dataset index property
+  const id = e.target.dataset.id;
+  // If the clicked element has the class "edit--btn", call the `handleEditClick` function with the id as an argument
   if (e.target.classList.contains("edit--btn")) {
-    handleEditClick(index);
+    handleEditClick(id);
   }
 
   // If the clicked element has the class "delete--btn", show a confirmation dialog
@@ -322,9 +350,9 @@ tbody.addEventListener("click", (e) => {
     //console.log(index);
     const confirmDelete = confirm("Are you sure you want to delete this book?");
 
-    // If the user confirms the deletion, call the `deleteBook` function with the index as an argument and re-render the books
+    // If the user confirms the deletion, call the `deleteBook` function with the id as an argument and re-render the books
     if (confirmDelete) {
-      deleteBook(index);
+      deleteBook(id);
       renderBooks();
     }
   }
