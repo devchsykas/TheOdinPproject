@@ -72,9 +72,89 @@ table {
    VARIABLES
 ========================= */
 
+:root {
+  /* Colors */
+  --color-page-bg: #0f172a;
+  --color-board-bg: #1e293b;
+  --x-color: #fb923c;
+  --o-color: #38bdf8;
+  --color-text: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-border: #334155;
+  --btn-bg: #2563eb;
+  --btn-text: #ffffff;
+  --btn-hover: #1d4ed8;
+  --cell-hover: rgba(255, 255, 255, 0.08);
+  /* Typography */
+  --font-heading: "Raleway", sans-serif;
+  --font-body: "Roboto", sans-serif;
+  /* Font sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  /* Border */
+  --border-sm: 1px solid var(--color-border);
+  --border-md: 2px solid var(--color-border);
+  --border-lg: 3px solid var(--color-border);
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease-in-out;
+  --transition-slow: 0.6s ease-in-out;
+}
+
 /* =========================
    BASE STYLES
 ========================= */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  background-color: var(--color-page-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
 
 /* =========================
    LAYOUT

@@ -14,7 +14,7 @@
     />
     <meta name="author" content="Chris Sykas" />
     <title>Odin Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -41,6 +41,29 @@
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
+    <header class="header">
+      <h1 class="header-title">Tic Tac Toe</h1>
+      <p class="header-subtitle">
+        Enjoy a game between you and Odin, the god of Tic Tac Toe!
+      </p>
+    </header>
+    <main class="main">
+      <section class="game-container">
+        <section class="board" id="board">
+          <div class="cell" id="cell-0"></div>
+          <div class="cell" id="cell-1"></div>
+          <div class="cell" id="cell-2"></div>
+          <div class="cell" id="cell-3"></div>
+          <div class="cell" id="cell-4"></div>
+          <div class="cell" id="cell-5"></div>
+          <div class="cell" id="cell-6"></div>
+          <div class="cell" id="cell-7"></div>
+          <div class="cell" id="cell-8"></div>
+        </section>
+        <div class="status" id="status">Player X's turn</div>
+        <div class="game-over" id="game-over">Game Over! X's wins!</div>
+        <button class="restart" id="restart">Restart</button>
+      </section>
+    </main>
   </body>
 </html>
