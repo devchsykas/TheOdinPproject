@@ -48,25 +48,22 @@
       </p>
     </header>
     <main class="main">
-      <section class="game-container">
-        <section class="board" id="board">
-          <div class="cell" id="cell-0"></div>
-          <div class="cell" id="cell-1"></div>
-          <div class="cell" id="cell-2"></div>
-          <div class="cell" id="cell-3"></div>
-          <div class="cell" id="cell-4"></div>
-          <div class="cell" id="cell-5"></div>
-          <div class="cell" id="cell-6"></div>
-          <div class="cell" id="cell-7"></div>
-          <div class="cell" id="cell-8"></div>
-        </section>
-        <div class="status" id="status">
-          Player <span class="player-x">X</span>'s turn
+      <section class="game-container" arial-labelledby="game-title">
+        <div class="board" id="board" aria-label="Tic Tac Toe board">
+          <button class="cell" data-index="0"></button>
+          <button class="cell" data-index="1"></button>
+          <button class="cell" data-index="2"></button>
+          <button class="cell" data-index="3"></button>
+          <button class="cell" data-index="4"></button>
+          <button class="cell" data-index="5"></button>
+          <button class="cell" data-index="6"></button>
+          <button class="cell" data-index="7"></button>
+          <button class="cell" data-index="8"></button>
         </div>
-        <div class="game-over" id="game-over">
-          Game Over! Player <span class="player-o">O</span>'s wins!
-        </div>
-        <button class="restart-btn" id="restart-btn">Restart</button>
+        <div class="status" id="status">Player X's turn</div>
+        <button type="button" class="restart-btn" id="restart-btn">
+          Restart
+        </button>
       </section>
     </main>
   </body>
