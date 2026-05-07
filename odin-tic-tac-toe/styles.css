@@ -81,9 +81,9 @@ table {
   --color-text: #f8fafc;
   --color-text-secondary: #94a3b8;
   --color-border: #334155;
-  --btn-bg: #2563eb;
+  --btn-bg: #eb2528;
   --btn-text: #ffffff;
-  --btn-hover: #1d4ed8;
+  --btn-hover: #ed6868;
   --cell-hover: rgba(255, 255, 255, 0.08);
   /* Typography */
   --font-heading: "Raleway", sans-serif;
@@ -149,6 +149,7 @@ h1 {
 p {
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+  font-family: var(--font-body);
 }
 
 button {
@@ -157,5 +158,100 @@ button {
 }
 
 /* =========================
-   LAYOUT
+   HEADER SECTION
 ========================= */
+
+.header {
+  padding: var(--spacing-xl);
+  text-align: center;
+}
+
+.header-subtitle {
+  font-size: var(--font-size-lg);
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+.main {
+  padding: var(--spacing-xl);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+  background-color: var(--color-board-bg);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.cell {
+  border: var(--border-md);
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+    STATUS SECTION
+========================= */
+
+.status,
+.game-over {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin: var(--spacing-sm) 0;
+}
+
+.player-x::before {
+  content: "X";
+  color: var(--x-color);
+}
+
+.player-o {
+  content: "O";
+  color: var(--o-color);
+}
+
+/* =========================
+    BUTTONS
+========================= */
+
+.restart-btn {
+  background-color: var(--btn-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-slow);
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+.cell:hover {
+  background-color: var(--cell-hover);
+}
+
+.restart-btn:hover {
+  background-color: var(--btn-hover);
+}
