@@ -175,10 +175,12 @@ const GameController = (() => {
       if (board[a] === board[b] && board[a] === board[c]) {
         // We have a winner!
         DisplayController.updateStatus(`${currentPlayer.name} wins!`);
+        // Set game over flag to prevent further moves
         gameOver = true;
+        // Return true to break the loop
         return true;
       }
-
+      // No winner for this combination, continue checking
       return false;
     });
   };
@@ -194,17 +196,16 @@ const GameController = (() => {
 
     // If every cell is filled and no winner, it's a draw
     if (board.every((cell) => cell !== "")) {
+      // Update status to draw
       DisplayController.updateStatus("Draw!");
+      // Set game over flag
       gameOver = true;
+      // Return true to break the loop
       return true;
     }
-
+    // Not a draw, continue game
     return false;
   };
-
-  // const switchPlayer = () => {
-  //   currentPlayer = currentPlayer === player1 ? player2 : player1;
-  // };
 
   /**
    * Handles cell clicks.
