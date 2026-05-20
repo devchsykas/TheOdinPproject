@@ -213,6 +213,14 @@ button {
   transition: background-color 0.2s ease transform 0.2s ease;
 }
 
+.x {
+  color: var(--x-color);
+}
+
+.o {
+  color: var(--o-color);
+}
+
 /* =========================
     STATUS SECTION
 ========================= */
