@@ -1,4 +1,4 @@
-import "./src/assets/styles/styles.css";
+import "/src/assets/styles/styles.css";
 
 const heading = document.createElement("h1");
 heading.textContent = "Agora Bistro";
