@@ -16,7 +16,7 @@
   \**********************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n// import \"./src/assets/styles/styles.css\";\r\n\r\nconst heading = document.createElement(\"h1\");\r\nheading.textContent = \"Agora Bistro\";\r\ndocument.body.appendChild(heading);\r\n\r\nconsole.log(\"Hello, Webpack!\");\r\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?\n}");
 
 /***/ }
 
