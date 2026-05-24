@@ -31,34 +31,23 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository:**
 
-   ```bash
    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-
-   ```
 
 2. **Navigate into the project directory**
 
-   ```bash
    cd YOUR_REPOSITORY_NAME
-
-   ```
 
 3. **Install the dependencies**
 
-````bash
-npm install
+   npm install
 
 4. **Start the development server**
 
-```bash
-npm start
+   npm start
 
 5. **Build the project for production**
 
-```bash
-npm run build
-
----
+   npm run build
 
 ## 🧠 What I Learned
 
@@ -81,4 +70,7 @@ This project is open source and available under the MIT License.
 ## 👨‍💻 Author
 
 Designed and built with ❤️ Christos Sykas.
-````
+
+```
+
+```
