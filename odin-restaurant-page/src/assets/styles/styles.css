@@ -1,3 +1,5 @@
+/* Font Faces */
+
 @font-face {
   font-family: "Cinzel";
   src: url("/src/assets/fonts/Cinzel-Lato/Cinzel/static/Cinzel-Bold.ttf")
@@ -13,13 +15,121 @@
   font-style: normal;
 }
 
-body {
-  background-color: rebeccapurple;
+/* Global Variables */
+:root {
+  /* Colors */
+  --primary-color: #d97455;
+  --secondary-color: #5f6f52;
+  --bg-color: #f9f8f3;
+  --text-color: #1a3644;
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Typography */
+  --font-size-base: 16px;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+
+  /* Spacing */
+  --spacing-xsm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xlg: 2rem;
+  --spacing-xxlg: 3rem;
+
+  /* Border Radius */
+  --border-radius-xsm: 0.125rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xlg: 1.5rem;
+  --border-radius-xxlg: 2rem;
+
+  /* Box Shadow */
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-family: "Cinzel", serif;
-  color: white;
-  text-align: center;
-  font-size: 3rem;
+/* Reset Styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
 }
