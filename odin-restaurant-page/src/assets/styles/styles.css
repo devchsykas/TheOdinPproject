@@ -1,7 +1,7 @@
 /* Font Faces */
 
 @font-face {
-  font-family: "Cinzel";
+  font-family: "Cinzel", serif;
   src: url("/src/assets/fonts/Cinzel-Lato/Cinzel/static/Cinzel-Bold.ttf")
     format("ttf");
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   src: url("/src/assets/fonts/Cinzel-Lato/Lato/Lato-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
@@ -27,8 +27,10 @@
 
   /* Typography */
   --font-size-base: 16px;
-  --font-size-lg: 1.25rem;
   --font-size-sm: 0.875rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xlg: 2rem;
   --font-weight-bold: 700;
   --font-weight-normal: 400;
 
@@ -132,4 +134,78 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   min-height: 100vh;
+  font-size: var(--font-size-base);
+}
+
+/* Header Section */
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  padding: var(--spacing-lg) var(--spacing-xlg);
+  border-bottom: 1px solid var(--secondary-color);
+  /* z-index: 10; */
+}
+
+/* Navigation Section */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-family: "Cinzel", serif;
+  font-size: var(--font-size-xlg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.logo-text span {
+  color: var(--primary-color);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius-xlg);
+}
+
+.nav-buttons button.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.nav-buttons button {
+  min-width: 80px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background-color: transparent;
+  border-radius: var(--border-radius-xlg);
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
