@@ -31,6 +31,7 @@
   --font-size-md: 1.25rem;
   --font-size-lg: 1.5rem;
   --font-size-xlg: 2rem;
+  --font-size-xxlg: 2.5rem;
   --font-weight-bold: 700;
   --font-weight-normal: 400;
 
@@ -217,4 +218,59 @@ body {
   /* margin: var(--spacing-xlg) auto; */
   /* padding: 0 var(--spacing-xlg); */
   padding: 0;
+}
+
+.home-page {
+  display: grid;
+  gap: 0;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  padding: var(--spacing-xlg) 0;
+}
+
+.hero-text {
+  grid-column: 1 / 2;
+}
+
+.hero-title {
+  max-width: 800px;
+  font-family: "Cinzel", serif;
+  font-size: var(--font-size-xxlg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-description {
+  max-width: 550px;
+  font-size: var(--font-size-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.hero-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-xlg);
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: var(--box-shadow-md);
+}
+
+.hero-btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
