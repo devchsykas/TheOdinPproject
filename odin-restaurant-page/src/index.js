@@ -1,3 +1,3 @@
-// import "/src/assets/styles/styles.css";
+import "/src/assets/styles/styles.css";
 
 console.log("Hello, Webpack!");
