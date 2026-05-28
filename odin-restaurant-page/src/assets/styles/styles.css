@@ -209,3 +209,12 @@ body {
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
 }
+
+/* Main Section */
+
+#content {
+  width: 100%;
+  /* margin: var(--spacing-xlg) auto; */
+  /* padding: 0 var(--spacing-xlg); */
+  padding: 0;
+}
