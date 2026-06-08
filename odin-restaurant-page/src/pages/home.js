@@ -57,3 +57,5 @@ const createHomePage = () => {
 
   content.appendChild(homePage);
 };
+
+export default createHomePage;
