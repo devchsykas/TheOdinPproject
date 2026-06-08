@@ -1,6 +1,7 @@
 import "/src/assets/styles/styles.css";
 import createHomePage from "./pages/home.js";
 
-createHomePage();
-
-console.log("Hello, Webpack!");
+document.addEventListener("DOMContentLoaded", () => {
+  const content = document.getElementById("content");
+  content.appendChild(createHomePage());
+});
