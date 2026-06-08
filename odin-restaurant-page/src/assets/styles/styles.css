@@ -508,7 +508,7 @@ body {
 }
 
 .footer-social-icons a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color-light);
   color: var(--white);
 }
 
