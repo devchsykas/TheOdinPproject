@@ -88,16 +88,19 @@ const createHomePage = () => {
   const recommendationSection = document.createElement("section");
   recommendationSection.classList.add("recommendation-section");
 
-  const recommendationHeading = document.createElement("h2");
+  const recommendationHeading = document.createElement("div");
   recommendationHeading.classList.add("recommendation-heading");
-  recommendationHeading.textContent = "Chef's Recommendation";
+
+  const recommendationTitle = document.createElement("h2");
+  recommendationTitle.textContent = "Chef's Recommendation";
 
   const recommendationText = document.createElement("p");
   recommendationText.textContent =
     "Our chef's recommendation is a carefully curated selection of Greek meals that will satisfy your cravings and delight your taste buds.";
 
   recommendationSection.appendChild(recommendationHeading);
-  recommendationSection.appendChild(recommendationText);
+  recommendationHeading.appendChild(recommendationTitle);
+  recommendationHeading.appendChild(recommendationText);
 
   const recommendationImageContainer = document.createElement("div");
   recommendationImageContainer.classList.add("recommendation-image-container");
