@@ -1,4 +1,7 @@
 import heroImage from "../assets/images/hero.jpg";
+import lambKleftiko from "../assets/images/lamb-kleftiko.jpg";
+import greekSalad from "../assets/images/traditional-Greek-salad.jpg";
+import galaktompoureko from "../assets/images/galaktompoureko.jpg";
 
 const content = document.getElementById("content");
 
@@ -114,6 +117,10 @@ const createHomePage = () => {
   recommendationSection.appendChild(recommendationHeading);
   recommendationSection.appendChild(recommendationText);
 
+  // Create the recommendation image container
+  const recommendationImageContainer = document.createElement("div");
+  recommendationImageContainer.classList.add("recommendation-image-container");
+
   const recommendations = [
     {
       image: lambKleftiko,
@@ -135,12 +142,29 @@ const createHomePage = () => {
     },
   ];
 
-  // create recommendation card container
-  const recommendationImageContainer = document.createElement("div");
-  recommendationImageContainer.classList.add("recommendation-image-container");
+  recommendations.forEach((recommendation) => {
+    const recommendationCard = document.createElement("article");
+    recommendationCard.classList.add("recommendation-card");
+    recommendationCard.innerHTML = `<img src="${recommendation.image}" alt="${recommendation.name}" />
+    <div class="recommendation-card-content">
+      <h3 class="recommendation-card-title">${recommendation.name}</h3>
+      <p class="recommendation-card-description">${recommendation.description}</p>
+    </div>
+    `;
+
+    recommendationImageContainer.appendChild(recommendationCard);
+  });
+
+  // Append the recommendation image container to the recommendation section
+  recommendationSection.appendChild(recommendationImageContainer);
+
+  // Append the recommendation section to the main wrapper container
+  homePage.appendChild(recommendationSection);
 
   // Append the main wrapper container to the content div
   content.appendChild(homePage);
+
+  return homePage;
 };
 
 export default createHomePage;
