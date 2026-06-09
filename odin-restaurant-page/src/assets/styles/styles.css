@@ -326,7 +326,7 @@ body {
   max-width: none;
 }
 
-.mission-content > div {
+.mission-content {
   grid-column: 2;
 }
 
