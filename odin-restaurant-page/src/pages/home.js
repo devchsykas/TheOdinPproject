@@ -1,21 +1,18 @@
 import heroImage from "../assets/images/hero.jpg";
-import lambKleftiko from "../assets/images/lamb-kleftiko.jpg";
-import greekSalad from "../assets/images/traditional-Greek-salad.jpg";
-import galaktompoureko from "../assets/images/galaktompoureko.jpg";
-
-const content = document.getElementById("content");
+import lambKleftikoImage from "../assets/images/lamb-kleftiko.jpg";
+import greekSaladImage from "../assets/images/traditional-Greek-salad.jpg";
+import galaktompourekoImage from "../assets/images/galaktompoureko.jpg";
 
 const createHomePage = () => {
-  // Create the main wrapper container
+  // Main page wrapper container
   const homePage = document.createElement("div");
   homePage.classList.add("home-page");
 
-  // create the hero section
+  // --- HERO SECTION ---
   const heroSection = document.createElement("section");
   heroSection.classList.add("hero-section");
   heroSection.setAttribute("aria-label", "Hero Section");
 
-  // Create the hero text container
   const heroText = document.createElement("div");
   heroText.classList.add("hero-text");
 
@@ -28,7 +25,6 @@ const createHomePage = () => {
   heroDescription.textContent =
     "Experience authentic Greek gathering and culinary art. Fresh ingredients, vibrant flavors, and a warm atmosphere await you at our Agora Bistro. Join us for a taste of the Mediterranean!";
 
-  // Create the hero buttons container
   const heroButtons = document.createElement("div");
   heroButtons.classList.add("hero-buttons");
 
@@ -42,35 +38,29 @@ const createHomePage = () => {
   bookButton.id = "book-table-btn";
   bookButton.textContent = "Book Table";
 
-  // Append buttons to the hero buttons container
   heroButtons.appendChild(exploreButton);
   heroButtons.appendChild(bookButton);
-
-  // Append the title, description, and buttons to the hero text container
   heroText.appendChild(heroTitle);
   heroText.appendChild(heroDescription);
   heroText.appendChild(heroButtons);
 
-  // Create the hero image container
   const heroImageContainer = document.createElement("div");
   heroImageContainer.classList.add("hero-image");
-  const heroImage = document.createElement("img");
 
-  heroImage.src = heroImage;
-  heroImage.alt = "Agora Bistro Interior";
+  // ✅ Renamed variable to prevent shadowing the import string path
+  const heroImgElement = document.createElement("img");
+  heroImgElement.src = heroImage;
+  heroImgElement.alt = "Agora Bistro Interior";
 
-  // Append the image to the hero image container
-  heroImageContainer.appendChild(heroImage);
-
-  // Append the hero text and image containers to the hero section
+  heroImageContainer.appendChild(heroImgElement);
   heroSection.appendChild(heroText);
   heroSection.appendChild(heroImageContainer);
+  homePage.appendChild(heroSection);
 
-  // Create the mission section
+  // --- MISSION SECTION ---
   const missionSection = document.createElement("section");
   missionSection.classList.add("mission-section");
 
-  // create the mission content container
   const missionContent = document.createElement("div");
   missionContent.classList.add("mission-content");
 
@@ -88,20 +78,13 @@ const createHomePage = () => {
   missionDescription.textContent =
     "At Agora Bistro, we believe in the power of good food to bring people together. Our mission is to create a warm and inviting atmosphere that celebrates the rich culinary heritage of Greece while embracing contemporary flavors and techniques.";
 
-  // Append the title, subtitle, and description to the mission content container
   missionContent.appendChild(missionTitle);
   missionContent.appendChild(missionSubtitle);
   missionContent.appendChild(missionDescription);
-
-  // Append the mission content container to the mission section
   missionSection.appendChild(missionContent);
-
-  // Append the hero section to the main wrapper container
-  homePage.appendChild(heroSection);
-  // Append the mission section to the main wrapper container
   homePage.appendChild(missionSection);
 
-  // create the recommendations section
+  // --- RECOMMENDATIONS SECTION ---
   const recommendationSection = document.createElement("section");
   recommendationSection.classList.add("recommendation-section");
 
@@ -111,31 +94,29 @@ const createHomePage = () => {
 
   const recommendationText = document.createElement("p");
   recommendationText.textContent =
-    "Our chef\'s recommendation is a carefully curated selection of Greek meals that will satisfy your cravings and delight your taste buds.";
+    "Our chef's recommendation is a carefully curated selection of Greek meals that will satisfy your cravings and delight your taste buds.";
 
-  // Append the heading and text to the recommendation section
   recommendationSection.appendChild(recommendationHeading);
   recommendationSection.appendChild(recommendationText);
 
-  // Create the recommendation image container
   const recommendationImageContainer = document.createElement("div");
   recommendationImageContainer.classList.add("recommendation-image-container");
 
   const recommendations = [
     {
-      image: lambKleftiko,
+      image: lambKleftikoImage,
       name: "Lamb Kleftiko",
       description:
         "Traditional Greek dish of slow-roasted lamb cooked in parchment paper with potatoes and vegetables.",
     },
     {
-      image: greekSalad,
+      image: greekSaladImage,
       name: "Greek Salad",
       description:
         "A refreshing salad made with tomatoes, cucumbers, onions, olives, and feta cheese, dressed with olive oil and oregano.",
     },
     {
-      image: galaktompoureko,
+      image: galaktompourekoImage,
       name: "Galaktompoureko",
       description:
         "A delicious Greek dessert made with layers of crispy phyllo dough and a creamy semolina custard, soaked in a fragrant syrup.",
@@ -145,24 +126,20 @@ const createHomePage = () => {
   recommendations.forEach((recommendation) => {
     const recommendationCard = document.createElement("article");
     recommendationCard.classList.add("recommendation-card");
-    recommendationCard.innerHTML = `<img src="${recommendation.image}" alt="${recommendation.name}" />
-    <div class="recommendation-card-content">
-      <h3 class="recommendation-card-title">${recommendation.name}</h3>
-      <p class="recommendation-card-description">${recommendation.description}</p>
-    </div>
+
+    recommendationCard.innerHTML = `
+      <img src="${recommendation.image}" alt="${recommendation.name}" />
+      <div class="recommendation-card-content">
+        <h3 class="recommendation-card-title">${recommendation.name}</h3>
+        <p class="recommendation-card-description">${recommendation.description}</p>
+      </div>
     `;
 
     recommendationImageContainer.appendChild(recommendationCard);
   });
 
-  // Append the recommendation image container to the recommendation section
   recommendationSection.appendChild(recommendationImageContainer);
-
-  // Append the recommendation section to the main wrapper container
   homePage.appendChild(recommendationSection);
-
-  // Append the main wrapper container to the content div
-  content.appendChild(homePage);
 
   return homePage;
 };
