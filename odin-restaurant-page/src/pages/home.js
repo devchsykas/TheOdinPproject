@@ -1,4 +1,5 @@
 import heroImage from "../assets/images/hero.jpg";
+import missionImage from "../assets/images/mission.jpg";
 import lambKleftikoImage from "../assets/images/lamb-kleftiko.jpg";
 import greekSaladImage from "../assets/images/traditional-Greek-salad.jpg";
 import galaktompourekoImage from "../assets/images/galaktompoureko.jpg";
@@ -61,6 +62,13 @@ const createHomePage = () => {
   const missionSection = document.createElement("section");
   missionSection.classList.add("mission-section");
 
+  const missionImageContainer = document.createElement("div");
+  missionImageContainer.classList.add("mission-image");
+
+  const missionImgElement = document.createElement("img");
+  missionImgElement.src = missionImage;
+  missionImgElement.alt = "";
+
   const missionContent = document.createElement("div");
   missionContent.classList.add("mission-content");
 
@@ -78,10 +86,12 @@ const createHomePage = () => {
   missionDescription.textContent =
     "At Agora Bistro, we believe in the power of good food to bring people together. Our mission is to create a warm and inviting atmosphere that celebrates the rich culinary heritage of Greece while embracing contemporary flavors and techniques.";
 
+  missionImageContainer.appendChild(missionImgElement);
   missionContent.appendChild(missionTitle);
   missionContent.appendChild(missionSubtitle);
   missionContent.appendChild(missionDescription);
   missionSection.appendChild(missionContent);
+  missionSection.appendChild(missionImageContainer);
   homePage.appendChild(missionSection);
 
   // --- RECOMMENDATIONS SECTION ---
