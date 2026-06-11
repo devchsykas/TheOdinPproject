@@ -1,48 +1,46 @@
 import logoImage from "../assets/images/logo.svg";
 
 const createNavbar = () => {
-  const header = createElement("header");
+  const header = document.createElement("header");
   header.classList.add("header");
 
-  const nav = createElement("nav");
+  const nav = document.createElement("nav");
   nav.classList.add("navbar");
   nav.setAttribute("aria-label", "Main Navigation");
 
-  const logoContainer = createElement("div");
+  const logoContainer = document.createElement("div");
   logoContainer.classList.add("logo");
 
-  const logoImageElement = createElement("img");
+  const logoImageElement = document.createElement("img");
   logoImageElement.classList.add("logo-img");
   logoImageElement.src = logoImage;
   logoImageElement.alt = "Agora Bistro Logo";
 
-  const logoText = createElement("h1");
+  const logoText = document.createElement("h1");
   logoText.classList.add("logo-text");
-  logoText.textContent = "Agora";
-  const logoSubtext = createElement("span");
-  logoSubtext.textContent = "Bistro";
+  logoText.innerHTML = "Agora <span >Bistro</span>";
 
-  const navButtons = createElement("div");
+  const navButtons = document.createElement("div");
   navButtons.classList.add("nav-buttons");
 
-  const homeButton = createElement("button");
+  const homeButton = document.createElement("button");
   homeButton.classList.add("active");
   homeButton.id = "home-btn";
   homeButton.textContent = "Home";
 
-  const menuButton = createElement("button");
+  const menuButton = document.createElement("button");
   menuButton.id = "menu-btn";
   menuButton.textContent = "Menu";
 
-  const aboutButton = createElement("button");
+  const aboutButton = document.createElement("button");
   aboutButton.id = "about-btn";
   aboutButton.textContent = "About";
 
-  const contactButton = createElement("button");
+  const contactButton = document.createElement("button");
   contactButton.id = "contact-btn";
   contactButton.textContent = "Contact";
 
-  logoContainer.append(logoImageElement, logoText, logoSubtext);
+  logoContainer.append(logoImageElement, logoText);
   navButtons.append(homeButton, menuButton, aboutButton, contactButton);
   nav.append(logoContainer, navButtons);
   header.append(nav);
