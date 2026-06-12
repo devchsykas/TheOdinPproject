@@ -73,4 +73,13 @@ const createFooter = () => {
       </a>
     </p>
   `;
+
+  footerTop.appendChild(footerColumn1);
+  footerTop.appendChild(footerColumn2);
+  footerTop.appendChild(footerColumn3);
+  footerTop.appendChild(footerColumn4);
+  footer.appendChild(footerTop);
+  footer.appendChild(footerBottom);
+
+  return footer;
 };
