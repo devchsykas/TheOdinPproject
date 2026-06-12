@@ -83,3 +83,5 @@ const createFooter = () => {
 
   return footer;
 };
+
+export default createFooter;
