@@ -1,7 +1,7 @@
 import aboutImage from "../assets/images/hero.jpg";
 
 const createAboutPage = () => {
-  const aboutSection = document.crateElement("section");
+  const aboutSection = document.createElement("section");
   aboutSection.classList.add("about-section");
 
   const aboutHeading = document.createElement("div");
