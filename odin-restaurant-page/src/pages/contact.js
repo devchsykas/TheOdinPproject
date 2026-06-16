@@ -11,4 +11,12 @@ const createContactPage = () => {
   const contactText = document.createElement("p");
   contactText.textContent =
     "Join us at the Agora Bistro. Whether a family dinner or a romantic night, our warm and welcoming atmosphere will bring you and your loved ones together in a place where the flavors of Greece come to life. We look forward to welcoming you!";
+
+  contactHeading.appendChild(contactTitle);
+  contactHeading.appendChild(contactText);
+  contactSection.appendChild(contactHeading);
+
+  return contactSection;
 };
+
+export default createContactPage;
