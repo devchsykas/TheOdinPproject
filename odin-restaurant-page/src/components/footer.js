@@ -61,7 +61,7 @@ const createFooter = () => {
   footerBottom.classList.add("footer-bottom");
   footerBottom.innerHTML = `
     <p>&copy; 2026 Agora Bistro. All rights reserved.</p>
-    <pan>|</span>
+    <span class="footer-divider">|</span>
     <p>Designed and Developed by
       <a class="footer-credit-link" href="https://github.com/devchsykas" target="_blank" rel="noopener noreferrer">
        <svg viewBox="0 0 24 24" aria-hidden="true">

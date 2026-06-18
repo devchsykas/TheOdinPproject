@@ -712,7 +712,7 @@ body {
   gap: var(--spacing-sm);
 }
 
-.footer-bottom span {
+.footer-divider {
   color: var(--primary-color);
 }
 
