@@ -487,6 +487,101 @@ body {
   object-fit: cover;
 }
 
+/* Contact Section */
+
+.contact-section {
+  padding: 80px 0;
+  background-color: var(--white);
+  width: 100%;
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.contact-heading {
+  grid-column: 1 / 2;
+  padding: 0 var(--spacing-xlg);
+}
+
+.contact-heading h2 {
+  font-family: "Cinzel", serif;
+  font-size: var(--font-size-xxlg);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-heading p {
+  font-size: var(--font-size-md);
+  line-height: 1.3;
+  max-width: 500px;
+}
+
+.contact-info {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-column: 2 / 3;
+  padding: 0 var(--spacing-xlg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-info p {
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  background: var(--bg-color);
+  font-size: var(--font-size-md);
+}
+
+.contact-info span {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+}
+
+.reservation-form {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-column: 2 / 3;
+  padding: 0 var(--spacing-xlg);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  background: var(--bg-color);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reservation-form h3 {
+  font-family: "Cinzel", serif;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.reservation-form label {
+  display: grid;
+  gap: var(--spacing-sm);
+  color: var(--secondary-color);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.reservation-form input {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-color);
+  color: var(--secondary-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
 /* Footer Section */
 
 .footer {
