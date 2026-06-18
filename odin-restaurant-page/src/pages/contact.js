@@ -27,18 +27,24 @@ const createContactPage = () => {
   reservationForm.id = "reservation-form";
   reservationForm.innerHTML = `
     <h3>Make a Reservation</h3>
-    <label>Name</label>
-    <input type="text" name="name" placeholder="Enter your name" required />
-    <label>Phone</label>
-    <input type="tel" name="phone" placeholder="+30 123 456 789" required />
-    <label>Guests</label>
-    <input type="number" name="guests" min="1" max="20" placeholder="2" required />
-    <label>Date</label>
-    <input type="date" name="date" required />
-    <label>Time</label>
-    <input type="time" name="time" min="10:00" max="21:30" required />
-    <label>Message</label>
-    <textarea name="message" placeholder="Occasion, special requests, or anything else you'd like to add"></textarea>
+    <label>Name
+      <input type="text" name="name" placeholder="Enter your name" required />
+    </label>
+    <label>Phone
+      <input type="tel" name="phone" placeholder="+30 123 456 789" required />
+    </label>
+    <label>Guests
+       <input type="number" name="guests" min="1" max="20" placeholder="2" required />
+    </label>
+    <label>Date
+      <input type="date" name="date" required />
+    </label>
+    <label>Time
+      <input type="time" name="time" min="10:00" max="21:30" required />
+    </label>
+    <label class="form-message">Message
+       <textarea name="message" placeholder="Occasion, special requests, or anything else you'd like to add"></textarea>
+    </label>
     <button type="submit">Request Reservation</button>
     <p class="form-message" id="form-message" aria-live="polite" role="status"></p>
   `;
