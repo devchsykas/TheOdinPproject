@@ -26,6 +26,7 @@
   --text-color: #1a3644;
   --white: #ffffff;
   --black: #000000;
+  --bg-footer: #1a3644;
 
   /* Typography */
   --font-size-base: 16px;
@@ -615,7 +616,7 @@ body {
 /* Footer Section */
 
 .footer {
-  background-color: var(--white);
+  background-color: var(--bg-footer);
   padding: 80px 0;
   width: 100%;
   border-top: 1px solid var(--secondary-color);
@@ -642,18 +643,19 @@ body {
   font-family: "Cinzel", serif;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
+  color: var(--white);
   text-transform: uppercase;
 }
 
 .footer-column p {
   font-size: var(--font-size-sm);
   line-height: 1.7;
+  color: var(--primary-color);
 }
 
 .footer-column a {
   text-decoration: none;
-  color: var(--text-color);
+  color: #d97455;
   transition: color 0.3s ease-in-out;
   font-size: var(--font-size-sm);
   line-height: 1.7;
@@ -667,10 +669,9 @@ body {
 .footer-social-icons a {
   width: 30px;
   height: 30px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--black);
   border-radius: 50%;
   padding: 5px;
-  color: var(--secondary-color);
   background-color: var(--white);
   transition:
     background-color 0.3s ease-in-out,
@@ -683,12 +684,12 @@ body {
 .footer-social-icons svg {
   width: 24px;
   height: 24px;
-  fill: var(--black);
+  fill: var(--primary-color);
   transition: fill 0.3s ease-in-out;
 }
 
 .footer-social-icons a:hover {
-  background-color: var(--secondary-color-light);
+  background-color: var(--white);
   color: var(--white);
 }
 
@@ -703,7 +704,7 @@ body {
 
 .footer-bottom p {
   font-size: var(--font-size-sm);
-  color: var(--text-color);
+  color: var(--white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -711,9 +712,13 @@ body {
   gap: var(--spacing-sm);
 }
 
+.footer-bottom span {
+  color: var(--primary-color);
+}
+
 .footer-bottom a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--white);
   transition: color 0.3s ease-in-out;
 }
 
@@ -726,6 +731,6 @@ body {
 .footer-credit-link svg {
   width: 24px;
   height: 24px;
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
   transition: fill 0.3s ease-in-out;
 }
