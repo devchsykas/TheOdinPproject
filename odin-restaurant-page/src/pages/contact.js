@@ -1,6 +1,7 @@
 const createContactPage = () => {
   const contactSection = document.createElement("section");
   contactSection.classList.add("contact-section");
+  contactSection.setAttribute("aria-label", "Contact Section");
 
   const contactHeading = document.createElement("div");
   contactHeading.classList.add("contact-heading");
@@ -8,13 +9,45 @@ const createContactPage = () => {
   const contactTitle = document.createElement("h2");
   contactTitle.textContent = "Booking & Visits";
 
-  const contactText = document.createElement("p");
-  contactText.textContent =
+  const contactIntro = document.createElement("p");
+  contactIntro.textContent =
     "Join us at the Agora Bistro. Whether a family dinner or a romantic night, our warm and welcoming atmosphere will bring you and your loved ones together in a place where the flavors of Greece come to life. We look forward to welcoming you!";
 
+  const contactInfo = document.createElement("div");
+  contactInfo.classList.add("contact-info");
+  contactInfo.innerHTML = `
+    <p><span>Address</span>123 Main Street, Athens, Greece</p>
+    <p><span>Phone</span>+30 213 778 965</p>
+    <p><span>Email</span>info@agorabistro.com</p>
+    <p><span>Opening Hours</span>Mon-Fri: 11am - 10pm, Sat-Sun: 12pm - 11pm</p>
+  `;
+
+  const reservationForm = document.createElement("form");
+  reservationForm.classList.add("reservation-form");
+  reservationForm.id = "reservation-form";
+  reservationForm.innerHTML = `
+    <h3>Make a Reservation</h3>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required />
+    <label>Phone</label>
+    <input type="tel" name="phone" placeholder="+30 123 456 789" required />
+    <label>Guests</label>
+    <input type="number" name="guests" min="1" max="20" placeholder="2" required />
+    <label>Date</label>
+    <input type="date" name="date" required />
+    <label>Time</label>
+    <input type="time" name="time" min="10:00" max="21:30" required />
+    <label>Message</label>
+    <textarea name="message" placeholder="Occasion, special requests, or anything else you'd like to add"></textarea>
+    <button type="submit">Request Reservation</button>
+    <p class="form-message" id="form-message" aria-live="polite" role="status"></p>
+  `;
+
   contactHeading.appendChild(contactTitle);
-  contactHeading.appendChild(contactText);
+  contactHeading.appendChild(contactIntro);
   contactSection.appendChild(contactHeading);
+  contactSection.appendChild(contactInfo);
+  contactSection.appendChild(reservationForm);
 
   return contactSection;
 };
