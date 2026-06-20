@@ -13,7 +13,7 @@ const createMenuPage = () => {
 
   const menuIntro = document.createElement("p");
   menuIntro.textContent =
-    "Welcome to our table, where every dish tells a story. From sun-ripened Mediterranean vegetables and hand-pressed extra virgin olive oil to slow-cooked family recipes passed down through generations, we invite you to experience the true essence of authentic Greek hospitality.";
+    "Welcome to our table, where every dish tells a story. We invite you to experience the true essence of authentic Greek hospitality.";
 
   menuHeading.appendChild(menuTitle);
   menuHeading.appendChild(menuIntro);
