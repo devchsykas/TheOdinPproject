@@ -732,10 +732,6 @@ body {
   gap: var(--spacing-sm);
 }
 
-/* .footer-credit-link a {
-  background: var(--white);
-} */
-
 .footer-credit-link svg {
   width: 24px;
   height: 24px;
@@ -746,11 +742,11 @@ body {
   transition: fill 0.3s ease-in-out;
 }
 
-.footer-credit-link a:hover {
-  background-color: var(--secondary-color-light);
-  color: var(--white);
+.footer-credit-link:hover {
+  color: var(--secondary-color-light);
 }
 
 .footer-credit-link svg:hover {
+  background-color: var(--secondary-color-light);
   fill: var(--white);
 }
