@@ -1,6 +1,7 @@
 import "/src/assets/styles/styles.css";
 import createNavbar from "./components/navbar.js";
 import createHomePage from "./pages/home.js";
+import createMenuPage from "./pages/menu.js";
 import createAboutPage from "./pages/about.js";
 import createContactPage from "./pages/contact.js";
 import createFooter from "./components/footer.js";
