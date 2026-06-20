@@ -689,8 +689,12 @@ body {
 }
 
 .footer-social-icons a:hover {
-  background-color: var(--white);
+  background-color: var(--secondary-color-light);
   color: var(--white);
+}
+
+.footer-social-icons svg:hover {
+  fill: var(--white);
 }
 
 .footer-bottom {
@@ -728,9 +732,25 @@ body {
   gap: var(--spacing-sm);
 }
 
+/* .footer-credit-link a {
+  background: var(--white);
+} */
+
 .footer-credit-link svg {
   width: 24px;
   height: 24px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: var(--white);
   fill: var(--primary-color);
   transition: fill 0.3s ease-in-out;
+}
+
+.footer-credit-link a:hover {
+  background-color: var(--secondary-color-light);
+  color: var(--white);
+}
+
+.footer-credit-link svg:hover {
+  fill: var(--white);
 }
