@@ -17,8 +17,8 @@ const createFooter = () => {
   const footerColumn2 = document.createElement("div");
   footerColumn2.classList.add("footer-column");
   footerColumn2.innerHTML = `<h3>Opening Hours</h3>
-   <p>Mon-Fri: 11am - 10pm</p>
-   <p>Sat-Sun: 12pm - 11pm</p> 
+   <p>Mon-Fri: 11:00 - 22:00</p>
+   <p>Sat-Sun: 12:00 - 23:00</p> 
   `;
 
   const footerColumn3 = document.createElement("div");
