@@ -15,11 +15,16 @@ import tomahawkImage from "../assets/images/tomahawk.webp";
 import octopusImage from "../assets/images/xtapodi-xidato.jpg";
 import shrimpSaganakiImage from "../assets/images/garides-saganaki.jpg";
 import anchoviesImage from "../assets/images/gauros-thganhtos.jpg";
+import stuffedSquidImage from "../assets/images/kalamari-gemisto.jpg";
+import seabassImage from "../assets/images/lavraki-sxaras.jpg";
+import mpaklavasImage from "../assets/images/mpaklavas.jpg";
+import galaktompourekoImage from "../assets/images/galaktompoureko.jpg";
+import ravaniImage from "../assets/images/ravani.jpg";
 
 const menuData = [
   {
     title: "Starters",
-    note: "Small plates, great for sharing.",
+    note: "Great for sharing",
     items: [
       {
         name: "Greek Salad",
@@ -60,7 +65,7 @@ const menuData = [
   },
   {
     title: "Greek Dishes",
-    note: "Traditional Greek Dishes.",
+    note: "Traditional Greek Dishes",
     items: [
       {
         name: "Traditional Beef Giouvetsi",
@@ -94,7 +99,7 @@ const menuData = [
   },
   {
     title: "Grill Dishes",
-    note: "Flame Grilled Dishes.",
+    note: "Flame Grilled Dishes",
     items: [
       {
         name: "The Ultimate Gyros Platter",
@@ -105,7 +110,7 @@ const menuData = [
       },
       {
         name: "Pita Souvlaki Wrap",
-        price: "6.00$",
+        price: "10.00$",
         image: "pitaSouvlakiImage",
         description:
           "Tender grilled chicken skewers, crispy fries, and fresh tomatoes tucked into a warm pita bread with authentic, garlic-infused tzatziki sauce.",
@@ -135,7 +140,7 @@ const menuData = [
   },
   {
     title: "Seafood Dishes",
-    note: "Dishes from the Aegean Sea.",
+    note: "Dishes from the Aegean Sea",
     items: [
       {
         name: "Marinated Octopus Meze",
@@ -159,28 +164,45 @@ const menuData = [
           "Fresh Mediterranean anchovies lightly dusted and fried to a delicate, savory crunch. The perfect seafood meze, finished with a generous squeeze of fresh lemon.",
       },
       {
-        name: "",
-        price: "",
-        image: "",
-        description: "",
+        name: "Grilled Stuffed Squid",
+        price: "23.00$",
+        image: "stuffedSquidImage",
+        description:
+          "Succulent grilled squid tubes filled with a rich, herbaceous feta and pepper stuffing, drizzled with extra virgin olive oil and fresh lemon juice.",
       },
       {
-        name: "",
-        price: "",
-        image: "",
-        description: "",
+        name: "Fresh Grilled Sea Bass",
+        price: "25.00$",
+        image: "seabassImage",
+        description:
+          "Premium whole sea bass expertly grilled over an open flame, finished with a classic Greek ladolemono sauce and wild Mediterranean herbs.",
       },
     ],
   },
   {
     title: "Desserts",
-    note: "",
+    note: "Sweet finishes",
     items: [
       {
-        name: "",
-        price: "",
-        image: "",
-        description: "",
+        name: "Crispy Spiced Walnut Baklava",
+        price: "10.00$",
+        image: "mpaklavasImage",
+        description:
+          "Pure indulgence in every layer. Experience the shattering crunch of delicate, buttery phyllo meeting the sweet warmth of cinnamon-spiced nuts and a glossy, rich honey reduction",
+      },
+      {
+        name: "Traditional Galaktoboureko",
+        price: "10.00$",
+        image: "galaktompourekoImage",
+        description:
+          "An iconic Greek dessert featuring a velvety, rich custard core enclosed in crunchy, syrup-soaked phyllo sheets, finished with a hint of orange zest and cinnamon.",
+      },
+      {
+        name: "Greek Ravani",
+        price: "10.00$",
+        image: "ravaniImage",
+        description:
+          "A wonderfully moist and airy Greek semolina cake soaked in a fragrant citrus syrup, elegantly finished with vibrant crushed pistachios and candied peel.",
       },
     ],
   },
