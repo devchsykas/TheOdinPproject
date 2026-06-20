@@ -1,5 +1,5 @@
 import greekSaladImage from "../assets/images/traditional-Greek-salad.jpg";
-import CretanDakosSaladImage from "../assets/images/cretan-dakos-salad.jpg";
+import cretanDakosSaladImage from "../assets/images/cretan-dakos-salad.jpg";
 import caesarSaladImage from "../assets/images/salata-caesar-me-kotopoulo-pane.jpg";
 import octopusSaladImage from "../assets/images/salata-xtapodi.jpg";
 import zucchiniImage from "../assets/images/kolokithokeftedes.jpg";
@@ -29,35 +29,35 @@ const menuData = [
       {
         name: "Greek Salad",
         price: "12.00$",
-        image: "greekSaladImage",
+        image: greekSaladImage,
         description:
           "Fresh, sun-ripened tomatoes, crunchy cucumbers, onions, and olives topped with a classic block of creamy feta cheese, finished with Greek herbs and pure olive oil.",
       },
       {
         name: "Cretan Dakos Salad",
         price: "12.00$",
-        image: "cretanDakosSaladImage",
+        image: cretanDakosSaladImage,
         description:
           "Crisp Cretan barley rusk topped with sweet, sun-ripened tomatoes, rich crumbled white cheese, wild oregano, and a drizzle of premium extra virgin olive oil.",
       },
       {
         name: "Crispy Chicken Caesar Salad",
         price: "15.00$",
-        image: "caesarSaladImage",
+        image: caesarSaladImage,
         description:
           "Fresh, crunchy greens paired with crispy breaded chicken, savory croutons, and shaved Parmesan, all brought together with a classic creamy Caesar dressing.",
       },
       {
         name: "Mediterranean Octopus Salad",
         price: "16.00$",
-        image: "octopusSaladImage",
+        image: octopusSaladImage,
         description:
           "Char-grilled octopus paired with peppery arugula, sweet roasted tomatoes, and savory olives, finished with a bright, creamy dressing.",
       },
       {
         name: "Greek Zucchini Fritters",
         price: "10.00$",
-        image: "zucchiniImage",
+        image: zucchiniImage,
         description:
           "Savory, golden zucchini fritters infused with Greek feta and aromatic fresh herbs, perfectly paired with a creamy garlic-yogurt dip.",
       },
@@ -70,28 +70,28 @@ const menuData = [
       {
         name: "Traditional Beef Giouvetsi",
         price: "20.00$",
-        image: "beefGiouvetsiImage",
+        image: beefGiouvetsiImage,
         description:
           "Succulent, clay-pot style braised beef over tender orzo pasta, bathed in a rich, spiced heirloom tomato reduction. Authentic Mediterranean comfort in every spoonful.",
       },
       {
         name: "Rustic Lemon-Herb Chicken Feast",
         price: "19.00$",
-        image: "chickenLemonato",
+        image: chickenLemonato,
         description:
           "Crispy, golden-baked chicken and tender roasted potatoes slow-cooked in a zesty, garlic-infused lemon sauce and finished with fresh herbs.",
       },
       {
         name: "Traditional Lamb Kleftiko",
         price: "22.00$",
-        image: "lambKleftikoImage",
+        image: lambKleftikoImage,
         description:
           "Succulent, fall-off-the-bone lamb slow-baked with tender potatoes and savory Greek herbs, sealing in all the rich, natural juices and flavors.",
       },
       {
         name: "Traditional Greek Moussaka",
         price: "17.00$",
-        image: "moussakaImage",
+        image: moussakaImage,
         description:
           "A rich, baked casserole featuring layered eggplant, potatoes, and savory seasoned minced meat, blanketed under a thick, decadent layer of toasted béchamel sauce.",
       },
@@ -104,35 +104,35 @@ const menuData = [
       {
         name: "The Ultimate Gyros Platter",
         price: "18.00$",
-        image: "gyrosImage",
+        image: gyrosImage,
         description:
           "Juicy, seasoned rotisserie meat paired with crisp fries, toasted pita, a vibrant garden salad, and authentic, garlic-infused tzatziki sauce.",
       },
       {
         name: "Pita Souvlaki Wrap",
         price: "10.00$",
-        image: "pitaSouvlakiImage",
+        image: pitaSouvlakiImage,
         description:
           "Tender grilled chicken skewers, crispy fries, and fresh tomatoes tucked into a warm pita bread with authentic, garlic-infused tzatziki sauce.",
       },
       {
         name: "Gourmet Grilled Lamb Chops",
         price: "25.00$",
-        image: "lambChopsImage",
+        image: lambChopsImage,
         description:
           "Juicy, flame-seared lamb chops served medium-rare and drizzled with a bright, tangy Mediterranean herb and olive oil salsa for the ultimate flavor balance.",
       },
       {
         name: "Feta-Stuffed Greek Burgers",
         price: "18.00$",
-        image: "beefBurgerImage",
+        image: beefBurgerImage,
         description:
           "Tender, seasoned grilled beef patties with a warm, melty center of feta and tomato, paired with crispy roasted sweet potato wedges.",
       },
       {
         name: "Flame-Grilled Tomahawk Steak",
         price: "30.00$",
-        image: "tomahawkImage",
+        image: tomahawkImage,
         description:
           "Juicy, richly marbled bone-in ribeye steak seared over high flame, seasoned simply with sea salt and fresh rosemary to let the premium quality shine.",
       },
@@ -145,35 +145,35 @@ const menuData = [
       {
         name: "Marinated Octopus Meze",
         price: "16.00$",
-        image: "octopusImage",
+        image: octopusImage,
         description:
           "Succulent, tender octopus steeped in a zesty vinegar and olive oil infusion, elegantly tossed with capers, aromatics, and delicate pearl onions.",
       },
       {
         name: "Shrimp Saganaki",
         price: "19.00$",
-        image: "shrimpSaganakiImage",
+        image: shrimpSaganakiImage,
         description:
           "Succulent jumbo prawns slow-baked in a savory, herb-spiced tomato reduction and blanketed with warm, melted Greek feta cheese.",
       },
       {
         name: "Crispy Fried Anchovies",
         price: "17.00$",
-        image: "anchoviesImage",
+        image: anchoviesImage,
         description:
           "Fresh Mediterranean anchovies lightly dusted and fried to a delicate, savory crunch. The perfect seafood meze, finished with a generous squeeze of fresh lemon.",
       },
       {
         name: "Grilled Stuffed Squid",
         price: "23.00$",
-        image: "stuffedSquidImage",
+        image: stuffedSquidImage,
         description:
           "Succulent grilled squid tubes filled with a rich, herbaceous feta and pepper stuffing, drizzled with extra virgin olive oil and fresh lemon juice.",
       },
       {
         name: "Fresh Grilled Sea Bass",
         price: "25.00$",
-        image: "seabassImage",
+        image: seabassImage,
         description:
           "Premium whole sea bass expertly grilled over an open flame, finished with a classic Greek ladolemono sauce and wild Mediterranean herbs.",
       },
@@ -186,21 +186,21 @@ const menuData = [
       {
         name: "Crispy Spiced Walnut Baklava",
         price: "10.00$",
-        image: "mpaklavasImage",
+        image: mpaklavasImage,
         description:
           "Pure indulgence in every layer. Experience the shattering crunch of delicate, buttery phyllo meeting the sweet warmth of cinnamon-spiced nuts and a glossy, rich honey reduction",
       },
       {
         name: "Traditional Galaktoboureko",
         price: "10.00$",
-        image: "galaktompourekoImage",
+        image: galaktompourekoImage,
         description:
           "An iconic Greek dessert featuring a velvety, rich custard core enclosed in crunchy, syrup-soaked phyllo sheets, finished with a hint of orange zest and cinnamon.",
       },
       {
         name: "Greek Ravani",
         price: "10.00$",
-        image: "ravaniImage",
+        image: ravaniImage,
         description:
           "A wonderfully moist and airy Greek semolina cake soaked in a fragrant citrus syrup, elegantly finished with vibrant crushed pistachios and candied peel.",
       },
