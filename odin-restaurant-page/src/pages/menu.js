@@ -28,6 +28,8 @@ const menuFilters = [
 ];
 
 const createMenuCard = (item) => {
+  console.log("the item is", item);
+
   const menuCard = document.createElement("article");
   menuCard.classList.add("menu-card");
 
@@ -53,10 +55,10 @@ const createMenuCard = (item) => {
 
   menuCardHeader.appendChild(menuCardTitle);
   menuCardHeader.appendChild(menuCardPrice);
-  menuCardBody.appendChild(menuCardDescription);
   menuCardBody.appendChild(menuCardHeader);
-  menuCard.appendChild(menuCardBody);
+  menuCardBody.appendChild(menuCardDescription);
   menuCard.appendChild(menuCardImage);
+  menuCard.appendChild(menuCardBody);
 
   return menuCard;
 };
@@ -95,14 +97,49 @@ const renderFilterButtons = (container, activeCategory, onFilterClick) => {
 const renderMenuList = (container, activeCategory) => {
   container.innerHTML = "";
 
-  const filteredMenuItems =
-    activeCategory === "all"
-      ? menuData
-      : menuData.filter((item) => item.title === activeCategory);
+  const matchesFilter = (item, activeFilter) => {
+    if (activeFilter === "all") return true;
+    return item.title === activeFilter;
+  };
 
-  filteredMenuItems.forEach((item) => {
-    const cardElement = createMenuCard(item);
-    container.appendChild(cardElement);
+  const matchingCategories = menuData
+    .map((category) => ({
+      ...category,
+      items: category.items
+        ? category.items.filter((item) => matchesFilter(item, activeCategory))
+        : [],
+    }))
+    .filter((category) => category.items.length > 0);
+
+  matchingCategories.forEach((category) => {
+    const categorySection = document.createElement("section");
+    categorySection.classList.add("menu-category");
+
+    const categoryHeader = document.createElement("div");
+    categoryHeader.classList.add("menu-category-header");
+
+    const categoryTitle = document.createElement("h3");
+    categoryTitle.textContent = category.title;
+
+    const categoryNote = document.createElement("p");
+    categoryNote.textContent = category.note;
+
+    const menuGrid = document.createElement("div");
+    menuGrid.classList.add("menu-grid");
+
+    category.items.forEach((item) => {
+      menuGrid.appendChild(createMenuCard(item));
+    });
+
+    categoryHeader.appendChild(categoryTitle);
+    if (category.note) {
+      categoryHeader.appendChild(categoryNote);
+    }
+
+    categorySection.appendChild(categoryHeader);
+    categorySection.appendChild(menuGrid);
+
+    container.appendChild(categorySection);
   });
 };
 
