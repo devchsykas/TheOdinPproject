@@ -19,7 +19,7 @@ const createContactPage = () => {
     <p><span>Address</span>123 Main Street, Athens, Greece</p>
     <p><span>Phone</span>+30 213 778 965</p>
     <p><span>Email</span>info@agorabistro.com</p>
-    <p><span>Opening Hours</span>Mon-Fri: 11am - 10pm, Sat-Sun: 12pm - 11pm</p>
+    <p><span>Opening Hours</span>Mon-Fri: 11:00 - 22:00, Sat-Sun: 12:00 - 23:00</p>
   `;
 
   const reservationForm = document.createElement("form");
