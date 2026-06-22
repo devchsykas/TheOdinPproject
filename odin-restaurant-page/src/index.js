@@ -29,47 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
-   * The setupNavigation function sets up click event listeners for navigation buttons to switch between
-   * different pages on a website.
-   */
-  function setupNavigation() {
-    // Get references to navigation buttons
-    const homeBtn = document.getElementById("home-btn");
-    const menuBtn = document.getElementById("menu-btn");
-    const aboutBtn = document.getElementById("about-btn");
-    const contactBtn = document.getElementById("contact-btn");
-
-    // Add click event listeners to navigation buttons
-    if (homeBtn) {
-      homeBtn.addEventListener("click", () => {
-        // Switch to the home page
-        switchTab(createHomePage());
-      });
-    }
-
-    if (menuBtn) {
-      menuBtn.addEventListener("click", () => {
-        // Switch to the menu page
-        switchTab(createMenuPage());
-      });
-    }
-
-    if (aboutBtn) {
-      aboutBtn.addEventListener("click", () => {
-        // Switch to the about page
-        switchTab(createAboutPage());
-      });
-    }
-
-    if (contactBtn) {
-      contactBtn.addEventListener("click", () => {
-        // Switch to the contact page
-        switchTab(createContactPage());
-      });
-    }
-  }
-
-  /**
    * The setupHeroNavigation function sets up click event listeners for navigation buttons in the hero
    * section of a website.
    */
@@ -92,6 +51,49 @@ document.addEventListener("DOMContentLoaded", () => {
           switchTab(createContactPage());
         });
       }
+    }
+  }
+
+  /**
+   * The setupNavigation function sets up click event listeners for navigation buttons to switch between
+   * different pages on a website.
+   */
+  function setupNavigation() {
+    // Get references to navigation buttons
+    const homeBtn = document.getElementById("home-btn");
+    const menuBtn = document.getElementById("menu-btn");
+    const aboutBtn = document.getElementById("about-btn");
+    const contactBtn = document.getElementById("contact-btn");
+
+    // Add click event listeners to navigation buttons
+    if (homeBtn) {
+      homeBtn.addEventListener("click", () => {
+        // Switch to the home page
+        switchTab(createHomePage());
+        // Set up hero navigation
+        setupHeroNavigation();
+      });
+    }
+
+    if (menuBtn) {
+      menuBtn.addEventListener("click", () => {
+        // Switch to the menu page
+        switchTab(createMenuPage());
+      });
+    }
+
+    if (aboutBtn) {
+      aboutBtn.addEventListener("click", () => {
+        // Switch to the about page
+        switchTab(createAboutPage());
+      });
+    }
+
+    if (contactBtn) {
+      contactBtn.addEventListener("click", () => {
+        // Switch to the contact page
+        switchTab(createContactPage());
+      });
     }
   }
 
