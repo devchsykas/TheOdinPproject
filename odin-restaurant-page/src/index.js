@@ -70,6 +70,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /**
+   * The setupHeroNavigation function sets up click event listeners for navigation buttons in the hero
+   * section of a website.
+   */
+  function setupHeroNavigation() {
+    // Get references to explore menu button and book table button
+    const exploreMenuButton = document.getElementById("explore-menu-btn");
+    const bookTableButton = document.getElementById("book-table-btn");
+
+    if (exploreMenuButton) {
+      // Add click event listener to the "Explore Menu" button
+      exploreMenuButton.addEventListener("click", () => {
+        // Switch to the menu page
+        switchTab(createMenuPage());
+      });
+
+      if (bookTableButton) {
+        // Add click event listener to the "Book Table" button
+        bookTableButton.addEventListener("click", () => {
+          // Switch to the contact page
+          switchTab(createContactPage());
+        });
+      }
+    }
+  }
+
+  /**
    * The function `initWebsite` initializes a website by creating a navbar, home page content, and a
    * footer.
    */
@@ -102,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
     switchTab(homePage);
     // Set up navigation
     setupNavigation();
+    // Set up hero navigation
+    setupHeroNavigation();
   }
 
   // Initialize the website
