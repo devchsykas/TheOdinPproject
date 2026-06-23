@@ -79,11 +79,11 @@ const createContactPage = () => {
     <label>Time
       <input type="time" name="time" min="10:00" max="21:30" required />
     </label>
-    <label class="form-message-label">Message
+    <label class="form-message">Message
        <textarea name="message" placeholder="Occasion, special requests, or anything else you'd like to add"></textarea>
     </label>
     <button type="submit">Request Reservation</button>
-    <p class="form-message" id="form-message" aria-live="polite" role="status"></p>
+    <p class="form-message-status" id="form-message-status" aria-live="polite" role="status"></p>
   `;
 
   reservationForm.addEventListener("submit", handleReservationFormSubmit);
