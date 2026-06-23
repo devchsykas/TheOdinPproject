@@ -8,7 +8,7 @@ const handleReservationFormSubmit = (event) => {
   console.log("Reservation form submitted");
 
   const form = event.target;
-  const formMessage = document.getElementById("form-message");
+  const formMessage = document.getElementById("form-message-status");
 
   const formData = new FormData(form);
   const reservationData = {
@@ -86,6 +86,7 @@ const createContactPage = () => {
     <p class="form-message-status" id="form-message-status" aria-live="polite" role="status"></p>
   `;
 
+  // Add event listener to reservation form submit
   reservationForm.addEventListener("submit", handleReservationFormSubmit);
 
   contactHeading.appendChild(contactTitle);
