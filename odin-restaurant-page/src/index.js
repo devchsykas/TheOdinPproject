@@ -43,14 +43,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Switch to the menu page
         switchTab(createMenuPage());
       });
+    }
 
-      if (bookTableButton) {
-        // Add click event listener to the "Book Table" button
-        bookTableButton.addEventListener("click", () => {
-          // Switch to the contact page
-          switchTab(createContactPage());
-        });
-      }
+    if (bookTableButton) {
+      // Add click event listener to the "Book Table" button
+      bookTableButton.addEventListener("click", () => {
+        // Switch to the contact page
+        switchTab(createContactPage());
+      });
     }
   }
 
