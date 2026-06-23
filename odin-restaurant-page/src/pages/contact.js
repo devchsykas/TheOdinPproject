@@ -1,3 +1,40 @@
+/**
+ *  Handles the form submission for the reservation form.
+ * @param {*} event - The event object representing the form submission
+ */
+const handleReservationFormSubmit = (event) => {
+  // Prevent the form from submitting
+  event.preventDefault();
+  console.log("Reservation form submitted");
+
+  const form = event.target;
+  const formMessage = document.getElementById("form-message");
+
+  const formData = new FormData(form);
+  const reservationData = {
+    name: formData.get("name").trim(),
+    phone: formData.get("phone").trim(),
+    guests: formData.get("guests"),
+    date: formData.get("date"),
+    time: formData.get("time"),
+    message: formData.get("message").trim(),
+  };
+
+  if (formMessage) {
+    formMessage.style.color = "#5f6f52";
+    formMessage.innerHTML = `
+      <strong>Opa! Reservation Requested 🎉</strong><br>
+      Thank you, ${reservationData.name}. We are processing your request for ${reservationData.guests} guests on ${reservationData.date} at ${reservationData.time}.<br> 
+    `;
+  }
+
+  form.reset();
+};
+
+/**
+ *  Creates the contact page section with contact information and reservation form.
+ * @returns - The contact page section element
+ */
 const createContactPage = () => {
   const contactSection = document.createElement("section");
   contactSection.classList.add("contact-section");
@@ -42,12 +79,14 @@ const createContactPage = () => {
     <label>Time
       <input type="time" name="time" min="10:00" max="21:30" required />
     </label>
-    <label class="form-message">Message
+    <label class="form-message-label">Message
        <textarea name="message" placeholder="Occasion, special requests, or anything else you'd like to add"></textarea>
     </label>
     <button type="submit">Request Reservation</button>
     <p class="form-message" id="form-message" aria-live="polite" role="status"></p>
   `;
+
+  reservationForm.addEventListener("submit", handleReservationFormSubmit);
 
   contactHeading.appendChild(contactTitle);
   contactHeading.appendChild(contactIntro);
