@@ -28,7 +28,7 @@ const menuData = [
     items: [
       {
         name: "Greek Salad",
-        category: "Starters",
+        category: "starters",
         price: "12.00$",
         image: greekSaladImage,
         description:
@@ -36,7 +36,7 @@ const menuData = [
       },
       {
         name: "Cretan Dakos Salad",
-        category: "Starters",
+        category: "starters",
         price: "12.00$",
         image: cretanDakosSaladImage,
         description:
@@ -44,7 +44,7 @@ const menuData = [
       },
       {
         name: "Crispy Chicken Caesar Salad",
-        category: "Starters",
+        category: "starters",
         price: "15.00$",
         image: caesarSaladImage,
         description:
@@ -52,7 +52,7 @@ const menuData = [
       },
       {
         name: "Mediterranean Octopus Salad",
-        category: "Starters",
+        category: "starters",
         price: "16.00$",
         image: octopusSaladImage,
         description:
@@ -60,7 +60,7 @@ const menuData = [
       },
       {
         name: "Greek Zucchini Fritters",
-        category: "Starters",
+        category: "starters",
         price: "10.00$",
         image: zucchiniImage,
         description:
@@ -74,7 +74,7 @@ const menuData = [
     items: [
       {
         name: "Traditional Beef Giouvetsi",
-        category: "Greek Dishes",
+        category: "greek-dishes",
         price: "20.00$",
         image: beefGiouvetsiImage,
         description:
@@ -82,7 +82,7 @@ const menuData = [
       },
       {
         name: "Rustic Lemon-Herb Chicken Feast",
-        category: "Greek Dishes",
+        category: "greek-dishes",
         price: "19.00$",
         image: chickenLemonato,
         description:
@@ -90,7 +90,7 @@ const menuData = [
       },
       {
         name: "Traditional Lamb Kleftiko",
-        category: "Greek Dishes",
+        category: "greek-dishes",
         price: "22.00$",
         image: lambKleftikoImage,
         description:
@@ -98,7 +98,7 @@ const menuData = [
       },
       {
         name: "Traditional Greek Moussaka",
-        category: "Greek Dishes",
+        category: "greek-dishes",
         price: "17.00$",
         image: moussakaImage,
         description:
@@ -112,7 +112,7 @@ const menuData = [
     items: [
       {
         name: "The Ultimate Gyros Platter",
-        category: "Grill Dishes",
+        category: "grill-dishes",
         price: "18.00$",
         image: gyrosImage,
         description:
@@ -120,7 +120,7 @@ const menuData = [
       },
       {
         name: "Pita Souvlaki Wrap",
-        category: "Grill Dishes",
+        category: "grill-dishes",
         price: "10.00$",
         image: pitaSouvlakiImage,
         description:
@@ -128,7 +128,7 @@ const menuData = [
       },
       {
         name: "Gourmet Grilled Lamb Chops",
-        category: "Grill Dishes",
+        category: "grill-dishes",
         price: "25.00$",
         image: lambChopsImage,
         description:
@@ -136,7 +136,7 @@ const menuData = [
       },
       {
         name: "Feta-Stuffed Greek Burgers",
-        category: "Grill Dishes",
+        category: "grill-dishes",
         price: "18.00$",
         image: beefBurgerImage,
         description:
@@ -144,7 +144,7 @@ const menuData = [
       },
       {
         name: "Flame-Grilled Tomahawk Steak",
-        category: "Grill Dishes",
+        category: "grill-dishes",
         price: "30.00$",
         image: tomahawkImage,
         description:
@@ -158,7 +158,7 @@ const menuData = [
     items: [
       {
         name: "Marinated Octopus Meze",
-        category: "Seafood Dishes",
+        category: "seafood-dishes",
         price: "16.00$",
         image: octopusImage,
         description:
@@ -166,7 +166,7 @@ const menuData = [
       },
       {
         name: "Shrimp Saganaki",
-        category: "Seafood Dishes",
+        category: "seafood-dishes",
         price: "19.00$",
         image: shrimpSaganakiImage,
         description:
@@ -174,7 +174,7 @@ const menuData = [
       },
       {
         name: "Crispy Fried Anchovies",
-        category: "Seafood Dishes",
+        category: "seafood-dishes",
         price: "17.00$",
         image: anchoviesImage,
         description:
@@ -182,7 +182,7 @@ const menuData = [
       },
       {
         name: "Grilled Stuffed Squid",
-        category: "Seafood Dishes",
+        category: "seafood-dishes",
         price: "23.00$",
         image: stuffedSquidImage,
         description:
@@ -190,7 +190,7 @@ const menuData = [
       },
       {
         name: "Fresh Grilled Sea Bass",
-        category: "Seafood Dishes",
+        category: "seafood-dishes",
         price: "25.00$",
         image: seabassImage,
         description:
@@ -204,7 +204,7 @@ const menuData = [
     items: [
       {
         name: "Crispy Spiced Walnut Baklava",
-        category: "Desserts",
+        category: "desserts",
         price: "10.00$",
         image: mpaklavasImage,
         description:
@@ -212,7 +212,7 @@ const menuData = [
       },
       {
         name: "Traditional Galaktoboureko",
-        category: "Desserts",
+        category: "desserts",
         price: "10.00$",
         image: galaktompourekoImage,
         description:
@@ -220,7 +220,7 @@ const menuData = [
       },
       {
         name: "Greek Ravani",
-        category: "Desserts",
+        category: "desserts",
         price: "10.00$",
         image: ravaniImage,
         description:
