@@ -59,6 +59,17 @@ const createContactPage = () => {
     <p><span>Opening Hours</span>Mon-Fri: 11:00 - 22:00, Sat-Sun: 12:00 - 23:00</p>
   `;
 
+  const reservationNotes = document.createElement("div");
+  reservationNotes.classList.add("reservation-notes");
+  reservationNotes.innerHTML = `
+    <h3>Reservation Policy</h3>
+    <ul>
+      <li><strong>Grace Period:</strong>We hold tables for up to 15 minutes past your reservation time. Please call us if you are running late.</li>
+      <li><strong>Large Groups:</strong>For groups of 10 or more, please contact us directly via phone at least 24 hours in advance.</li>
+      <li><strong>Special Requests:</strong>While we try our best to accommodate seating preferences (indoor/outdoor), they are subject to availability.</li>
+    </ul>
+  `;
+
   const reservationForm = document.createElement("form");
   reservationForm.classList.add("reservation-form");
   reservationForm.id = "reservation-form";
@@ -93,6 +104,7 @@ const createContactPage = () => {
   contactHeading.appendChild(contactIntro);
   contactSection.appendChild(contactHeading);
   contactSection.appendChild(contactInfo);
+  contactSection.appendChild(reservationNotes);
   contactSection.appendChild(reservationForm);
 
   return contactSection;
