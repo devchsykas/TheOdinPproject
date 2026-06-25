@@ -1,5 +1,6 @@
 import menuData from "../data/menuData.js";
 
+// Filters
 const menuFilters = [
   {
     label: "All",
@@ -27,8 +28,13 @@ const menuFilters = [
   },
 ];
 
+/**
+ *  Function that creates a menu card element
+ * @param {*} item - the item to create the menu card
+ * @returns - The menu card element
+ */
 const createMenuCard = (item) => {
-  console.log("the item is", item);
+  //console.log("the item is", item);
 
   const menuCard = document.createElement("article");
   menuCard.classList.add("menu-card");
@@ -63,6 +69,13 @@ const createMenuCard = (item) => {
   return menuCard;
 };
 
+/**
+ *  Function that creates a filter button element
+ * @param {*} filter - the filter to create the button for the menu
+ * @param {*} currentActiveCategory - the current active category
+ * @param {*} onFilterClick - the function to call when the button is clicked
+ * @returns
+ */
 const createFilterButton = (filter, currentActiveCategory, onFilterClick) => {
   const button = document.createElement("button");
   button.classList.add("filter-btn");
@@ -81,6 +94,12 @@ const createFilterButton = (filter, currentActiveCategory, onFilterClick) => {
   return button;
 };
 
+/**
+ *  Function that renders the filter buttons for the menu
+ * @param {*} container - the container to render the filter buttons in the menu
+ * @param {*} activeCategory - the current active category of the menu
+ * @param {*} onFilterClick - the function to call when a filter button is clicked in the menu
+ */
 const renderFilterButtons = (container, activeCategory, onFilterClick) => {
   container.innerHTML = "";
 
@@ -94,14 +113,26 @@ const renderFilterButtons = (container, activeCategory, onFilterClick) => {
   });
 };
 
+/**
+ *  Function that renders the menu list
+ * @param {*} container - the container to render the menu list in
+ * @param {*} activeCategory - the current active category of the menu
+ */
 const renderMenuList = (container, activeCategory) => {
   container.innerHTML = "";
 
+  /**
+   * - Function to check if an item matches the active filter or not
+   * @param {*} item - the item to check if it matches the active filter or not
+   * @param {*} activeFilter - the active filter to check if the item matches or not
+   * @returns - true if the item matches the active filter, false otherwise
+   */
   const matchesFilter = (item, activeFilter) => {
     if (activeFilter === "all") return true;
-    return item.title === activeFilter;
+    return item.category === activeFilter;
   };
 
+  // Filter the menu data based on the active filter and render the matching categories and items in the menu list
   const matchingCategories = menuData
     .map((category) => ({
       ...category,
@@ -143,6 +174,10 @@ const renderMenuList = (container, activeCategory) => {
   });
 };
 
+/**
+ * Function that creates the menu page element
+ * @returns the menu page element
+ */
 const createMenuPage = () => {
   let activeCategory = "all";
 
@@ -182,6 +217,10 @@ const createMenuPage = () => {
   menuSection.appendChild(menuFilters);
   menuSection.appendChild(menuList);
 
+  /**
+   * Function that handles the filter change event and renders the menu list and filter buttons
+   * @param {*} newCategory - the new category to filter the menu list
+   */
   const handleFilterChange = (newCategory) => {
     activeCategory = newCategory;
     renderFilterButtons(menuFilterButtons, activeCategory, handleFilterChange);
