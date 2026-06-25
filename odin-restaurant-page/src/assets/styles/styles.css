@@ -3,14 +3,15 @@
 @font-face {
   font-family: "Cinzel", serif;
   src: url("/src/assets/fonts/Cinzel-Lato/Cinzel/static/Cinzel-Bold.ttf")
-    format("ttf");
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Lato", sans-serif;
-  src: url("/src/assets/fonts/Cinzel-Lato/Lato/Lato-Regular.ttf") format("ttf");
+  src: url("/src/assets/fonts/Cinzel-Lato/Lato/Lato-Regular.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -678,13 +679,16 @@ body {
   width: 100%;
   max-width: none;
   display: grid;
-  grid-template-columns: minmax(300px, 1fr) 1fr;
+  /* grid-template-columns: minmax(300px, 1fr) 1fr; */
+  grid-template-columns: repeat(12, 1fr);
   gap: var(--spacing-lg);
-  align-items: center;
+  /* align-items: center; */
+  align-items: start;
 }
 
 .contact-heading {
-  grid-column: 1 / 2;
+  /* grid-column: 1 / 2; */
+  grid-column: 2 / 12;
   padding: 0 var(--spacing-xlg);
 }
 
@@ -730,7 +734,8 @@ body {
 .reservation-form {
   display: grid;
   gap: var(--spacing-md);
-  grid-column: 2 / 3;
+  /* grid-column: 2 / 3; */
+  grid-column: 6 / 12;
   padding: 0 var(--spacing-xlg);
   border: 1px solid var(--secondary-color);
   border-radius: var(--border-radius-md);
@@ -768,12 +773,22 @@ body {
   background: var(--white);
 }
 
+.reservation-form input:focus,
+.reservation-form textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -1px;
+}
+
 .reservation-form textarea {
   min-height: 6rem;
   resize: vertical;
 }
 
-.form-message {
+/* .form-message {
+  grid-column: 1 / -1;
+} */
+
+.reservation-form label.form-message {
   grid-column: 1 / -1;
 }
 
@@ -804,6 +819,10 @@ body {
   font-size: var(--font-size-sm);
   line-height: 1.5;
   font-weight: 500;
+}
+
+.form-message-status.form-message-error {
+  color: #b3261e;
 }
 
 /* Footer Section */
