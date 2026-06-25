@@ -733,6 +733,10 @@ body {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   padding-right: var(--spacing-lg);
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-color);
+  padding: var(--spacing-md);
 }
 
 .reservation-notes h3 {
@@ -1104,6 +1108,8 @@ body {
   }
 
   .reservation-notes {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-md);
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-md);
   }
