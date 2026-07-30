@@ -3,10 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Odin Todo App" />
+    <meta name="keywords" content="todo, task, project, productivity" />
+    <meta name="author" content="Christos Sykas" />
     <title>Odin Todo App</title>
   </head>
   <body>
-    <h1>Odin Todo App</h1>
-    <p>My first todo app</p>
+    <div id="root">
+      <!-- HEADER SECTION -->
+      <header class="header__section">
+        <div class="header__logo">
+          <img
+            src="./assets/icons/calendar-check-solid-full.svg"
+            alt="logo icon"
+            class="logo__icon"
+          />
+          <h1 class="header__title">Odin Todo App</h1>
+        </div>
+        <div class="header__icons">
+          <img
+            src="./assets/icons/bell-solid-full.svg"
+            alt="notification icon"
+            class="notification__icon"
+          />
+          <img
+            src="./assets/icons/arrow-right-from-bracket-solid-full.svg"
+            alt="logout icon"
+            class="logout__icon"
+          />
+        </div>
+      </header>
+
+      <!-- SIDEBAR SECTION -->
+      <aside class="sidebar__section">
+        <button class="sidebar__button btn" id="add-project-button">
+          Add Project
+        </button>
+        <h2>Projects</h2>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list" id="project-list">
+            <li class="sidebar__item">
+              <a href="#inbox">
+                <img
+                  src="./assets/icons/inbox-solid-full.svg"
+                  alt="inbox icon"
+                  class="sidebar__icon"
+                />
+                <span class="sidebar__item-text">Inbox</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#work">
+                <img
+                  src="./assets/icons/briefcase-solid-full.svg"
+                  alt="work icon"
+                  class="sidebar__icon"
+                />
+                <span class="sidebar__item-text">Work</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#personal">
+                <img
+                  src="./assets/icons/user-solid-full.svg"
+                  alt="personal icon"
+                  class="sidebar__icon"
+                />
+                <span class="sidebar__item-text">Personal</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#add-new-project">
+          <img
+            src="./assets/icons/plus-solid-full.svg"
+            alt="add new project icon"
+            class="add-new-project__icon"
+          />
+          <span class="add-new-project__text">Add New Project</span>
+        </a>
+      </aside>
+
+      <!-- MAIN SECTION -->
+      <main class="main__section">
+        <div class="main__header">
+          <h2 class="main__title">Daily Tasks</h2>
+          <button class="add-task__button btn" id="add-task-button">
+            Add Task
+          </button>
+        </div>
+        <div class="task__container" id="task-container">
+          <p class="no-task__text">No tasks added</p>
+          <div class="task__card">
+            <div class="task__content">
+              <span class="task__priority">High Priority</span>
+              <h3 class="task__title">Finish Project Report</h3>
+              <img
+                src="./assets/icons/clock-solid-full.svg"
+                alt="clock icon"
+                class="task__icon"
+              />
+              <img
+                src="./assets/icons/calendar-solid-full.svg"
+                alt="calendar icon"
+                class="task__icon"
+              />
+              <span class="task__due-date">Due: 2026-06-30</span>
+              <p class="task__notes">Notes: This is a sample task.</p>
+            </div>
+            <div class="task__actions">
+              <input
+                type="checkbox"
+                class="task__checkbox"
+                id="task-checkbox"
+              />
+              <span class="task__status">Completed</span>
+              <a href="#edit-task" class="task__edit-link" id="edit-link">
+                <img
+                  src="./assets/icons/pen-solid-full.svg"
+                  alt="edit icon"
+                  class="task__edit-icon"
+                />
+              </a>
+              <a href="#delete-task" class="task__delete-link" id="delete-link">
+                <img
+                  src="./assets/icons/trash-can-solid-full.svg"
+                  alt="delete icon"
+                  class="task__delete-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer__section">
+        <p class="footer__text">Copyright &copy; 2026 by</p>
+        <a
+          href="https://github.com/devchsykas"
+          class="footer__link"
+          target="_blank"
+          >Christos Sykas</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
