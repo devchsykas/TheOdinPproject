@@ -47,6 +47,9 @@ odin-todo-app/
 │   └── index.js          # App Entry Point
 ├── package.json
 └── webpack.config.js
+```
+
+---
 
 ## 🚀 Getting Started
 
@@ -57,14 +60,12 @@ Make sure you have Node.js and npm installed on your machine.
 
 Installation
 
-1.  Clone the repository
+1.  Clone the repository:
 
 ```
-
 Bash
 
 git clone [https://github.com/devchsykas/TheOdinProject.git](https://github.com/devchsykas/TheOdinProject.git)
-
 ```
 
 2.  Navigate to the project directory:
@@ -74,7 +75,6 @@ git clone [https://github.com/devchsykas/TheOdinProject.git](https://github.com/
 Bash
 
 cd TheOdinProject/odin-todo-app
-
 ```
 
 3.  Install dependencies:
@@ -84,8 +84,8 @@ cd TheOdinProject/odin-todo-app
 Bash
 
 npm install
-
 ```
+
 4.  Start the development server:
 
 ```
@@ -93,8 +93,8 @@ npm install
 Bash
 
 npm start
-
 ```
+
 The application will open automatically in your default browser at http://localhost:8080.
 
 5.  Build for production:
@@ -104,10 +104,8 @@ The application will open automatically in your default browser at http://localh
 Bash
 
 npm run build
-
 ```
 
 ## 📜 License
 
 Distributed under the MIT License. See LICENSE for more information.
-```
