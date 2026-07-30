@@ -10,14 +10,14 @@
     <title>Odin Todo App</title>
   </head>
   <body>
-    <div id="root">
+    <div id="container">
       <!-- HEADER SECTION -->
-      <header class="header__section">
+      <header class="header">
         <div class="header__logo">
           <img
             src="./assets/icons/calendar-check-solid-full.svg"
             alt="logo icon"
-            class="logo__icon"
+            class="header__logo-icon"
           />
           <h1 class="header__title">Odin Todo App</h1>
         </div>
@@ -25,126 +25,128 @@
           <img
             src="./assets/icons/bell-solid-full.svg"
             alt="notification icon"
-            class="notification__icon"
+            class="header__icon"
           />
           <img
             src="./assets/icons/arrow-right-from-bracket-solid-full.svg"
             alt="logout icon"
-            class="logout__icon"
+            class="header__icon"
           />
         </div>
       </header>
 
       <!-- SIDEBAR SECTION -->
-      <aside class="sidebar__section">
-        <button class="sidebar__button btn" id="add-project-button">
+      <aside class="sidebar">
+        <button class="btn btn--primary" id="btn-add-project-modal">
           Add Project
         </button>
-        <h2>Projects</h2>
+        <h2 class="sidebar__title">Projects</h2>
         <nav class="sidebar__nav">
           <ul class="sidebar__list" id="project-list">
-            <li class="sidebar__item">
-              <a href="#inbox">
+            <li class="sidebar__item" data-project="inbox">
+              <button class="sidebar__link">
                 <img
                   src="./assets/icons/inbox-solid-full.svg"
                   alt="inbox icon"
                   class="sidebar__icon"
                 />
-                <span class="sidebar__item-text">Inbox</span>
-              </a>
+                <span class="sidebar__text">Inbox</span>
+              </button>
             </li>
-            <li class="sidebar__item">
-              <a href="#work">
+            <li class="sidebar__item" data-project="work">
+              <button class="sidebar__link">
                 <img
                   src="./assets/icons/briefcase-solid-full.svg"
                   alt="work icon"
                   class="sidebar__icon"
                 />
-                <span class="sidebar__item-text">Work</span>
-              </a>
+                <span class="sidebar__text">Work</span>
+              </button>
             </li>
-            <li class="sidebar__item">
-              <a href="#personal">
+            <li class="sidebar__item" data-project="personal">
+              <button class="sidebar__link">
                 <img
                   src="./assets/icons/user-solid-full.svg"
                   alt="personal icon"
                   class="sidebar__icon"
                 />
-                <span class="sidebar__item-text">Personal</span>
-              </a>
+                <span class="sidebar__text">Personal</span>
+              </button>
             </li>
           </ul>
         </nav>
-        <a href="#add-new-project">
+        <!-- <a href="#add-new-project">
           <img
             src="./assets/icons/plus-solid-full.svg"
             alt="add new project icon"
             class="add-new-project__icon"
           />
           <span class="add-new-project__text">Add New Project</span>
-        </a>
+        </a> -->
       </aside>
 
       <!-- MAIN SECTION -->
-      <main class="main__section">
-        <div class="main__header">
-          <h2 class="main__title">Daily Tasks</h2>
-          <button class="add-task__button btn" id="add-task-button">
+      <main class="main-content">
+        <div class="main-content__header">
+          <h2 class="main-content__title" id="current-project-title">Inbox</h2>
+          <button class="btn btn--primary" id="btn-add-task-modal">
             Add Task
           </button>
         </div>
-        <div class="task__container" id="task-container">
-          <p class="no-task__text">No tasks added</p>
-          <div class="task__card">
-            <div class="task__content">
-              <span class="task__priority">High Priority</span>
-              <h3 class="task__title">Finish Project Report</h3>
-              <img
-                src="./assets/icons/clock-solid-full.svg"
-                alt="clock icon"
-                class="task__icon"
-              />
-              <img
-                src="./assets/icons/calendar-solid-full.svg"
-                alt="calendar icon"
-                class="task__icon"
-              />
-              <span class="task__due-date">Due: 2026-06-30</span>
-              <p class="task__notes">Notes: This is a sample task.</p>
+
+        <section class="tasks-grid" id="task-container">
+          <!-- <p class="no-task__text">No tasks added</p> -->
+          <article class="task-card" data-priority="high" data-id="task-1">
+            <div class="task-card__header">
+              <span class="badge badge--high">High Priority</span>
+              <h3 class="task-card__title">Finish Project Report</h3>
             </div>
-            <div class="task__actions">
-              <input
-                type="checkbox"
-                class="task__checkbox"
-                id="task-checkbox"
-              />
-              <span class="task__status">Completed</span>
-              <a href="#edit-task" class="task__edit-link" id="edit-link">
+            <div class="task-card__body">
+              <p class="task-card__date">
                 <img
-                  src="./assets/icons/pen-solid-full.svg"
-                  alt="edit icon"
-                  class="task__edit-icon"
+                  src="./assets/icons/calendar-solid-full.svg"
+                  alt="calendar icon"
+                  class="icon-small"
                 />
-              </a>
-              <a href="#delete-task" class="task__delete-link" id="delete-link">
-                <img
-                  src="./assets/icons/trash-can-solid-full.svg"
-                  alt="delete icon"
-                  class="task__delete-icon"
-                />
-              </a>
+                Due: 2026-06-30
+              </p>
+              <p class="task-card__notes">
+                Notes: This is a sample task description.
+              </p>
             </div>
-          </div>
-        </div>
+            <div class="task-card__footer">
+              <label class="task-card__checkbox-label">
+                <input type="checkbox" class="task-card__checkbox" />
+                <span>Completed</span>>
+              </label>
+              <div class="task-card__actions">
+                <button class="btn-icon btn-edit" title="Edit Task">
+                  <img
+                    src="./assets/icons/pen-solid-full.svg"
+                    alt="edit icon"
+                  />
+                </button>
+                <button class="btn-icon btn-delete" title="Delete Task">
+                  <img
+                    src="./assets/icons/trash-can-solid-full.svg"
+                    alt="delete icon"
+                    class="task__delete-icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
       </main>
 
       <!-- FOOTER SECTION -->
-      <footer class="footer__section">
+      <footer class="footer">
         <p class="footer__text">Copyright &copy; 2026 by</p>
         <a
           href="https://github.com/devchsykas"
           class="footer__link"
           target="_blank"
+          rel="noopener noreferrer"
           >Christos Sykas</a
         >
       </footer>
