@@ -635,3 +635,23 @@ body {
 /* =========================================================================
    FOOTER SECTION
    ====================================================================== */
+
+.footer {
+  padding: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.footer__text,
+.footer__link {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.footer__link {
+  color: var(--primary);
+  font-weight: var(--font-weight-semibold);
+}
