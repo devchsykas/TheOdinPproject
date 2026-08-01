@@ -300,41 +300,6 @@ body {
 }
 
 /* =========================================================================
-   HEADER SECTION
-   ====================================================================== */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-sm) var(--space-md);
-  /* background-color: var(--bg-surface); */
-  border-bottom: 1px solid var(--border-color);
-  height: var(--header-height);
-}
-
-.header__logo,
-.header__icons {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.header__icons {
-  gap: var(--space-md);
-}
-
-.header__title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-}
-
-.header__logo-icon,
-.header__icon {
-  width: 24px;
-  height: 24px;
-}
-
-/* =========================================================================
    SIDEBAR SECTION
    ====================================================================== */
 
