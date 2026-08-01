@@ -340,9 +340,69 @@ q::after {
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-md);
-  line-height: 1.5;
   color: var(--text-primary);
   background-color: var(--bg-app);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================================================
+   APP CONTAINER
+   ====================================================================== */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================================================================
+   HEADER SECTION
+   ====================================================================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.header__logo-icon,
+.header__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* =========================================================================
+   SIDEBAR SECTION
+   ====================================================================== */
+
+/* =========================================================================
+   MAIN SECTION
+   ====================================================================== */
+
+/* =========================================================================
+   FOOTER SECTION
+   ====================================================================== */
