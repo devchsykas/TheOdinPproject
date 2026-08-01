@@ -117,7 +117,6 @@
             Add Task
           </button>
         </div>
-
         <section class="tasks-grid" id="task-container">
           <!-- <p class="no-task__text">No tasks added</p> -->
           <article class="task-card" data-priority="high" data-id="task-1">
@@ -174,6 +173,9 @@
           >Christos Sykas</a
         >
       </footer>
+
+      <!-- MODAL SECTION -->
+      <!--TASK MODAL -->
       <dialog class="modal" id="task-modal">
         <form method="dialog" class="modal__form" id="task-form">
           <h3 class="modal__title">Add New Task</h3>
@@ -219,6 +221,8 @@
           </div>
         </form>
       </dialog>
+
+      <!--PROJECT MODAL -->
       <dialog class="modal" id="project-modal">
         <form method="dialog" class="modal__form" id="project-form">
           <h3 class="modal__title">Create New Project</h3>
@@ -234,7 +238,8 @@
           </div>
           <div class="modal__actions">
             <button
-              type="button"
+              type="submit"
+              value="cancel"
               class="btn btn--secondary"
               id="btn-cancel-project"
             >
@@ -242,6 +247,7 @@
             </button>
             <button
               type="submit"
+              value="create"
               class="btn btn--primary"
               id="btn-create-project"
             >
