@@ -8,83 +8,42 @@
    GLOBAL RESETS 
    ====================================================================== */
 
-/* Padding and borders should not change an element's declared size. */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Browser margin/padding defaults vary wildly across elements and vendors.
-   Start from zero - handle spacing intentionally via the design system. */
-* {
   margin: 0;
   padding: 0;
-}
-
-/* Prevents flex/grid children from overflowing their container.
-   The default min-width: auto on flex and grid children causes overflow bugs
-   that are notoriously confusing to debug. */
-* {
   min-width: 0;
 }
 
-/* Hidden means hidden: !important is warranted here. */
 [hidden] {
   display: none !important;
 }
 
-/* Allows CSS transitions to/from intrinsic keyword sizes (auto, min-content, etc.).
-   Only meaningful for users who haven't requested reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
   }
 }
 
-/* Prevent adjustments of font size after orientation changes in iOS. */
 html {
   -webkit-text-size-adjust: 100%; /* Safari, iOS Safari */
   text-size-adjust: 100%; /* Chrome, Edge, Firefox Android */
-}
-
-/* Ensures the page occupies at least the full viewport.
-   dvh accounts for mobile browser UI (address bar, navigation)
-   and overrides the vh fallback in browsers that support it. */
-body {
-  min-height: 100vh;
-  min-height: 100svh;
-}
-
-/* Reserves space for the scrollbar, when the scrollbar is not showing.
-   Prevents flicker when changes on the page cause the scrollbar to toggle. */
-html {
   scrollbar-gutter: stable;
-}
-
-/* Scroll events captured by the scrolling area you're pointing at, by default. */
-html {
   overscroll-behavior: contain;
 }
 
-/* Antialiased rendering looks better on high-DPI (retina) screens.
-   On lower-DPI displays, subpixel antialiasing (the default) can be
-   sharper, so this is slightly lossy on older monitors.
-   Enable kerning and ligatures at small font-sizes by default. */
 body {
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100svh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   text-rendering: optimizeLegibility;
 }
 
-/* A unitless line-height avoids inheritance math issues.
-   The smaller default line-height for h-elements avoids excessive
-   line-height when your design system (likely) applies larger fonts.
-   WCAG recommends at least 1.5 for body copy. */
-body {
-  line-height: 1.5;
-}
 h1,
 h2,
 h3,
@@ -92,50 +51,18 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-}
-
-/* Prevents long URLs or unbreakable strings from blowing out their container. */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   overflow-wrap: break-word;
-}
-
-/* Smarter line-breaking:
-   'pretty' avoids widows (lone words on the last line of a paragraph).
-   'balance' distributes heading text more evenly across lines. 
-   Harmless in browsers that don't support them. */
-p {
   text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   text-wrap: balance;
-}
-
-/* Headings carry semantic meaning, not visual weight.
-   h1–h6 sizing and boldness should come from your design system. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-size: inherit;
   font-weight: inherit;
 }
 
-/* Inline embedded content has a gap at the bottom caused by baseline alignment.
-   Block display removes it; max-width prevents overflow.
-   height: auto preserves aspect ratio when max-width constrains the width. */
+p {
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+
 img,
 picture,
 video,
@@ -150,39 +77,25 @@ audio {
   height: auto;
 }
 
-/* Exemption for SVG icons (Heroicons/Lucide/Phosphor, etc.) with explicit sizes:
-   these should not be constrained. */
 svg[width][height] {
   max-width: revert;
 }
 
-/* Strips visual chrome from buttons so they can be styled from scratch. */
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
-/* Form elements use OS-level fonts and ignore font inheritance by default. */
 input,
 button,
 textarea,
 select {
   font: inherit;
-}
-
-/* Strips OS-level native styling from interactive elements.
-   Leaves border and background intact, providing accessibility by default.
-   Visual styling should be handled by the design system. */
-input,
-button,
-textarea,
-select {
   -webkit-appearance: none;
   appearance: none;
 }
 
-/* Anything interactive should signal clickability.
-   'button' attribute targets [type="button"], [type="submit"], etc. */
 button,
 [role="button"],
 label,
@@ -191,53 +104,39 @@ select {
   cursor: pointer;
 }
 
-/* Inherit color by default so links don't always appear in browser-default blue.
-   Text-decoration is intentionally left as underlined for accessibility. */
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-/* Removes bullets/numbers.
-   list markers should be an explicit choice, not a default. */
 ul,
 ol {
   list-style: none;
 }
 
-/* Tables default to separated borders with spacing between cells.
-   For any custom table design, you'll want to collapse the borders. */
 table {
   border-collapse: collapse;
 }
 
-/* Browsers apply bold to <th> elements.
-   Boldness in tables should be controlled by your design system. */
 th {
   font-weight: inherit;
 }
 
-/* Fieldsets have a surprise border and padding that most UIs don't want. */
 fieldset {
   border: none;
   padding: 0;
 }
 
-/* More of a normalization, but these are inconsistently styled in some browsers. */
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
-}
-sub {
   bottom: -0.25em;
-}
-sup {
   top: -0.5em;
 }
 
-/* Ensures monospace elements render at the same size as surrounding text. */
 pre,
 code,
 kbd,
@@ -246,7 +145,6 @@ samp {
   font-size: inherit;
 }
 
-/* Browser-generated quotation marks are rarely wanted in a design system. */
 blockquote,
 q {
   quotes: none;
@@ -258,9 +156,6 @@ q::after {
   content: none;
 }
 
-/* Creates an explicit stacking context on the app root.
-   Prevents z-index bleed from portals, modals, or tooltips
-   from leaking out unexpectedly. */
 #root {
   isolation: isolate;
 }
@@ -276,14 +171,17 @@ q::after {
   --bg-surface: #ffffff;
   --bg-sidebar: #ffffff;
   --bg-hover: #f1f3f5;
+
   /* Typography Colors */
   --text-primary: #212529;
   --text-secondary: #6c757d;
   --text-muted: #adb5bd;
+
   /* Accent & Action Colors */
   --primary: #4f46e5;
   --primary-hover: #4338ca;
   --primary-light: #eef2ff;
+
   /* Status & Priority Colors */
   --priority-high: #ef4444;
   --priority-high-bg: #fef2f2;
@@ -291,9 +189,11 @@ q::after {
   --priority-medium-bg: #fffbeb;
   --priority-low: #10b981;
   --priority-low-bg: #ecfdf5;
+
   /* Borders & Dividers */
   --border-color: #e9ecef;
   --border-focus: #818cf8;
+
   /* --- Typography --- */
   --font-family:
     "Inter", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
@@ -307,6 +207,7 @@ q::after {
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+
   /* --- Spacing --- */
   --space-xs: 0.25rem; /* 4px */
   --space-sm: 0.5rem; /* 8px */
@@ -315,6 +216,7 @@ q::after {
   --space-xl: 2rem; /* 32px */
   --space-2xl: 3rem; /* 48px */
   --space-3xl: 4rem; /* 64px */
+
   /* --- Layout & Dimensions --- */
   --sidebar-width: 260px;
   --header-height: 64px;
@@ -322,12 +224,14 @@ q::after {
   --border-radius-md: 8px;
   --border-radius-lg: 12px;
   --border-radius-pill: 9999px;
+
   /* --- Elevation & Shadows --- */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md:
-    1 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg:
     0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
   /* --- Transitions --- */
   --transition-fast: 0.15s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
@@ -342,12 +246,6 @@ body {
   font-size: var(--font-size-md);
   color: var(--text-primary);
   background-color: var(--bg-app);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  text-decoration: none;
 }
 
 .btn {
@@ -362,14 +260,43 @@ a {
   transition: background-color var(--transition-fast);
 }
 
+.btn--primary {
+  background-color: var(--primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--primary-hover);
+}
+
 /* =========================================================================
-   APP CONTAINER
+   APP CONTAINER (GRID LAYOUT)
    ====================================================================== */
 
-.container {
-  display: flex;
-  flex-direction: column;
+#container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
   min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 /* =========================================================================
@@ -385,10 +312,15 @@ a {
   height: var(--header-height);
 }
 
-.header__logo {
+.header__logo,
+.header__icons {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+.header__icons {
+  gap: var(--space-md);
 }
 
 .header__title {
@@ -402,25 +334,19 @@ a {
   height: 24px;
 }
 
-.header__icons {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-}
-
 /* =========================================================================
    SIDEBAR SECTION
    ====================================================================== */
 
 .sidebar {
   background-color: var(--bg-sidebar);
-  width: var(--sidebar-width);
+  /* width: var(--sidebar-width); */
   border-right: 1px solid var(--border-color);
   padding: var(--space-lg);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  min-height: calc(100vh - var(--header-height));
+  /* min-height: calc(100vh - var(--header-height)); */
 }
 
 .sidebar__title {
@@ -432,14 +358,13 @@ a {
   margin-top: var(--space-xs);
 }
 
-.sidebar__nav {
+.sidebar__nav,
+.sidebar__list {
   display: flex;
   flex-direction: column;
 }
 
 .sidebar__list {
-  display: flex;
-  flex-direction: column;
   gap: var(--space-sm);
 }
 
@@ -455,6 +380,10 @@ a {
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--border-radius-md);
   transition: background-color var(--transition-fast);
+}
+
+.sidebar__link:hover {
+  background-color: var(--bg-hover);
 }
 
 .sidebar__link-content {
@@ -478,7 +407,6 @@ a {
 .sidebar__notification-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .sidebar__notification {
@@ -490,34 +418,7 @@ a {
   border-radius: var(--border-radius-pill);
 }
 
-/* =========================================================================
-   MAIN SECTION
-   ====================================================================== */
-
-/* =========================================================================
-   FOOTER SECTION
-   ====================================================================== */
-
-/* =========================================================================
-   BUTTONS
-   ====================================================================== */
-
-.btn--primary {
-  background-color: var(--primary);
-}
-
-/* =========================================================================
-   HOVER EFFECTS
-   ====================================================================== */
-
-.btn--primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.sidebar__link:hover {
-  background-color: var(--bg-hover);
-}
-
+/* Active State */
 .sidebar__item--active .sidebar__link {
   background-color: var(--primary-light);
 }
@@ -531,3 +432,206 @@ a {
   background-color: var(--primary);
   color: var(--bg-surface);
 }
+
+/* =========================================================================
+   MAIN SECTION
+   ====================================================================== */
+
+.main-content {
+  padding: var(--space-xl);
+  background-color: var(--bg-app);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  overflow-y: auto;
+}
+
+.main-content__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--space-md);
+}
+
+.main-content__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+/* Tasks Grid System */
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.task-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 12px var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.task-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+.task-card__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+}
+
+.task-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.task-card__date {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+.task-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-xs);
+  margin-top: var(--space-xs);
+  border-top: 1px solid var(--border-color);
+}
+
+.task-card__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.task-card__checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+  display: grid;
+  place-content: center;
+  outline: none;
+}
+
+.task-card__checkbox:hover {
+  border-color: var(--primary);
+}
+
+.task-card__checkbox:focus-visible {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.task-card__checkbox:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.task-card__checkbox:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--bg-surface);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.task-card__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-edit {
+  padding: var(--space-xs);
+  background-color: #d6d9db;
+  color: var(--bg-surface);
+}
+
+.btn-delete {
+  padding: var(--space-xs);
+  background-color: #e69d9d;
+  color: var(--bg-surface);
+}
+
+/* Priority Badges */
+
+.badge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-pill);
+}
+
+.badge--high {
+  background-color: var(--priority-high-bg);
+  color: var(--priority-high);
+}
+
+.badge--high:hover {
+  background-color: var(--priority-high-bg);
+}
+
+.badge--medium {
+  background-color: var(--priority-medium-bg);
+  color: var(--priority-medium);
+}
+
+.badge--medium:hover {
+  background-color: var(--priority-medium-bg);
+}
+
+.badge--low {
+  background-color: var(--priority-low-bg);
+  color: var(--priority-low);
+}
+
+.badge--low:hover {
+  background-color: var(--priority-low-bg);
+}
+
+/* =========================================================================
+   FOOTER SECTION
+   ====================================================================== */
