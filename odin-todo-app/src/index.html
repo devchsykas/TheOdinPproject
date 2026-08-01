@@ -43,34 +43,58 @@
         <h2 class="sidebar__title">Projects</h2>
         <nav class="sidebar__nav">
           <ul class="sidebar__list" id="project-list">
-            <li class="sidebar__item" data-project="inbox">
+            <li
+              class="sidebar__item sidebar__item--active"
+              data-project="inbox"
+            >
               <button class="sidebar__link">
-                <img
-                  src="./assets/icons/inbox-solid-full.svg"
-                  alt="inbox icon"
-                  class="sidebar__icon"
-                />
-                <span class="sidebar__text">Inbox</span>
+                <div class="sidebar__link-content">
+                  <img
+                    src="./assets/icons/inbox-solid-full.svg"
+                    alt="inbox icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Inbox</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="inbox-notification"
+                    >5</span
+                  >
+                </div>
               </button>
             </li>
             <li class="sidebar__item" data-project="work">
               <button class="sidebar__link">
-                <img
-                  src="./assets/icons/briefcase-solid-full.svg"
-                  alt="work icon"
-                  class="sidebar__icon"
-                />
-                <span class="sidebar__text">Work</span>
+                <div class="sidebar__link-content">
+                  <img
+                    src="./assets/icons/briefcase-solid-full.svg"
+                    alt="work icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Work</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="work-notification"
+                    >3</span
+                  >
+                </div>
               </button>
             </li>
             <li class="sidebar__item" data-project="personal">
               <button class="sidebar__link">
-                <img
-                  src="./assets/icons/user-solid-full.svg"
-                  alt="personal icon"
-                  class="sidebar__icon"
-                />
-                <span class="sidebar__text">Personal</span>
+                <div class="sidebar__link-content">
+                  <img
+                    src="./assets/icons/user-solid-full.svg"
+                    alt="personal icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Personal</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="personal-notification"
+                    >2</span
+                  >
+                </div>
               </button>
             </li>
           </ul>
