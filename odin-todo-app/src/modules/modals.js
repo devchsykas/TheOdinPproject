@@ -3,9 +3,18 @@
  *
  */
 const addProjectModalBtn = document.getElementById("btn-add-project-modal");
-const taskModal = document.getElementById("task-modal");
-const taskForm = document.getElementById("task-form");
+const projectModal = document.getElementById("project-modal");
+const projectForm = document.getElementById("project-form");
 
 addProjectModalBtn.addEventListener("click", () => {
-  taskModal.showModal();
+  projectModal.showModal();
+});
+
+projectModal.addEventListener("close", () => {
+  if (projectModal.returnValue === "create") {
+    console.log("Project created");
+  } else {
+    console.log("Project canceled");
+  }
+  projectForm.reset();
 });
