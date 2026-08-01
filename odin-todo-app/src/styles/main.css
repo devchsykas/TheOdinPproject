@@ -181,6 +181,10 @@ q::after {
   --primary: #4f46e5;
   --primary-hover: #4338ca;
   --primary-light: #eef2ff;
+  --secondary: #6c757d;
+  --secondary-hover: #5a6268;
+  --secondary-light: #f8f9fa;
+  --secondary-border: #dee2e6;
 
   /* Status & Priority Colors */
   --priority-high: #ef4444;
@@ -262,10 +266,23 @@ body {
 
 .btn--primary {
   background-color: var(--primary);
+  border: 1px solid var(--border-focus);
 }
 
 .btn--primary:hover {
   background-color: var(--primary-hover);
+}
+
+.btn--secondary {
+  background-color: var(--secondary-light);
+  color: var(--secondary);
+  border: 1px solid var(--secondary-border);
+}
+
+.btn--secondary:hover {
+  background-color: var(--border-color);
+  color: var(--secondary-hover);
+  border-color: #ced4ce;
 }
 
 /* =========================================================================
