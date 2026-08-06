@@ -1,3 +1,10 @@
+/**
+ * Task class
+ * @class Task
+ * @constructor Creates a new Task instance with the given title, description, due date, priority, and project.
+ * @description Task class
+ * @exports Task
+ */
 export class Task {
   constructor(
     title,
@@ -15,10 +22,17 @@ export class Task {
     this.completed = false;
   }
 
+  /**
+   * Toggles the completion status of the task.
+   */
   toggleComplete() {
     this.completed = !this.completed;
   }
 
+  /**
+   * Updates the details of the task based on the provided parameters.
+   * @param {*} { title, description, dueDate, priority, project }
+   */
   updateDetails({ title, description, dueDate, priority, project }) {
     if (title !== undefined) {
       this.title = title;
