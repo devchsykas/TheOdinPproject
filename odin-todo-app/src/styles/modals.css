@@ -98,7 +98,8 @@
   transition: border-color var(--transition-fast);
 }
 
-.form-group textarea::placeholder {
+.form-group textarea::placeholder,
+.form-group input[type="text"]::placeholder {
   color: var(--text-muted);
 }
 
