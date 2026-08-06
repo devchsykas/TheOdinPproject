@@ -49,4 +49,5 @@ taskModal.addEventListener("close", () => {
   } else {
     console.log("Task canceled");
   }
+  taskForm.reset();
 });
