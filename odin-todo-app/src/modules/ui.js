@@ -1,5 +1,18 @@
+/**
+ * UI Class
+ * Handles rendering of the sidebar projects and tasks grid, as well as modal controls.
+ * @class UI
+ * @description UI class
+ * @exports UI
+ */
 export class UI {
   // --- 1. RENDER SIDEBAR PROJECTS ---
+  /**
+   * Renders the list of projects in the sidebar.
+   * @param {*} projects
+   * @param {*} activeProjectId
+   * @returns
+   */
   static renderProjects(projects, activeProjectId) {
     const projectList = document.querySelector(".sidebar__list");
     if (!projectList) return;
@@ -33,6 +46,11 @@ export class UI {
   }
 
   // --- 2. RENDER TASKS GRID ---
+  /**
+   * Renders the list of tasks for a given project.
+   * @param {*} project
+   * @returns
+   */
   static renderTasks(project) {
     const tasksGrid = document.querySelector(".tasks-grid");
     const mainTitle = document.querySelector(".main-content__title");
@@ -87,6 +105,10 @@ export class UI {
   }
 
   // --- 3. MODAL CONTROLS ---
+  /**
+   * Opens a modal dialog.
+   * @param {*} modalId
+   */
   static openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal && typeof modal.showModal === "function") {
@@ -94,6 +116,10 @@ export class UI {
     }
   }
 
+  /**
+   * Closes a modal dialog.
+   * @param {*} modalId
+   */
   static closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal && typeof modal.close === "function") {
@@ -106,6 +132,11 @@ export class UI {
   }
 
   // --- 4. SECURITY UTILITY (XSS Prevention) ---
+  /**
+   * Escapes HTML characters in a string to prevent XSS attacks.
+   * @param {*} str
+   * @returns
+   */
   static escapeHTML(str) {
     return str
       .replace(/&/g, "amp")
