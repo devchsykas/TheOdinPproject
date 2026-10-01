@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Odin Todo App" />
+    <meta name="keywords" content="todo, task, project, productivity" />
+    <meta name="author" content="Christos Sykas" />
+    <title>Odin Todo App</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="container">
+      <!-- HEADER SECTION -->
+      <header class="header">
+        <div class="header__logo">
+          <img
+            src="a02eba4d79111f7fa294.svg"
+            alt="logo icon"
+            class="header__logo-icon"
+          />
+          <h1 class="header__title">Odin Todo App</h1>
+        </div>
+        <div class="header__icons">
+          <img
+            src="99605d0ca7b543398031.svg"
+            alt="notification icon"
+            class="header__icon"
+          />
+          <img
+            src="96d500b75b3ec2018a05.svg"
+            alt="logout icon"
+            class="header__icon"
+          />
+        </div>
+      </header>
+
+      <!-- SIDEBAR SECTION -->
+      <aside class="sidebar">
+        <button class="btn btn--primary" id="btn-add-project-modal">
+          Add Project
+        </button>
+        <h2 class="sidebar__title">Projects</h2>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list" id="project-list">
+            <li
+              class="sidebar__item sidebar__item--active"
+              data-project="inbox"
+            >
+              <button class="sidebar__link">
+                <div class="sidebar__link-content">
+                  <img
+                    src="19df9ee3deb6f4f9aba8.svg"
+                    alt="inbox icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Inbox</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="inbox-notification"
+                    >5</span
+                  >
+                </div>
+              </button>
+            </li>
+            <li class="sidebar__item" data-project="work">
+              <button class="sidebar__link">
+                <div class="sidebar__link-content">
+                  <img
+                    src="bdaec33744397e6a0d18.svg"
+                    alt="work icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Work</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="work-notification"
+                    >3</span
+                  >
+                </div>
+              </button>
+            </li>
+            <li class="sidebar__item" data-project="personal">
+              <button class="sidebar__link">
+                <div class="sidebar__link-content">
+                  <img
+                    src="79a4a6de327d6051ad0f.svg"
+                    alt="personal icon"
+                    class="sidebar__icon"
+                  />
+                  <span class="sidebar__text">Personal</span>
+                </div>
+                <div class="sidebar__notification-container">
+                  <span class="sidebar__notification" id="personal-notification"
+                    >2</span
+                  >
+                </div>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <!-- <a href="#add-new-project">
+          <img
+            src="./assets/icons/plus-solid-full.svg"
+            alt="add new project icon"
+            class="add-new-project__icon"
+          />
+          <span class="add-new-project__text">Add New Project</span>
+        </a> -->
+      </aside>
+
+      <!-- MAIN SECTION -->
+      <main class="main-content">
+        <div class="main-content__header">
+          <h2 class="main-content__title" id="current-project-title">Inbox</h2>
+          <button class="btn btn--primary" id="btn-add-task-modal">
+            Add Task
+          </button>
+        </div>
+        <section class="tasks-grid" id="task-container">
+          <!-- <p class="no-task__text">No tasks added</p> -->
+          <article class="task-card" data-priority="high" data-id="task-1">
+            <div class="task-card__header">
+              <span class="badge badge--high">High Priority</span>
+              <h3 class="task-card__title">Finish Project Report</h3>
+            </div>
+            <div class="task-card__body">
+              <p class="task-card__date">
+                <img
+                  src="1e4519b70a76905412e5.svg"
+                  alt="calendar icon"
+                  class="icon-small"
+                />
+                Due: 2026-06-30
+              </p>
+              <p class="task-card__notes">
+                Notes: This is a sample task description.
+              </p>
+            </div>
+            <div class="task-card__footer">
+              <label class="task-card__checkbox-label">
+                <input type="checkbox" class="task-card__checkbox" />
+                <span>Completed</span>
+              </label>
+              <div class="task-card__actions">
+                <button class="btn-icon btn-edit" title="Edit Task">
+                  <img
+                    src="8b647ee1db78a14e71fa.svg"
+                    alt="edit icon"
+                  />
+                </button>
+                <button class="btn-icon btn-delete" title="Delete Task">
+                  <img
+                    src="1cb6231121848004ebba.svg"
+                    alt="delete icon"
+                    class="task__delete-icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer">
+        <p class="footer__text">Copyright &copy; 2026 by</p>
+        <a
+          href="https://github.com/devchsykas"
+          class="footer__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Christos Sykas</a
+        >
+      </footer>
+
+      <!-- MODAL SECTION -->
+      <!--TASK MODAL -->
+      <dialog class="modal" id="task-modal">
+        <form method="dialog" class="modal__form" id="task-form">
+          <h3 class="modal__title">Add New Task</h3>
+          <div class="form-group">
+            <label for="task-title">Title *</label>
+            <input
+              type="text"
+              id="task-title"
+              name="task-title"
+              required
+              placeholder="e.g. Buy groceries"
+            />
+          </div>
+          <div class="form-group">
+            <label for="task-desc">Description</label>
+            <textarea
+              id="task-desc"
+              name="task-desc"
+              rows="3"
+              placeholder="e.g. milk"
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="task-date">Due Date</label>
+              <input type="date" id="task-date" name="task-date" required />
+            </div>
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority" name="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal__actions">
+            <button
+              type="submit"
+              value="cancel"
+              class="btn btn--secondary"
+              id="btn-cancel-task"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              value="save"
+              class="btn btn--primary"
+              id="btn-save-task"
+            >
+              Save Task
+            </button>
+          </div>
+        </form>
+      </dialog>
+
+      <!--PROJECT MODAL -->
+      <dialog class="modal" id="project-modal">
+        <form method="dialog" class="modal__form" id="project-form">
+          <h3 class="modal__title">Create New Project</h3>
+          <div class="form-group">
+            <label for="project-name">Project Name *</label>
+            <input
+              type="text"
+              id="project-name"
+              name="project-name"
+              required
+              placeholder="e.g. Fitness"
+            />
+          </div>
+          <div class="modal__actions">
+            <button
+              type="submit"
+              value="cancel"
+              class="btn btn--secondary"
+              id="btn-cancel-project"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              value="create"
+              class="btn btn--primary"
+              id="btn-create-project"
+            >
+              Create
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+  </body>
+</html>
